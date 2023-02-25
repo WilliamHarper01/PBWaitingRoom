@@ -19,6 +19,11 @@
         </header>
         
         <main>
+
+            <figure>
+                <img id="itemImg" src="img/Eqp_Berserked.webp">
+            </figure>
+
             <div class="textBubble">
                 chance to go 22: 
                 <div id="chance">
@@ -26,24 +31,33 @@
                 </div>
             </div>
             
-            <div id="result" class="textBubble">
-                &nbsp;
-            </div>
-
             <div class="selector">
-                    <select name="item" id="item" onload="select()">
-                        <option value="zerk" onclick="select()">Berserked</option>
-                        <option value="mep" onclick="select()">Magic Eyepatch</option>
-                        <option value="belt" onclick="select()">Dreamy Belt</option>
-                        <option value="et" onclick="select()">Endless Terror</option>
-                        <option value="cfe" onclick="select()">Commanding Force Earring</option>
-                        <option value="sos" onclick="select()">Source Of Suffering: At 0*</option>
-                        <option value="sos20" onclick="select()">Source Of Suffering: At 20*</option>
-                        <option value="sos21" onclick="select()">Source Of Suffering: At 21*</option>
-                        <option value="sosrep" onclick="select()">Source Of Suffering: 21* Repeated</option>
-                    </select>
+                <select name="item" id="item" onload="select()">
+                    <option value="zerk" onclick="select()">Berserked</option>
+                    <option value="mep" onclick="select()">Magic Eyepatch</option>
+                    <option value="belt" onclick="select()">Dreamy Belt</option>
+                    <option value="et" onclick="select()">Endless Terror</option>
+                    <option value="cfe" onclick="select()">Commanding Force Earring</option>
+                    <option value="sos" onclick="select()">Source Of Suffering: At 0*</option>
+                    <option value="sos20" onclick="select()">Source Of Suffering: At 20*</option>
+                    <option value="sos21" onclick="select()">Source Of Suffering: At 21*</option>
+                    <option value="sosrep" onclick="select()">Source Of Suffering: 21* Repeated</option>
+                </select>
                 <button onclick="tap()">TAP THAT SHIT</button>
             </div>
+
+            <div class="textBubble">
+                Result:
+                <div id="result">
+                    &nbsp;
+                </div>
+                Cost: 
+                <div id="cost">
+                    &nbsp;
+                </div>
+
+            </div>
+
         </main>
         
         <script src="js/main.js">  </script> 

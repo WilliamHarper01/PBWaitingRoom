@@ -131,7 +131,7 @@ div.textBubble{
   text-align: center;
   padding: 2em;
   border-radius: 0.4em;
-  min-width: 8em;
+  min-width: 12em;
   font-size: 1.5em;
   margin:2em;
 }
@@ -147,4 +147,11 @@ div.selector{
 div.selector * {
   padding: 1em;
   text-align: center;
+}
+
+img{
+  width: 16em;
+  height: 16em;
+  align-content: center;
+  margin: 3em;
 }
