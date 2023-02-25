@@ -1,0 +1,150 @@
+/* Main Style Sheet */
+/* Name: main.css */
+/* William Harper - 2/11/2023 */
+/* Purpose: specifies the general style of the entire website */
+
+/* reset the styling of the page */
+@import "reset.css";
+
+/* import the Roboto Mono font  */
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+
+/* Makes the webpage fill out the entire browser window */
+:root{
+  background-color: white;
+  
+  height: 100vh;
+}
+
+/* sets the font of the website */
+body{
+  font-family: "Roboto Mono", normal;
+  font-weight: 400;
+  color: #000000;
+}
+
+/* defines the styling for the header at the top of each page */
+/* the header is a flex box containing the name of the page on the left */
+/* and a navigation bar on the right */
+header{
+  background-color: #213d22;
+  color: white;
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  flex-grow: 1;
+  margin-bottom: 4em;
+}
+
+/* the styling for the navigation bar */
+header div{
+  font-size: 1.5em;
+  margin-top: 0.75em;
+  margin-bottom: 0em;
+}
+
+/* the styling for the links inside each item of the nav bar */
+header div a{
+  margin: 0.25em;
+}
+
+/* the styling for the title of the page */
+h1{
+  font-size: 4em;
+  text-align: center;
+}
+
+/* the main content of each page will be inside a flexbox */
+main{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  margin: 4em;
+  background-color: lightgray;
+  border-radius: 0.4em;
+  padding: 2em;
+  max-width: 1000px;
+  margin:auto;
+}
+
+/* the styling for forms, such as the login form */
+form{
+  background-color: lightgray;
+  padding: 1em;
+  border-radius: 0.4em;
+}
+
+/* the styling for labels of form elements, such as the "remember me" text */
+label{
+  display: inline-block;
+  clear: left;
+  width: 8em;
+  font-size: 1.25em;
+  text-align: left;
+}
+
+/* the styling for the text input boxes, such as the username box */
+input {
+  display: inline-block;
+  background-color: white;
+  font-size: 1.25em;
+  padding: 4em, 2em;
+  border-radius: 0.4em;
+  border-width: 0.2em;
+}
+
+/* the styling for links and buttons */
+a, button{
+  border: 0.1em solid #ffffff;
+  border-radius: 0.2em;
+  border-width: 0.2em;
+  background-color: #213d22;
+  color: #ffffff;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+  padding:0.125em;
+}
+
+/* styling for the submit buttons, and the forgot password button */
+form div button, a#resetLink{
+  font-size: 1.25em;
+  padding: 4em, 2em;
+}
+
+/* styling for when the user hovers over a button, or a link */
+a:hover, button:hover{
+  border-color: #213d22;
+  background-color: #ffffff;
+  color: #213d22;
+}
+
+div *{
+  margin: 1em;
+}
+
+div.textBubble{
+  background-color: gray;
+  text-align: center;
+  padding: 2em;
+  border-radius: 0.4em;
+  min-width: 8em;
+  font-size: 1.5em;
+  margin:2em;
+}
+
+div.selector{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  font-size: 1.5em;
+  margin: 2em;
+}
+
+div.selector * {
+  padding: 1em;
+  text-align: center;
+}
