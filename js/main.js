@@ -40,7 +40,7 @@ itemLevel["sosrep"] = 160.0;
 
 const safeguard = 1.05;
 
-function fullSend(currentStar, failCount, repeat, level)
+function fullSend(currentStar, failCount, repeat, level, targetStar)
 {
     let cost = 0.0;
     while (true)
@@ -50,7 +50,7 @@ function fullSend(currentStar, failCount, repeat, level)
         cost = result[1];
         boomed = result[2];
 
-        if (currentStar == 22)
+        if (currentStar == targetStar)
             return [result[0], result[1]];
         if (boomed == true)
             return [result[0], result[1]];
@@ -69,7 +69,10 @@ function tapOnce(currentStar, failCount, repeat, level, cost)
 
     if (currentStar < 17 && currentStar > 11)
         deltaCost = deltaCost * 2.0;
-    
+
+    if (repeat == true)
+        deltaCost += transfer(22);
+
     cost += deltaCost;
     
     if (failCount >= 2)
@@ -135,7 +138,7 @@ function select()
             repeat = true;
         }
 
-        let result = fullSend(currentStar, failCount, repeat, itemLevel[item]);
+        let result = fullSend(currentStar, failCount, repeat, itemLevel[item], 22);
         if (result[0] != 22)
             boom += 1.0;
         else    
@@ -143,6 +146,18 @@ function select()
     }
     document.getElementById("chance").innerHTML = Math.round(pass / 10000.0 * 100) + "%";
 
+}
+
+function transfer(targetStar)
+{
+    cost = 0;
+    do
+    {
+        let result = fullSend(12, 0, false, 150.0, targetStar);
+        cost += result[1];
+    } while (result[0] != targetStar);
+
+    return cost;
 }
 
 function insta()
@@ -153,24 +168,31 @@ function insta()
     let currentStar = 0;
     let failCount = 0;
     let repeat = false;
+    let transferCost = 0;
 
     if(item == "sos20")
+    {
         currentStar = 20;
+        transferCost = transfer(21);
+    }
     else if (item == "sos21")
+    {
         currentStar = 21;
+        transferCost = transfer(22);
+    }
     else if (item == "sosrep")
     {
         currentStar = 21;
         repeat = true;
     }
 
-    let result = fullSend(currentStar, failCount, repeat, itemLevel[item]);
+    let result = fullSend(currentStar, failCount, repeat, itemLevel[item], 22);
     if (result[0] != 22)
         document.getElementById("result").innerHTML = "boomed at " + result[0];
     else    
         document.getElementById("result").innerHTML = result[0];
     
-    document.getElementById("cost").innerHTML = Math.round(result[1]).toLocaleString("en-US");
+    document.getElementById("cost").innerHTML = Math.round(result[1] + transferCost).toLocaleString("en-US");
 }
 
 let globalStar = 0;
@@ -192,19 +214,31 @@ function tap()
         globalItem = e.value;
         
         if(globalItem == "sos20")
+        {
             globalStar = 20;
+            globalCost += transfer(21);
+            document.getElementById("result").innerHTML = "20";
+            document.getElementById("cost").innerHTML = Math.round(globalCost).toLocaleString("en-US");
+        }
         else if (globalItem == "sos21")
+        {
             globalStar = 21;
+            globalCost += transfer(22);
+            document.getElementById("result").innerHTML = "21";
+            document.getElementById("cost").innerHTML = Math.round(globalCost).toLocaleString("en-US");
+        }
         else if (globalItem == "sosrep")
         {
             globalStar = 21;
             globalRepeat = true;
         }
+        else
+        {
+            document.getElementById("result").innerHTML = 0;
+            document.getElementById("cost").innerHTML = Math.round(0.0).toLocaleString("en-US");
+        }
         
         first = false;
-
-        document.getElementById("result").innerHTML = '\xa0';
-        document.getElementById("cost").innerHTML = '\xa0';
 
         return;
     }
