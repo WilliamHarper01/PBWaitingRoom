@@ -80,6 +80,8 @@ function tapOnce(currentStar, failCount, repeat, level, cost)
     {
         currentStar += 1;
         failCount = 0;
+        globalFail = 0;
+	    return [currentStar, cost, false];
     }
     
     let success = Math.random() * 100.0;
@@ -89,6 +91,7 @@ function tapOnce(currentStar, failCount, repeat, level, cost)
     {
         currentStar += 1;
         failCount = 0;
+        globalFail = 0;
     }
     else if (boom < boomChances[currentStar])
     {
@@ -100,6 +103,7 @@ function tapOnce(currentStar, failCount, repeat, level, cost)
         {
             failCount += 1;
             currentStar -= 1;
+            globalFail += 1;
         }
     }
 
