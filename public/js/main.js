@@ -50,6 +50,7 @@ function fullSend(currentStar, failCount, repeat, level, targetStar)
         currentStar = result[0];
         cost = result[1];
         boomed = result[2];
+        failCount = result[3];
 
         if (currentStar == targetStar)
             return [result[0], result[1]];
@@ -76,22 +77,19 @@ function tapOnce(currentStar, failCount, repeat, level, cost)
 
     cost += deltaCost;
     
+    let success = Math.random() * 100.0;
+    let boom = Math.random() * 100.0;
+
+
     if (failCount >= 2)
     {
         currentStar += 1;
         failCount = 0;
-        globalFail = 0;
-	    return [currentStar, cost, false];
     }
-    
-    let success = Math.random() * 100.0;
-    let boom = Math.random() * 100.0;
-
-    if (success < (successChances[currentStar] * safeguard))
+    else if (success < (successChances[currentStar] * safeguard))
     {
         currentStar += 1;
         failCount = 0;
-        globalFail = 0;
     }
     else if (boom < boomChances[currentStar])
     {
@@ -103,11 +101,10 @@ function tapOnce(currentStar, failCount, repeat, level, cost)
         {
             failCount += 1;
             currentStar -= 1;
-            globalFail += 1;
         }
     }
 
-    return [currentStar, cost, false];
+    return [currentStar, cost, false, failCount];
 }
 
 let first = true;
@@ -254,6 +251,7 @@ function tap()
     globalStar = result[0];
     globalCost = result[1];
     boomed = result[2];
+    globalFail = result[3];
 
     if (globalStar == 22)
     {
