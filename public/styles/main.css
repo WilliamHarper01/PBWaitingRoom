@@ -154,4 +154,5 @@ img{
   height: 16em;
   align-content: center;
   margin: 3em;
+  image-rendering: pixelated;
 }

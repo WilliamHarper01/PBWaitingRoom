@@ -16,8 +16,8 @@ boomChances.push(
 );
 
 const itemImgs = [];
-itemImgs["zerk"] = "img/Eqp_Berserked.webp";
-itemImgs["mep"] = "img/Eqp_Magic_Eyepatch.webp";
+itemImgs["zerk"] = "img/Eqp_Berserked.png";
+itemImgs["mep"] = "img/Eqp_Magic_Eyepatch.png";
 itemImgs["belt"] = "img/Eqp_Dreamy_Belt.webp";
 itemImgs["et"] = "img/Eqp_Endless_Terror.webp";
 itemImgs["cfe"] = "img/Eqp_Commanding_Force_Earring.webp";
