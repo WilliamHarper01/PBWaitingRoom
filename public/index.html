@@ -1,0 +1,66 @@
+<!--Index-->
+<!--Name: index.html-->
+<!--William Harper - 1/26/2023-->
+<!--Purpose: The main page of the website, showing the user's book collection-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pitched Boss Simulator</title>
+        <link rel="stylesheet" href="styles/main.css">
+    </head>
+
+    <body>
+        <!--the header at the top of the page-->
+        <header>
+            <h1>Pitched Boss Simulator</h1>
+        </header>
+        
+        <main>
+
+            <figure>
+                <img id="itemImg" src="img/Eqp_Berserked.webp">
+            </figure>
+
+            <div class="textBubble">
+                chance to go 22: 
+                <div id="chance">
+                    &nbsp;
+                </div>
+            </div>
+            
+            <div class="selector">
+                <select name="item" id="item" onload="select()" value="zerk">
+                    <option value="zerk" onclick="select()">Berserked</option>
+                    <option value="mep" onclick="select()">Magic Eyepatch</option>
+                    <option value="belt" onclick="select()">Dreamy Belt</option>
+                    <option value="et" onclick="select()">Endless Terror</option>
+                    <option value="cfe" onclick="select()">Commanding Force Earring</option>
+                    <option value="sos" onclick="select()">Source Of Suffering: At 0*</option>
+                    <option value="sos20" onclick="select()">Source Of Suffering: At 20*</option>
+                    <option value="sos21" onclick="select()">Source Of Suffering: At 21*</option>
+                    <option value="sosrep" onclick="select()">Source Of Suffering: 21* Repeated</option>
+                </select>
+                <button onclick="tap()">TAP THAT SHIT</button>
+                <button onclick="insta()">FULL SEND</button>
+            </div>
+
+            <div class="textBubble">
+                Star:
+                <div id="result">
+                    &nbsp;
+                </div>
+                Cost: 
+                <div id="cost">
+                    &nbsp;
+                </div>
+
+            </div>
+
+        </main>
+        
+        <script src="js/main.js">  </script> 
+    </body>
+</html>
