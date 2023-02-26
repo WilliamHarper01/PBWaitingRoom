@@ -21,7 +21,7 @@
         <main>
 
             <figure>
-                <img id="itemImg" src="img/Eqp_Berserked.png">
+                <img id="itemImg" src="img/Eqp_Berserked.png" alt="Chrome is bad">
             </figure>
 
             <div class="textBubble">
@@ -32,16 +32,16 @@
             </div>
             
             <div class="selector">
-                <select name="item" id="item" onload="select()" value="zerk">
-                    <option value="zerk" onclick="select()">Berserked</option>
-                    <option value="mep" onclick="select()">Magic Eyepatch</option>
-                    <option value="belt" onclick="select()">Dreamy Belt</option>
-                    <option value="et" onclick="select()">Endless Terror</option>
-                    <option value="cfe" onclick="select()">Commanding Force Earring</option>
-                    <option value="sos" onclick="select()">Source Of Suffering: At 0*</option>
-                    <option value="sos20" onclick="select()">Source Of Suffering: At 20*</option>
-                    <option value="sos21" onclick="select()">Source Of Suffering: At 21*</option>
-                    <option value="sosrep" onclick="select()">Source Of Suffering: 21* Repeated</option>
+                <select name="item" id="item" onchange="select()">
+                    <option value="zerk" selected>Berserked</option>
+                    <option value="mep">Magic Eyepatch</option>
+                    <option value="belt">Dreamy Belt</option>
+                    <option value="et">Endless Terror</option>
+                    <option value="cfe">Commanding Force Earring</option>
+                    <option value="sos">Source Of Suffering: At 0*</option>
+                    <option value="sos20">Source Of Suffering: At 20*</option>
+                    <option value="sos21">Source Of Suffering: At 21*</option>
+                    <option value="sosrep">Source Of Suffering: 21* Repeated</option>
                 </select>
                 <button onclick="tap()">TAP THAT SHIT</button>
                 <button onclick="insta()">FULL SEND</button>

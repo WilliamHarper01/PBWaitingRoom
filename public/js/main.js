@@ -4,7 +4,8 @@ successChances.push(
     75.0,70.0,65.0,60.0,55.0,
     50.0,45.0,40.0,35.0,30.0,
     30.0,30.0,30.0,30.0,30.0,
-    30.0,30.0);
+    30.0,30.0
+);
 
 const boomChances = [];
 boomChances.push(
@@ -111,12 +112,14 @@ function select()
 {
     first = true;
 
+    console.log("please kill me");
+
     document.getElementById("result").innerHTML = '\xa0';
     document.getElementById("cost").innerHTML = '\xa0';
     
     var e = document.getElementById("item");
     var item = e.value;
-
+    
     document.getElementById("itemImg").src = itemImgs[item];
     
     let pass = 0.0;
