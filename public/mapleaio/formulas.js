@@ -1,109 +1,5 @@
 "use strict";
 
-const BLANK = 0;
-
-const FLAT_STR = 1;
-const FLAT_DEX = 2;
-const FLAT_INT = 3;
-const FLAT_LUK = 4;
-const FLAT_HP = 5;
-const FLAT_MP = 6;
-const FLAT_DEF = 7;
-
-const PERCENT_STR = 8;
-const PERCENT_DEX = 9;
-const PERCENT_INT = 10;
-const PERCENT_LUK = 11;
-const PERCENT_HP = 12;
-const PERCENT_MP = 13;
-const PERCENT_DEF = 14;
-
-const FINAL_STR = 15;
-const FINAL_DEX = 16;
-const FINAL_INT = 17;
-const FINAL_LUK = 18;
-const FINAL_HP = 19;
-const FINAL_MP = 20;
-const FINAL_DEF = 21;
-
-const FLAT_ATTACK = 22;
-const FINAL_ATTACK = 23;
-const PERCENT_ATTACK = 24;
-
-const DAMAGE = 25;
-const BOSS_DAMAGE = 26;
-const IED = 27;
-const CRIT_DAMAGE = 28;
-const FINAL_DAMAGE = 29;
-const PERCENT_ALL_STAT = 30;
-const STATS_LENGTH = 31;
-
-const statDict = {
-    "-none-":       BLANK,
-    "str":          FLAT_STR,
-    "dex":          FLAT_DEX,
-    "int":          FLAT_INT,
-    "luk":          FLAT_LUK,
-    "hp":           FLAT_HP,
-    "mp":           FLAT_MP,
-    "def":          FLAT_DEF,
-    "%str":         PERCENT_STR,
-    "%int":         PERCENT_INT,
-    "%dex":         PERCENT_DEX,
-    "%luk":         PERCENT_LUK,
-    "%hp":          PERCENT_HP,
-    "%mp":          PERCENT_MP,
-    "%def":         PERCENT_DEF,
-    "finalstr":     FINAL_STR,
-    "finalint":     FINAL_INT,
-    "finaldex":     FINAL_DEX,
-    "finalluk":     FINAL_LUK,
-    "finalhp":      FINAL_HP,
-    "finalmp":      FINAL_MP,
-    "finaldef":     FINAL_DEF,
-    "attack":       FLAT_ATTACK,
-    "%att":         PERCENT_ATTACK,
-    "finalattack":  FINAL_ATTACK,
-    "%damage":      DAMAGE,
-    "%bossdamage":  BOSS_DAMAGE,
-    "%ied":         IED,
-    "%critdamage":  CRIT_DAMAGE,
-    "%finaldamage": FINAL_DAMAGE,
-    "%allstat":     PERCENT_ALL_STAT,
-}
-
-statDict[BLANK] = "-none-"
-statDict[FLAT_STR] = "str";
-statDict[FLAT_DEX] = "dex";
-statDict[FLAT_INT] = "int";
-statDict[FLAT_LUK] = "luk";
-statDict[FLAT_HP] = "hp";
-statDict[FLAT_MP] = "mp";
-statDict[FLAT_DEF] = "def";
-statDict[PERCENT_STR] = "%str";
-statDict[PERCENT_INT] = "%int";
-statDict[PERCENT_DEX] = "%dex";
-statDict[PERCENT_LUK] = "%luk";
-statDict[PERCENT_HP] = "%hp";
-statDict[PERCENT_MP] = "%mp";
-statDict[PERCENT_DEF] = "%def";
-statDict[FINAL_STR] = "finalstr";
-statDict[FINAL_INT] = "finalint";
-statDict[FINAL_DEX] = "finaldex";
-statDict[FINAL_LUK] = "finalluk";
-statDict[FINAL_HP] = "finalhp";
-statDict[FINAL_MP] = "finalmp";
-statDict[FINAL_DEF] = "finaldef";
-statDict[FLAT_ATTACK] = "attack";
-statDict[PERCENT_ATTACK] = "%att";
-statDict[FINAL_ATTACK] = "finalattack";
-statDict[DAMAGE] = "%damage";
-statDict[BOSS_DAMAGE] = "%bossdamage";
-statDict[IED] = "%ied";
-statDict[CRIT_DAMAGE] = "%critdamage";
-statDict[FINAL_DAMAGE] = "%finaldamage";
-statDict[PERCENT_ALL_STAT] = "%allstat";
-
 const BEGINNER = 0;
 const HERO = 100;
 const PALADIN = 101;
@@ -185,7 +81,7 @@ class StarForce {
         this.isTransposed = isTransposed;
     }
 
-    
+    //TODO: this doesn't work
     calculateStats(level, equipType, visibleAtt) {
         let flatMainStat = 0;
         let flatSecondaryStat = 0;
@@ -203,7 +99,7 @@ class StarForce {
         if (level > 249)
             statInc = 17;
 
-            let attInc = 7;
+        let attInc = 7;
         if (level > 138)
             attInc = 8;
         if (level > 149)
@@ -215,7 +111,7 @@ class StarForce {
         if (level > 249)
             attInc = 14;
 
-        if (equipType == "weapon") {   
+        if (equipType == WEAPON) {   
             if (level < 200)
                 attInc -= 1;
             else
@@ -232,7 +128,7 @@ class StarForce {
                 flatMainStat += 1;
                 flatSecondaryStat += 1;
                 
-                if (equipType == "weapon")
+                if (equipType == WEAPON)
                     flatAttack += Math.floor(visibleAtt * 0.02)
 
             }
@@ -245,7 +141,7 @@ class StarForce {
                 flatAttack += attInc + (this.star - 16);
             }
 
-            if (equipType == "glove") {
+            if (equipType == GLOVES) {
                 if (star == 5 || star == 7 || star == 9 || star == 11 || star == 13 || star == 14 || star == 15)
                 {
                     flatAttack += 1;
@@ -254,7 +150,11 @@ class StarForce {
                 
         }
         
-        let stats = new Array(STATS_LENGTH).fill(0)
+        let stats = new Array(STATS_LENGTH).fill(0);
+
+        if (level == 0)
+            return stats;
+
         stats[FLAT_STR] = flatMainStat;
         stats[FLAT_ATTACK] = flatAttack;
         stats[FLAT_DEX] = flatSecondaryStat;
@@ -266,9 +166,7 @@ class StarForce {
 class Equip {
     constructor(name, starforce, potential, flame) {
         this.name = name;
-        this.level = 200;
-
-        this.stats = new Array(STATS_LENGTH).fill(0);
+        this.baseEquip = baseEquips[name];
 
         this.starforce = starforce;
         this.potential = potential;
@@ -280,18 +178,19 @@ class Equip {
         let stats = new Array(STATS_LENGTH).fill(0)
         let flameStats = this.flame.calculateStats();
         let potentialStats = this.potential.calculateStats();
-        let starforceStats = this.starforce.calculateStats();
+        let starforceStats = this.starforce.calculateStats(this.baseEquip.level, 
+            this.baseEquip.type, this.baseEquip.stats[FLAT_ATTACK]);
 
         for (let i=0; i<STATS_LENGTH; i++)
         {
             if (i == IED) { 
-                stats[IED] = addIEDSource(this.stats[IED], stats[IED]); 
+                stats[IED] = addIEDSource(this.baseEquip.stats[IED], stats[IED]); 
                 stats[IED] = addIEDSource(potentialStats[IED], stats[IED]);
                 stats[IED] = addIEDSource(flameStats[IED], stats[IED]); 
                 stats[IED] = addIEDSource(starforceStats[IED], stats[IED]);
             }
             else {
-                stats[i] = this.stats[i] + flameStats[i] + potentialStats[i] + starforceStats[i];
+                stats[i] = this.baseEquip.stats[i] + flameStats[i] + potentialStats[i] + starforceStats[i];
             }
         }
 
@@ -327,7 +226,7 @@ class Legion
     constructor(bossDamageSection, normalDamageSection, iedSection, critDamageSection, attackSection, 
     strSection, dexSection, intSection, lukSection, hpSection, mpSection)
     {
-        this.legionBlocks = []
+        this.legionBlocks = [];
         this.bossDamageSection = bossDamageSection;
         this.normalDamageSection = normalDamageSection;
         this.iedSection = iedSection;
@@ -491,53 +390,57 @@ class Range {
         
         if (this.job == DEMON_AVENGER)
         {
-            mainStat = this.setTotalStat(this.stats[FLAT_HP], this.stats[PERCENT_HP], this.stats[FINAL_HP]);
-            secondaryStat = this.setTotalStat(this.stats[FLAT_STR], this.stats[PERCENT_STR], this.stats[FINAL_STR]);
+            //TODO: demon avenger flat hp is only supposed to be halved for equips
+            mainStat = this.setTotalStat(this.stats[FLAT_HP]/2, this.stats[PERCENT_HP], this.stats[FINAL_HP]);
+            secondaryStat = this.setTotalStatPlusAll(this.stats[FLAT_STR], this.stats[PERCENT_STR], this.stats[FINAL_STR]);
             attack = this.setTotalStat(this.stats[FLAT_ATTACK], this.stats[PERCENT_ATTACK], this.stats[FINAL_ATTACK]);
         }
         if (this.job == KANNA)
         {
-            mainStat = this.setTotalStat(this.stats[FLAT_INT], this.stats[PERCENT_INT], this.stats[FINAL_INT]);
-            secondaryStat = this.setTotalStat(this.stats[FLAT_LUK], this.stats[PERCENT_LUK], this.stats[FINAL_LUK]);
-            attack = this.setTotalStat(this.stats[FLAT_ATTACK], this.stats[PERCENT_ATTACK], this.stats[FINAL_ATTACK]);
+            mainStat = this.setTotalStatPlusAll(this.stats[FLAT_INT], this.stats[PERCENT_INT], this.stats[FINAL_INT]);
+            secondaryStat = this.setTotalStatPlusAll(this.stats[FLAT_LUK], this.stats[PERCENT_LUK], this.stats[FINAL_LUK]);
+            let totalHp = this.setTotalStat(this.stats[FLAT_HP] + this.stats[FLAT_MP],
+                this.stats[PERCENT_HP] + this.stats[PERCENT_MP], FINAL_HP);
+            attack = this.setTotalStat(this.stats[FLAT_ATTACK], this.stats[PERCENT_ATTACK], 
+                this.stats[FINAL_ATTACK] + Math.max(Math.floor(totalHp/700), 500000));
         }
         if (this.job == XENON)
         {
-            mainStat = this.setTotalStat(this.stats[FLAT_STR], this.stats[PERCENT_STR], this.stats[FINAL_STR]) + 
-                        this.setTotalStat(this.stats[FLAT_DEX], this.stats[PERCENT_DEX], this.stats[FINAL_DEX]) + 
-                        this.setTotalStat(this.stats[FLAT_LUK], this.stats[PERCENT_LUK], this.stats[FINAL_LUK]);
+            mainStat = this.setTotalStatPlusAll(this.stats[FLAT_STR], this.stats[PERCENT_STR], this.stats[FINAL_STR]) + 
+                        this.setTotalStatPlusAll(this.stats[FLAT_DEX], this.stats[PERCENT_DEX], this.stats[FINAL_DEX]) + 
+                        this.setTotalStatPlusAll(this.stats[FLAT_LUK], this.stats[PERCENT_LUK], this.stats[FINAL_LUK]);
             secondaryStat = 0;
             attack = this.setTotalStat(this.stats[FLAT_ATTACK], this.stats[PERCENT_ATTACK], this.stats[FINAL_ATTACK]);
         }
         if ((this.job >= 100 && this.job < 200) || (this.job >= 500 && this.job < 550))
         {
-            mainStat = this.setTotalStat(this.stats[FLAT_STR], this.stats[PERCENT_STR], this.stats[FINAL_STR]);
-            secondaryStat = this.setTotalStat(this.stats[FLAT_DEX], this.stats[PERCENT_DEX], this.stats[FINAL_DEX]);
+            mainStat = this.setTotalStatPlusAll(this.stats[FLAT_STR], this.stats[PERCENT_STR], this.stats[FINAL_STR]);
+            secondaryStat = this.setTotalStatPlusAll(this.stats[FLAT_DEX], this.stats[PERCENT_DEX], this.stats[FINAL_DEX]);
             attack = this.setTotalStat(this.stats[FLAT_ATTACK], this.stats[PERCENT_ATTACK], this.stats[FINAL_ATTACK]);
         }
         if (this.job >= 200 && this.job < 300)
         {
-            mainStat = this.setTotalStat(this.stats[FLAT_INT], this.stats[PERCENT_INT], this.stats[FINAL_INT]);
-            secondaryStat = this.setTotalStat(this.stats[FLAT_LUK], this.stats[PERCENT_LUK], this.stats[FINAL_LUK]);
+            mainStat = this.setTotalStatPlusAll(this.stats[FLAT_INT], this.stats[PERCENT_INT], this.stats[FINAL_INT]);
+            secondaryStat = this.setTotalStatPlusAll(this.stats[FLAT_LUK], this.stats[PERCENT_LUK], this.stats[FINAL_LUK]);
             attack = this.setTotalStat(this.stats[FLAT_ATTACK], this.stats[PERCENT_ATTACK], this.stats[FINAL_ATTACK]);
         }
         if ((this.job >= 300 && this.job < 400) || (this.job >= 500 && this.job < 550))
         {
-            mainStat = this.setTotalStat(this.stats[FLAT_DEX], this.stats[PERCENT_DEX], this.stats[FINAL_DEX]);
-            secondaryStat = this.setTotalStat(this.stats[FLAT_STR], this.stats[PERCENT_STR], this.stats[FINAL_STR]);
+            mainStat = this.setTotalStatPlusAll(this.stats[FLAT_DEX], this.stats[PERCENT_DEX], this.stats[FINAL_DEX]);
+            secondaryStat = this.setTotalStatPlusAll(this.stats[FLAT_STR], this.stats[PERCENT_STR], this.stats[FINAL_STR]);
             attack = this.setTotalStat(this.stats[FLAT_ATTACK], this.stats[PERCENT_ATTACK], this.stats[FINAL_ATTACK]);
         }
         if (this.job >= 400 && this.job < 450)
         {
-            mainStat = this.setTotalStat(this.stats[FLAT_LUK], this.stats[PERCENT_LUK], this.stats[FINAL_LUK]);
-            secondaryStat = this.setTotalStat(this.stats[FLAT_DEX], this.stats[PERCENT_DEX], this.stats[FINAL_DEX]);
+            mainStat = this.setTotalStatPlusAll(this.stats[FLAT_LUK], this.stats[PERCENT_LUK], this.stats[FINAL_LUK]);
+            secondaryStat = this.setTotalStatPlusAll(this.stats[FLAT_DEX], this.stats[PERCENT_DEX], this.stats[FINAL_DEX]);
             attack = this.setTotalStat(this.stats[FLAT_ATTACK], this.stats[PERCENT_ATTACK], this.stats[FINAL_ATTACK]);
         }
         if (this.job >= 450 && this.job < 500)
         {
-            mainStat = this.setTotalStat(this.stats[FLAT_LUK], this.stats[PERCENT_LUK], this.stats[FINAL_LUK]);
-            secondaryStat = this.setTotalStat(this.stats[FLAT_DEX], this.stats[PERCENT_DEX], this.stats[FINAL_DEX]) +
-                            this.setTotalStat(this.stats[FLAT_STR], this.stats[PERCENT_STR], this.stats[FINAL_STR])
+            mainStat = this.setTotalStatPlusAll(this.stats[FLAT_LUK], this.stats[PERCENT_LUK], this.stats[FINAL_LUK]);
+            secondaryStat = this.setTotalStatPlusAll(this.stats[FLAT_DEX], this.stats[PERCENT_DEX], this.stats[FINAL_DEX]) +
+                            this.setTotalStatPlusAll(this.stats[FLAT_STR], this.stats[PERCENT_STR], this.stats[FINAL_STR])
             attack = this.setTotalStat(this.stats[FLAT_ATTACK], this.stats[PERCENT_ATTACK], this.stats[FINAL_ATTACK]);
         }
 
@@ -552,12 +455,17 @@ class Range {
         return Math.floor(flatStat * (1.0 + percentStat/100.0) + finalStat);
     }
 
-    addEquip(equip) {
-        let equipStats = equip.calculateStats();
+    setTotalStatPlusAll(flatStat, percentStat, finalStat) {
+        return Math.floor((flatStat + this.stats[FLAT_ALL_STAT]) 
+        * (1.0 + (percentStat + this.stats[PERCENT_ALL_STAT])/100.0) 
+        + finalStat);
+    }
+
+    addStats(stats) {
         for (let i=0; i<STATS_LENGTH; i++)
         {
-            if (i == IED) this.stats[i] = addIEDSource(this.stats[IED], equipStats[IED])
-            else this.stats[i] += equipStats[i];
+            if (i == IED) this.stats[i] = addIEDSource(this.stats[IED], stats[IED])
+            else this.stats[i] += stats[i];
         }
     }
 }
@@ -574,10 +482,26 @@ function test1()
 
     let equip = new Equip("testEquip", starforce, potential, flame);
     let stats = new Range(NIGHTLORD);
-    stats.addEquip(equip);
+    stats.addStats(equip.calculateStats());
 
     let damageToBosses = stats.inGameRange();
     
     document.getElementById("testID").innerHTML = damageToBosses;
 
+}
+
+function updateRange()
+{
+    let stats = new Range(NIGHTLORD);
+    for (let i=0; i<equips.length; i++)
+    {
+        stats.addStats(equips[i].calculateStats());
+    }
+    document.getElementById("damagetobosses").innerHTML = "Damage To Bosses: " + stats.damageToBosses();
+    statstext = document.getElementById("statstext");
+    statstext.innerHTML = "";
+    for (let i=1; i<STATS_LENGTH; i++)
+    {
+        statstext.innerHTML += statDict[i] + ": " + stats.stats[i] + '<br>';
+    }
 }
