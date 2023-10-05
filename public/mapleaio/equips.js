@@ -71,7 +71,7 @@ for (let i = 0; i < 5; i++)
     for (let j = 0; j < possibleFlameStats.length; j++)
     {
         let oStat = possibleFlameStats[j];
-        var option = document.createElement("option");
+        let option = document.createElement("option");
         option.text = statDict[oStat];
         option.value = statDict[oStat];
         flameStat.add(option);
@@ -154,17 +154,6 @@ function showEquipStats(id)
     }
     document.getElementById("starforceValue").value = equips[equipSelected].starforce.star;
 
-}
-
-function showTab(id)
-{
-    var tab = document.getElementById(id);
-    if (tab.style.display === "none") 
-        tab.style.display = "block";
-    else 
-        tab.style.display = "none";
-
-    equipStats.style.display = "none";
 }
 
 //called when the user changes the html value of one of the flame, pot, or starforce stat elements

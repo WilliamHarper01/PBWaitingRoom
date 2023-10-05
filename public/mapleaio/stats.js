@@ -35,7 +35,17 @@ const CRIT_DAMAGE = 28;
 const FINAL_DAMAGE = 29;
 const PERCENT_ALL_STAT = 30;
 const FLAT_ALL_STAT = 31;
-const STATS_LENGTH = 32;
+const NORMAL_DAMAGE = 32
+const STATS_LENGTH = 33;
+
+//placeholder stats that don't do anything
+const FLAT_COOLDOWN_REDUCTION = 50;
+const PERCENT_COOLDOWN_REDUCTION = 60;
+const SKIP_COOLDOWN = 51;
+const ATTACK_SPEED = 52;
+const CRIT_RATE = 53;
+const BUFF_DURATION = 54;
+const MINION_DURATION = 55;
 
 const statDict = {
     "-none-":       BLANK,
@@ -70,6 +80,7 @@ const statDict = {
     "%finaldamage": FINAL_DAMAGE,
     "%allstat":     PERCENT_ALL_STAT,
     "allstat":      FLAT_ALL_STAT,
+    "normaldamage": NORMAL_DAMAGE,
 }
 
 statDict[BLANK] = "-none-"
@@ -104,3 +115,12 @@ statDict[CRIT_DAMAGE] = "%critdamage";
 statDict[FINAL_DAMAGE] = "%finaldamage";
 statDict[PERCENT_ALL_STAT] = "%allstat";
 statDict[FLAT_ALL_STAT] = "allstat";
+statDict[NORMAL_DAMAGE] = "normaldamage";
+
+statDict[FLAT_COOLDOWN_REDUCTION] = "cooldown reduction";
+statDict[PERCENT_COOLDOWN_REDUCTION] = "%cooldown reduction";
+statDict[SKIP_COOLDOWN] = "cooldown skip";
+statDict[CRIT_RATE] = "crit rate";
+statDict[ATTACK_SPEED] = "attack speed";
+statDict[BUFF_DURATION] = "buff duration";
+statDict[MINION_DURATION] = "minion duration";

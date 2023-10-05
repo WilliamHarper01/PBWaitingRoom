@@ -1,25 +1,5 @@
 "use strict";
 
-const BEGINNER = 0;
-const HERO = 100;
-const PALADIN = 101;
-const DARK_KNIGHT = 102;
-const FIRE_POISON = 200;
-const ICE_LIGHTNING = 201;
-const BISHOP = 202;
-const BOWMASTER = 300;
-const MARKSMAN = 301;
-const PATHFINDER = 302;
-const NIGHTLORD = 400;
-const SHADOWER = 450;
-const DUAL_BLADE = 451;
-const CORSAIR = 500;
-const BUCCANEER = 550;
-const CANNON_MASTER = 551;
-const DEMON_AVENGER = 600;
-const KANNA = 700;
-const XENON = 800;
-
 function addIEDSource(a, b) {
     return 100.0 - (100.0 * (1.0 - a / 100.0) * (1.0 - b / 100.0));
 }
@@ -81,10 +61,8 @@ class StarForce {
         this.isTransposed = isTransposed;
     }
 
-    //TODO: this doesn't work
-    calculateStats(level, equipType, visibleAtt) {
+    calculateStats(level, equipType, visibleAtt, branch) {
         let flatMainStat = 0;
-        let flatSecondaryStat = 0;
         let flatAttack = 0;
 
         let statInc = 7;
@@ -111,53 +89,78 @@ class StarForce {
         if (level > 249)
             attInc = 14;
 
-        if (equipType == WEAPON) {   
-            if (level < 200)
-                attInc -= 1;
-            else
-                attInc += 2;
-            
-        }
+        let past16Attack = [0, 1, 2, 3, 4, 5, 7, 9, 11, 13];
+        let past16AttackWeapon = [-1, -1, 0, 1, 2, 3, 4, 12, 13, 14];
         
         for (let i=1; i<=this.star; i++) {
             if (i < 6) {
                 flatMainStat += 2;
-                flatSecondaryStat += 2;
+                if (equipType == WEAPON)
+                    flatAttack += visibleAtt * 0.02
             }
-            if (i < 16) {
-                flatMainStat += 1;
-                flatSecondaryStat += 1;
+            else if (i < 16) {
+                flatMainStat += 3;
                 
                 if (equipType == WEAPON)
-                    flatAttack += Math.floor(visibleAtt * 0.02)
+                    flatAttack += visibleAtt * 0.02
 
             }
-            if (i >= 16) {
-                if (i < 23)
+            else
+            {
+                if (equipType == WEAPON)
                 {
                     flatMainStat += statInc;
-                    flatSecondaryStat += statInc;
+                    flatAttack += attInc + past16AttackWeapon[i-16];
+                    if (level >= 200)
+                    {
+                        if (i == 16 || i == 18)
+                            flatAttack += 2;
+                        else if (i == 17 || i == 18 || i == 19 || i == 20 || i == 21 || i == 22)
+                            flatAttack += 1;
+                    }
                 }
-                flatAttack += attInc + (this.star - 16);
-            }
-
-            if (equipType == GLOVES) {
-                if (star == 5 || star == 7 || star == 9 || star == 11 || star == 13 || star == 14 || star == 15)
+                else if (equipType == BADGE)
                 {
-                    flatAttack += 1;
+                    flatMainStat += statInc;
+                }
+                else
+                {
+                    flatMainStat += statInc;
+                    flatAttack += attInc + past16Attack[i - 16];
                 }
             }
                 
         }
+
+        flatAttack = Math.floor(flatAttack);
         
         let stats = new Array(STATS_LENGTH).fill(0);
 
         if (level == 0)
             return stats;
 
-        stats[FLAT_STR] = flatMainStat;
-        stats[FLAT_ATTACK] = flatAttack;
-        stats[FLAT_DEX] = flatSecondaryStat;
+        if (branch == ALL_CLASS) {
+            stats[FLAT_STR] = flatMainStat;
+            stats[FLAT_DEX] = flatMainStat;
+            stats[FLAT_INT] = flatMainStat;
+            stats[FLAT_LUK] = flatMainStat;
+            stats[FLAT_ATTACK] = flatAttack;
+        }
+        else if (branch == WARRIOR || branch == BOWMAN || branch == PIRATE) {
+            stats[FLAT_STR] = flatMainStat;
+            stats[FLAT_DEX] = flatMainStat;
+            stats[FLAT_ATTACK] = flatAttack;
+        }
+        else if (branch == MAGE) {
+            stats[FLAT_INT] = flatMainStat;
+            stats[FLAT_LUK] = flatMainStat;
+            stats[FLAT_ATTACK] = flatAttack;
+        }
+        else if (branch == THEIF) {
+            stats[FLAT_DEX] = flatMainStat;
+            stats[FLAT_LUK] = flatMainStat;
+            stats[FLAT_ATTACK] = flatAttack;
+        }
 
         return stats;
     }
@@ -179,7 +182,7 @@ class Equip {
         let flameStats = this.flame.calculateStats();
         let potentialStats = this.potential.calculateStats();
         let starforceStats = this.starforce.calculateStats(this.baseEquip.level, 
-            this.baseEquip.type, this.baseEquip.stats[FLAT_ATTACK]);
+            this.baseEquip.type, this.baseEquip.stats[FLAT_ATTACK], this.baseEquip.branch);
 
         for (let i=0; i<STATS_LENGTH; i++)
         {
@@ -268,7 +271,7 @@ class Legion
 
             if (job == DEMON_AVENGER)
                 this.stats[BOSS_DAMAGE] += Math.round(1.15 * level); //1, 2, 3, 5, 6
-            else
+            else if (job != 0)
                 console.log("legion block for job " + this.job + " not implemented yet!");
         }
 
@@ -470,26 +473,6 @@ class Range {
     }
 }
 
-function test1()
-{
-    let linkSkill = new LinkSkill(BOWMASTER, 3);
-    linkSkill.calculateStats();
-
-    let flame = new Flame([FLAT_LUK, 41247], [FLAT_DEX, 9311], [IED, 99], [DAMAGE, 71]);
-
-    let potential = new Potential([FINAL_ATTACK, 3939], [FINAL_DAMAGE, 145.03], [BLANK, 0]);
-    let starforce = new StarForce(0, false);
-
-    let equip = new Equip("testEquip", starforce, potential, flame);
-    let stats = new Range(NIGHTLORD);
-    stats.addStats(equip.calculateStats());
-
-    let damageToBosses = stats.inGameRange();
-    
-    document.getElementById("testID").innerHTML = damageToBosses;
-
-}
-
 function updateRange()
 {
     let stats = new Range(NIGHTLORD);
@@ -497,6 +480,13 @@ function updateRange()
     {
         stats.addStats(equips[i].calculateStats());
     }
+    stats.addStats(inner.calculateStats());
+    
+    for (let i=0; i<links.length; i++)
+    {
+        stats.addStats(links[i].calculateStats());
+    }
+
     document.getElementById("damagetobosses").innerHTML = "Damage To Bosses: " + stats.damageToBosses();
     statstext = document.getElementById("statstext");
     statstext.innerHTML = "";

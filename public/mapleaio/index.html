@@ -1,25 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>MapleAIO</title>
-  </head>
-  <body id="body">
-    <button id="showEquipTab" onclick="showTab('equipTab')">EQUIPS</button>
-    
-    <div id="equipTab"> </div>
+	<head>
+		<meta charset="utf-8">
+		<title>MapleAIO</title>
+	</head>
+	<body id="body">
+		<button id="showEquipTab" onclick="showTab('equipTab')">EQUIPS</button>
+		<button id="showInnerTab" onclick="showTab('innerTab')">INNER</button>
+		<button id="showLinkTab" onclick="showTab('linkTab')">LINKS</button>
+		
+		<div id="equipTab"> </div>
+		<div id="innerTab"> </div>
+		<div id="linkTab"> </div>
 
-    <div>
-      <h1 id="damagetobosses">Damage To Bosses: 0 </h1>
-      <h1>Stats: </h1>
-      <p id="statstext"> </p>
-    </div>
+		<div>
+		<h1 id="damagetobosses">Damage To Bosses: 0 </h1>
+		<h1>Stats: </h1>
+		<p id="statstext"> </p>
+		</div>
 
-    <style src="styles.css"></style>
-    <script src="stats.js"> </script>
-    <script src="baseEquips.js"> </script>
-    <script src="formulas.js"></script>
-    <script src="equips.js"> </script>
-  </body>
+		<style src="styles.css"></style>
+
+		<script>
+			document.getElementById("equipTab").style.display = "none";
+			document.getElementById("innerTab").style.display = "none";
+			document.getElementById("linkTab").style.display = "none";
+
+			function showTab(id)
+			{
+				document.getElementById("equipTab").style.display = "none";
+				document.getElementById("innerTab").style.display = "none";
+				document.getElementById("linkTab").style.display = "none";
+				
+				var tab = document.getElementById(id);
+				if (tab.style.display === "none") 
+					tab.style.display = "block";
+				else 
+					tab.style.display = "none";
+			}  
+		</script>
+
+		<script src="stats.js"> </script>
+		<script src="jobs.js"> </script>
+		<script src="baseEquips.js"> </script>
+		<script src="formulas.js"></script>
+		<script src="equips.js"> </script>
+		<script src="inner.js"> </script>
+		<script src="links.js"> </script>
+	</body>
 </html>
 
