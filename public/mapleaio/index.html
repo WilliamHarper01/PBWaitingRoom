@@ -5,10 +5,12 @@
 		<title>MapleAIO</title>
 	</head>
 	<body id="body">
+		<button id="showCharacterTab" onclick="showTab('characterTab')">CHARACTER</button>
 		<button id="showEquipTab" onclick="showTab('equipTab')">EQUIPS</button>
 		<button id="showInnerTab" onclick="showTab('innerTab')">INNER</button>
 		<button id="showLinkTab" onclick="showTab('linkTab')">LINKS</button>
 		
+		<div id="characterTab"> </div>
 		<div id="equipTab"> </div>
 		<div id="innerTab"> </div>
 		<div id="linkTab"> </div>
@@ -22,12 +24,15 @@
 		<style src="styles.css"></style>
 
 		<script>
+
+			document.getElementById("characterTab").style.display = "none";
 			document.getElementById("equipTab").style.display = "none";
 			document.getElementById("innerTab").style.display = "none";
 			document.getElementById("linkTab").style.display = "none";
 
 			function showTab(id)
 			{
+				document.getElementById("characterTab").style.display = "none";
 				document.getElementById("equipTab").style.display = "none";
 				document.getElementById("innerTab").style.display = "none";
 				document.getElementById("linkTab").style.display = "none";
@@ -40,10 +45,12 @@
 			}  
 		</script>
 
+		<script src="utils.js"> </script>
 		<script src="stats.js"> </script>
 		<script src="jobs.js"> </script>
 		<script src="baseEquips.js"> </script>
 		<script src="formulas.js"></script>
+		<script src="character.js"></script>
 		<script src="equips.js"> </script>
 		<script src="inner.js"> </script>
 		<script src="links.js"> </script>

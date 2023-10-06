@@ -49,7 +49,7 @@ function changeLink(part, line)
     if (part == 0)
         links[line].job = classDict[document.getElementById("linkLine" + line).firstChild.value];
     else
-        links[line].level = Number(document.getElementById("linkLine" + line).lastChild.value);
+        links[line].level = isANumber(document.getElementById("linkLine" + line).lastChild.value);
 
     updateRange();
 }

@@ -35,7 +35,7 @@ const CRIT_DAMAGE = 28;
 const FINAL_DAMAGE = 29;
 const PERCENT_ALL_STAT = 30;
 const FLAT_ALL_STAT = 31;
-const NORMAL_DAMAGE = 32
+const NORMAL_DAMAGE = 32;
 const STATS_LENGTH = 33;
 
 //placeholder stats that don't do anything

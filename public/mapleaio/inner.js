@@ -37,7 +37,7 @@ function changeInner(part, line)
     if (part == 0)
         inner.lines[line][0] = statDict[document.getElementById("innerLine" + line).firstChild.value];
     else
-        inner.lines[line][1] = Number(document.getElementById("innerLine" + line).lastChild.value);
+        inner.lines[line][1] = isANumber(document.getElementById("innerLine" + line).lastChild.value);
 
     updateRange();
 }

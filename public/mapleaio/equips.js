@@ -171,16 +171,16 @@ function changeStat(type, part, index)
         if (part == 0)
             equips[equipSelected].flame.lines[index][0] = statDict[flameTab.childNodes[index].firstChild.value];
         else
-            equips[equipSelected].flame.lines[index][1] = Number(flameTab.childNodes[index].lastChild.value);
+            equips[equipSelected].flame.lines[index][1] = isANumber(flameTab.childNodes[index].lastChild.value);
     }
     else if (type == "starforce")
-        equips[equipSelected].starforce.star = Number(document.getElementById("starforceValue").value);
+        equips[equipSelected].starforce.star = isANumber(document.getElementById("starforceValue").value);
     else if (type == "potential")
     {
         if (part == 0)
             equips[equipSelected].potential.lines[index][0] = statDict[potentialTab.childNodes[index].firstChild.value];
         else
-            equips[equipSelected].potential.lines[index][1] = Number(potentialTab.childNodes[index].lastChild.value);
+            equips[equipSelected].potential.lines[index][1] = isANumber(potentialTab.childNodes[index].lastChild.value);
     }
 
     updateRange();

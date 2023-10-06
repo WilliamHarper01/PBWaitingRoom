@@ -1,7 +1,26 @@
 "use strict";
 
-function addIEDSource(a, b) {
-    return 100.0 - (100.0 * (1.0 - a / 100.0) * (1.0 - b / 100.0));
+function rebootStats(lvl)
+{
+    let rStats = new Array(STATS_LENGTH).fill(0);
+    rStats[FLAT_ATTACK] += 5;
+    rStats[FLAT_HP] += 200;
+    rStats[FLAT_MP] += 100;
+
+    if (lvl >= 300)
+        rStats[FINAL_DAMAGE] = 70;
+    else if (lvl >= 250)
+        rStats[FINAL_DAMAGE] = 65;
+    else if (lvl >= 200)
+        rStats[FINAL_DAMAGE] = 60;
+    else if (lvl >= 150)
+        rStats[FINAL_DAMAGE] = 50;
+    else if (lvl >= 100)
+        rStats[FINAL_DAMAGE] = 40;
+    else
+        rStats[FINAL_DAMAGE] = 30;
+
+    return rStats;
 }
 
 class Flame {
@@ -476,6 +495,19 @@ class Range {
 function updateRange()
 {
     let stats = new Range(NIGHTLORD);
+
+    stats.addStats(rebootStats(characterLevel));
+
+    stats.addStats(getJobStats(job, commonLevels[0],
+        commonLevels[1],
+        commonLevels[2],
+        commonLevels[3],
+        commonLevels[4],
+        commonLevels[5],
+        commonLevels[6],
+        commonLevels[7],
+        commonLevels[8],));
+
     for (let i=0; i<equips.length; i++)
     {
         stats.addStats(equips[i].calculateStats());

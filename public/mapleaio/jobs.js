@@ -60,3 +60,66 @@ classDict[CANNON_MASTER] = "Cannon Master";
 classDict[DEMON_AVENGER] = "Demon Avenger";
 classDict[KANNA] = "Kanna";
 classDict[XENON] = "Xenon";
+
+passiveStats = [];
+
+passiveStats[BEGINNER] = new Array(STATS_LENGTH).fill(0);
+
+function getJobStats(job, dse=0, dsi=0, rope=0, blink=0, dab=0, 
+    dco=0, dhb=0, dmd=0, eb=0, averageIEDfromAttacks=0, averageCritDamageFromVS=0)
+{
+    jStats = new Array(STATS_LENGTH).fill(0)
+    switch (job)
+    {
+        case BOWMASTER:
+            jStats[FLAT_STR] = 30;
+            jStats[FLAT_DEX] = 130;
+            jStats[FLAT_ATTACK] = 130;
+            jStats[PERCENT_ATTACK] = 25;
+            if (dco >= 1)
+            {
+                jStats[CRIT_DAMAGE] = 32;
+                jStats[IED] = addIEDSource(25, 41);
+                jStats[FLAT_ATTACK] += 3;
+                jStats[FLAT_DEX] += 2;
+            }
+            else
+            {
+                jStats[IED] = 55;
+                jStats[CRIT_DAMAGE] = 31;
+            }
+            jStats[FINAL_DAMAGE] = 37.8;
+            
+
+            break;
+    }
+
+    if(dse >= 1)
+        jStats[CRIT_DAMAGE] += 8;
+    
+    jStats[FLAT_ALL_STAT] += Math.floor(dmd/5);
+    jStats[FLAT_ALL_STAT] += rope;
+    jStats[FLAT_ALL_STAT] += Math.floor(dsi/5);
+    jStats[FLAT_ATTACK] += blink;
+    
+    if (dab >= 1)
+    {
+        jStats[FLAT_ATTACK] += 20;
+        jStats[FLAT_DEF] += 425;
+        jStats[FLAT_HP] += 475;
+        jStats[FLAT_MP] += 475;
+    }
+
+    jStats[FLAT_ATTACK] += eb;
+
+    if (dhb >= 1)
+    {
+        jStats[PERCENT_HP] += 40;
+        jStats[PERCENT_MP] += 40;
+    }
+
+    jStats[IED] = addIEDSource(jStats[IED], averageIEDfromAttacks);
+    jStats[CRIT_DAMAGE] += averageCritDamageFromVS;
+
+    return jStats;
+}
