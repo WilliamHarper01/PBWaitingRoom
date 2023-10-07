@@ -7,13 +7,22 @@
 	<body id="body">
 		<button id="showCharacterTab" onclick="showTab('characterTab')">CHARACTER</button>
 		<button id="showEquipTab" onclick="showTab('equipTab')">EQUIPS</button>
-		<button id="showInnerTab" onclick="showTab('innerTab')">INNER</button>
 		<button id="showLinkTab" onclick="showTab('linkTab')">LINKS</button>
+		<button id="showLegionTab" onclick="showTab('legionTab')">LEGION</button>
+		<button id="showHyperTab" onclick="showTab('hyperTab')">HYPERS</button>
+		<button id="showSymbolsTab" onclick="showTab('symbolsTab')">SYMBOLS</button>
+		<button id="showFamiliarsTab" onclick="showTab('familiarsTab')">FAMILIARS</button>
+		<button id="showInnerTab" onclick="showTab('innerTab')">MISC</button>
+
 		
 		<div id="characterTab"> </div>
 		<div id="equipTab"> </div>
-		<div id="innerTab"> </div>
 		<div id="linkTab"> </div>
+		<div id="legionTab"> </div>
+		<div id="hyperTab"> </div>
+		<div id="symbolsTab"> </div>
+		<div id="familiarsTab"> </div>
+		<div id="innerTab"> </div>
 
 		<div>
 		<h1 id="damagetobosses">Damage To Bosses: 0 </h1>
@@ -29,9 +38,17 @@
 			document.getElementById("equipTab").style.display = "none";
 			document.getElementById("innerTab").style.display = "none";
 			document.getElementById("linkTab").style.display = "none";
+			document.getElementById("legionTab").style.display = "none";
+			document.getElementById("hyperTab").style.display = "none";
+			document.getElementById("symbolsTab").style.display = "none";
+			document.getElementById("familiarsTab").style.display = "none";
 
 			function showTab(id)
 			{
+				document.getElementById("legionTab").style.display = "none";
+				document.getElementById("familiarsTab").style.display = "none";
+				document.getElementById("symbolsTab").style.display = "none";
+				document.getElementById("hyperTab").style.display = "none";
 				document.getElementById("characterTab").style.display = "none";
 				document.getElementById("equipTab").style.display = "none";
 				document.getElementById("innerTab").style.display = "none";
@@ -54,6 +71,10 @@
 		<script src="equips.js"> </script>
 		<script src="inner.js"> </script>
 		<script src="links.js"> </script>
+		<script src="legion.js"> </script>
+		<script src="hyperstats.js"> </script>
+		<script src="symbols.js"> </script>
+		<script src="familiars.js"> </script>
 	</body>
 </html>
 

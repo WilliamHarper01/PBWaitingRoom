@@ -1,23 +1,27 @@
-const BEGINNER = 0;
-const HERO = 1;
-const PALADIN = 2;
+const BEGINNER = -1;
+const HERO = 0;
+const PALADIN = 1;
+const ADELE = 2;
 const DARK_KNIGHT = 3;
 const FIRE_POISON = 4;
-const ICE_LIGHTNING = 5;
-const BISHOP = 6;
-const BOWMASTER = 7;
-const MARKSMAN = 8;
-const PATHFINDER = 9;
-const NIGHTLORD = 10;
-const SHADOWER = 11;
-const DUAL_BLADE = 12;
-const CORSAIR = 13;
-const BUCCANEER = 14;
-const CANNON_MASTER = 15;
-const DEMON_AVENGER = 16;
-const KANNA = 17;
-const XENON = 18;
-const CLASS_LENGTH = 19;
+const ILLIUM = 5;
+const ICE_LIGHTNING = 6;
+const BISHOP = 7;
+const BOWMASTER = 8;
+const MARKSMAN = 9;
+const PATHFINDER = 10;
+const NIGHTLORD = 11;
+const SHADOWER = 12;
+const KHALI = 13;
+const DUAL_BLADE = 14;
+const CORSAIR = 15;
+const BUCCANEER = 16;
+const ARK = 17;
+const CANNON_MASTER = 18;
+const DEMON_AVENGER = 19;
+const KANNA = 20;
+const XENON = 21;
+const CLASS_LENGTH = 22;
 
 const classDict = {
     "-none-": BEGINNER,
@@ -39,6 +43,10 @@ const classDict = {
     "Demon Avenger": DEMON_AVENGER,
     "Kanna": KANNA,
     "Xenon": XENON,
+    "Adele": ADELE,
+    "Ark": ARK,
+    "Illium": ILLIUM,
+    "Khali": KHALI,
 }
 
 classDict[BEGINNER] = "-none-";
@@ -60,6 +68,10 @@ classDict[CANNON_MASTER] = "Cannon Master";
 classDict[DEMON_AVENGER] = "Demon Avenger";
 classDict[KANNA] = "Kanna";
 classDict[XENON] = "Xenon";
+classDict[ADELE] = "Adele";
+classDict[ARK] = "Ark";
+classDict[ILLIUM] = "Illium";
+classDict[KHALI] = "Khali";
 
 passiveStats = [];
 

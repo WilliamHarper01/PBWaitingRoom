@@ -7,7 +7,6 @@ var commonNames = ["Decent Sharp Eyes", "Decent Speed Infusion", "Rope Lift", "B
 var skillIEDValue = 0;
 var VSValue = 0;
 
-
 var characterTab = document.getElementById("characterTab");
 
 var jobSelection = document.createElement("div");

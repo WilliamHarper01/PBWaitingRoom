@@ -1,12 +1,10 @@
 var linkTab = document.getElementById("linkTab");
 
-var linkOptions = [BLANK, DEMON_AVENGER];
-
 var links = new Array(12);
 
 for (let i = 0; i < 12; i++)
 {
-    links[i] = new LinkSkill(BLANK, 0);
+    links[i] = new LinkSkill(BEGINNER, 0);
 }
 
 for (let i = 0; i < 12; i++)
@@ -18,7 +16,7 @@ for (let i = 0; i < 12; i++)
     let linkClass = document.createElement("select");
     let linkLevel = document.createElement("select");
 
-    for (let j = 0; j < CLASS_LENGTH; j++)
+    for (let j = -1; j < CLASS_LENGTH; j++)
     {
         let oStat = classDict[j];
         let option = document.createElement("option");
@@ -38,6 +36,7 @@ for (let i = 0; i < 12; i++)
     linkClass.setAttribute("onchange", "changeLink(0, " + i + ")");
     linkLevel.setAttribute("onchange", "changeLink(1, " + i + ")");
     linkLevel.value = links[i].level;
+    linkClass.value = classDict[links[i].job];
 
 
     linkLine.appendChild(linkClass);
@@ -53,3 +52,4 @@ function changeLink(part, line)
 
     updateRange();
 }
+

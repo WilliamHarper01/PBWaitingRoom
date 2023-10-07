@@ -48,74 +48,74 @@ const BUFF_DURATION = 54;
 const MINION_DURATION = 55;
 
 const statDict = {
-    "-none-":       BLANK,
-    "str":          FLAT_STR,
-    "dex":          FLAT_DEX,
-    "int":          FLAT_INT,
-    "luk":          FLAT_LUK,
-    "hp":           FLAT_HP,
-    "mp":           FLAT_MP,
-    "def":          FLAT_DEF,
-    "%str":         PERCENT_STR,
-    "%int":         PERCENT_INT,
-    "%dex":         PERCENT_DEX,
-    "%luk":         PERCENT_LUK,
-    "%hp":          PERCENT_HP,
-    "%mp":          PERCENT_MP,
-    "%def":         PERCENT_DEF,
-    "finalstr":     FINAL_STR,
-    "finalint":     FINAL_INT,
-    "finaldex":     FINAL_DEX,
-    "finalluk":     FINAL_LUK,
-    "finalhp":      FINAL_HP,
-    "finalmp":      FINAL_MP,
-    "finaldef":     FINAL_DEF,
-    "attack":       FLAT_ATTACK,
-    "%att":         PERCENT_ATTACK,
-    "finalattack":  FINAL_ATTACK,
-    "%damage":      DAMAGE,
-    "%bossdamage":  BOSS_DAMAGE,
-    "%ied":         IED,
-    "%critdamage":  CRIT_DAMAGE,
-    "%finaldamage": FINAL_DAMAGE,
-    "%allstat":     PERCENT_ALL_STAT,
-    "allstat":      FLAT_ALL_STAT,
-    "normaldamage": NORMAL_DAMAGE,
+    "-none-":           BLANK,
+    "STR":              FLAT_STR,
+    "DEX":              FLAT_DEX,
+    "INT":              FLAT_INT,
+    "LUK":              FLAT_LUK,
+    "HP":               FLAT_HP,
+    "MP":               FLAT_MP,
+    "DEF":              FLAT_DEF,
+    "%STR":             PERCENT_STR,
+    "%INT":             PERCENT_INT,
+    "%DEX":             PERCENT_DEX,
+    "%LUK":             PERCENT_LUK,
+    "%HP":              PERCENT_HP,
+    "%MP":              PERCENT_MP,
+    "%DEF":             PERCENT_DEF,
+    "Final STR":        FINAL_STR,
+    "Final INT":        FINAL_INT,
+    "Final DEX":        FINAL_DEX,
+    "Final LUK":        FINAL_LUK,
+    "Final HP":         FINAL_HP,
+    "Final MP":         FINAL_MP,
+    "Final DEF":        FINAL_DEF,
+    "ATT/MATT":         FLAT_ATTACK,
+    "%ATT/MATT":        PERCENT_ATTACK,
+    "Final ATT/MATT":   FINAL_ATTACK,
+    "%Damage":          DAMAGE,
+    "%Boss Damage":     BOSS_DAMAGE,
+    "%IED":             IED,
+    "%Critical Damage": CRIT_DAMAGE,
+    "%Final Damage":    FINAL_DAMAGE,
+    "%All Stats":       PERCENT_ALL_STAT,
+    "All Stats":        FLAT_ALL_STAT,
+    "Normal Damage":    NORMAL_DAMAGE,
 }
 
-statDict[BLANK] = "-none-"
-statDict[FLAT_STR] = "str";
-statDict[FLAT_DEX] = "dex";
-statDict[FLAT_INT] = "int";
-statDict[FLAT_LUK] = "luk";
-statDict[FLAT_HP] = "hp";
-statDict[FLAT_MP] = "mp";
-statDict[FLAT_DEF] = "def";
-statDict[PERCENT_STR] = "%str";
-statDict[PERCENT_INT] = "%int";
-statDict[PERCENT_DEX] = "%dex";
-statDict[PERCENT_LUK] = "%luk";
-statDict[PERCENT_HP] = "%hp";
-statDict[PERCENT_MP] = "%mp";
-statDict[PERCENT_DEF] = "%def";
-statDict[FINAL_STR] = "finalstr";
-statDict[FINAL_INT] = "finalint";
-statDict[FINAL_DEX] = "finaldex";
-statDict[FINAL_LUK] = "finalluk";
-statDict[FINAL_HP] = "finalhp";
-statDict[FINAL_MP] = "finalmp";
-statDict[FINAL_DEF] = "finaldef";
-statDict[FLAT_ATTACK] = "attack";
-statDict[PERCENT_ATTACK] = "%att";
-statDict[FINAL_ATTACK] = "finalattack";
-statDict[DAMAGE] = "%damage";
-statDict[BOSS_DAMAGE] = "%bossdamage";
-statDict[IED] = "%ied";
-statDict[CRIT_DAMAGE] = "%critdamage";
-statDict[FINAL_DAMAGE] = "%finaldamage";
-statDict[PERCENT_ALL_STAT] = "%allstat";
-statDict[FLAT_ALL_STAT] = "allstat";
-statDict[NORMAL_DAMAGE] = "normaldamage";
+statDict[BLANK] = "-none-";
+statDict[FLAT_STR] = "STR";
+statDict[FLAT_DEX] = "DEX";
+statDict[FLAT_INT] = "INT";
+statDict[FLAT_LUK] = "LUK";
+statDict[FLAT_HP] = "HP";
+statDict[FLAT_MP] = "MP";
+statDict[FLAT_DEF] = "DEF";
+statDict[PERCENT_STR] ="%STR";
+statDict[PERCENT_INT] ="%INT";
+statDict[PERCENT_DEX] ="%DEX";
+statDict[PERCENT_LUK] ="%LUK";
+statDict[PERCENT_HP] = "%HP";
+statDict[PERCENT_MP] = "%MP";
+statDict[PERCENT_DEF] ="%DEF";
+statDict[FINAL_STR] = "Final STR";
+statDict[FINAL_INT] = "Final INT";
+statDict[FINAL_DEX] = "Final DEX";
+statDict[FINAL_LUK] = "Final LUK";
+statDict[FINAL_HP] = "Final HP";
+statDict[FINAL_MP] = "Final MP";
+statDict[FINAL_DEF] = "Final DEF";
+statDict[FLAT_ATTACK] = "ATT/MATT";
+statDict[PERCENT_ATTACK] = "%ATT/MATT";
+statDict[FINAL_ATTACK] = "Final ATT/MATT";
+statDict[DAMAGE] = "%Damage";
+statDict[BOSS_DAMAGE] = "%Boss Damage";
+statDict[IED] = "%IED";
+statDict[CRIT_DAMAGE] = "%Critical Damage";
+statDict[FINAL_DAMAGE] = "%Final Damage";
+statDict[PERCENT_ALL_STAT] = "%All Stats";
+statDict[FLAT_ALL_STAT] ="All Stats";
+statDict[NORMAL_DAMAGE] = "Normal Damage";
 
 statDict[FLAT_COOLDOWN_REDUCTION] = "cooldown reduction";
 statDict[PERCENT_COOLDOWN_REDUCTION] = "%cooldown reduction";
