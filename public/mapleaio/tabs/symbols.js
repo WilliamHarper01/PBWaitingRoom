@@ -3,8 +3,6 @@ var symbolTab = document.getElementById("symbolsTab");
 var symbolOptions = ["Vanishing Journey", "Chu Chu Island", "Lachelien", "Arcana", "Morass", "Esfera", "Cernium", "Hotel Arcus", 
                     "Odium", "Shangri-La", "Arteria", "Carcion"];
 
-var symbols = new Symbols(new Array(12).fill(0));
-
 for (let i = 0; i < 12; i++)
 {
     let symbolLine = document.createElement("div");
@@ -29,7 +27,7 @@ for (let i = 0; i < 12; i++)
     }
 
     symbolLevel.setAttribute("onchange", "changeSymbols(" + i + ")");
-    symbolLevel.value = symbols[i];
+    symbolLevel.value = symbols.values[i];
     
     symbolLine.appendChild(symbolLevel);
 }

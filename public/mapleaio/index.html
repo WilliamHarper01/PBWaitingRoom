@@ -5,30 +5,39 @@
 		<title>MapleAIO</title>
 	</head>
 	<body id="body">
-		<button id="showCharacterTab" onclick="showTab('characterTab')">CHARACTER</button>
-		<button id="showEquipTab" onclick="showTab('equipTab')">EQUIPS</button>
-		<button id="showLinkTab" onclick="showTab('linkTab')">LINKS</button>
-		<button id="showLegionTab" onclick="showTab('legionTab')">LEGION</button>
-		<button id="showHyperTab" onclick="showTab('hyperTab')">HYPERS</button>
-		<button id="showSymbolsTab" onclick="showTab('symbolsTab')">SYMBOLS</button>
-		<button id="showFamiliarsTab" onclick="showTab('familiarsTab')">FAMILIARS</button>
-		<button id="showInnerTab" onclick="showTab('innerTab')">MISC</button>
+		<div id="app">
+			<button id="showCharacterTab" onclick="showTab('characterTab')">CHARACTER</button>
+			<button id="showEquipTab" onclick="showTab('equipTab')">EQUIPS</button>
+			<button id="showLinkTab" onclick="showTab('linkTab')">LINKS</button>
+			<button id="showLegionTab" onclick="showTab('legionTab')">LEGION</button>
+			<button id="showHyperTab" onclick="showTab('hyperTab')">HYPERS</button>
+			<button id="showSymbolsTab" onclick="showTab('symbolsTab')">SYMBOLS</button>
+			<button id="showFamiliarsTab" onclick="showTab('familiarsTab')">FAMILIARS</button>
+			<button id="showInnerTab" onclick="showTab('innerTab')">MISC</button>
 
-		
-		<div id="characterTab"> </div>
-		<div id="equipTab"> </div>
-		<div id="linkTab"> </div>
-		<div id="legionTab"> </div>
-		<div id="hyperTab"> </div>
-		<div id="symbolsTab"> </div>
-		<div id="familiarsTab"> </div>
-		<div id="innerTab"> </div>
+			
+			<div id="characterTab"> </div>
+			<div id="equipTab"> </div>
+			<div id="linkTab"> </div>
+			<div id="legionTab"> </div>
+			<div id="hyperTab"> </div>
+			<div id="symbolsTab"> </div>
+			<div id="familiarsTab"> </div>
+			<div id="innerTab"> </div>
 
-		<div>
-		<h1 id="damagetobosses">Damage To Bosses: 0 </h1>
-		<h1>Stats: </h1>
-		<p id="statstext"> </p>
+			<div>
+			<h1 id="damagetobosses">Damage To Bosses: 0 </h1>
+			<h1>Stats: </h1>
+			<p id="statstext"> </p>
+			</div>
+
+			<button id="saveButton" onclick="saveData()">SAVE</button>
+
 		</div>
+		<div id="loadingScreen">
+			<h1> LOADING... </h1>
+		</div>
+
 
 		<style src="styles.css"></style>
 
@@ -67,14 +76,11 @@
 		<script src="jobs.js"> </script>
 		<script src="baseEquips.js"> </script>
 		<script src="formulas.js"></script>
-		<script src="character.js"></script>
-		<script src="equips.js"> </script>
-		<script src="inner.js"> </script>
-		<script src="links.js"> </script>
-		<script src="legion.js"> </script>
-		<script src="hyperstats.js"> </script>
-		<script src="symbols.js"> </script>
-		<script src="familiars.js"> </script>
+
+		<script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-app-compat.js"> </script>
+		<script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-auth-compat.js"> </script>
+		<script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-storage-compat.js"> </script>
+		<script src="database.js"></script>
 	</body>
 </html>
 

@@ -1,12 +1,5 @@
 var linkTab = document.getElementById("linkTab");
 
-var links = new Array(12);
-
-for (let i = 0; i < 12; i++)
-{
-    links[i] = new LinkSkill(BEGINNER, 0);
-}
-
 for (let i = 0; i < 12; i++)
 {
     let linkLine = document.createElement("div");

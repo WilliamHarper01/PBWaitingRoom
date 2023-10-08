@@ -3,8 +3,6 @@ var innerTab = document.getElementById("innerTab");
 var innerOptions = [BLANK, BOSS_DAMAGE, DAMAGE, NORMAL_DAMAGE, FINAL_ATTACK, FINAL_STR, FINAL_DEX, FINAL_INT, FINAL_LUK,
                     SKIP_COOLDOWN, ATTACK_SPEED, CRIT_RATE, BUFF_DURATION];
 
-var inner = new Potential([BLANK, 0], [BLANK, 0], [BLANK, 0]);
-
 var innerLines = document.createElement("div");
 innerTab.appendChild(innerLines);
 
@@ -45,8 +43,6 @@ function changeInner(part, line)
     updateRange();
 }
 
-var eventStats = new Array(STATS_LENGTH).fill(0);
-
 var eventOptions = [BOSS_DAMAGE, NORMAL_DAMAGE, IED, CRIT_DAMAGE, FLAT_ATTACK, FLAT_ALL_STAT, FLAT_HP];
 
 var eventLines = document.createElement("div");
@@ -75,8 +71,6 @@ function changeEventStats(index)
     eventStats[eventOptions[index]] = isANumber(document.getElementById("eventLine" + index).lastChild.value);
     updateRange();
 }
-
-var weaponSoul = new Potential([BLANK, 0], [FLAT_ATTACK, 20], [BLANK, 0]);
 
 const possibleSoulStats = [BLANK, FLAT_ATTACK, FLAT_STR, FLAT_DEX, FLAT_INT , FLAT_LUK, FLAT_ALL_STAT,
     PERCENT_ATTACK, BOSS_DAMAGE, IED];

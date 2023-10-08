@@ -35,16 +35,16 @@ function setBonuses(equips)
 
     for (let i=0; i<equips.length; i++)
     {
-        let set = equips[i].baseEquip.set;
+        let set = baseEquips[equips[i].name].set;
         switch(set)
         {
             case NO_SET:
                 break;
             case LUCKY:
-                luckies.push(equips[i].baseEquip.type);
+                luckies.push(baseEquips[equips[i].name].type);
                 break;
             default:
-                sets[set].push(equips[i].baseEquip.type);
+                sets[set].push(baseEquips[equips[i].name].type);
                 break;
         }
     }
@@ -259,7 +259,6 @@ class StarForce {
 class Equip {
     constructor(name, starforce, potential, flame) {
         this.name = name;
-        this.baseEquip = baseEquips[name];
 
         this.starforce = starforce;
         this.potential = potential;
@@ -268,52 +267,54 @@ class Equip {
     }
 
     calculateStats(job) {
+        let baseEquip = baseEquips[this.name];
+        
         let stats = new Array(STATS_LENGTH).fill(0)
         let flameStats = this.flame.calculateStats();
         let potentialStats = this.potential.calculateStats();
-        let starforceStats = this.starforce.calculateStats(this.baseEquip.level, 
-            this.baseEquip.type, this.baseEquip.stats[FLAT_ATTACK], this.baseEquip.branch);
+        let starforceStats = this.starforce.calculateStats(baseEquip.level, 
+            baseEquip.type, baseEquip.stats[FLAT_ATTACK], baseEquip.branch);
 
         for (let i=0; i<STATS_LENGTH; i++)
         {
             if (i == IED) { 
-                stats[IED] = addIEDSource(this.baseEquip.stats[IED], stats[IED]); 
+                stats[IED] = addIEDSource(baseEquip.stats[IED], stats[IED]); 
                 stats[IED] = addIEDSource(potentialStats[IED], stats[IED]);
                 stats[IED] = addIEDSource(flameStats[IED], stats[IED]); 
                 stats[IED] = addIEDSource(starforceStats[IED], stats[IED]);
             }
             else {
-                stats[i] = this.baseEquip.stats[i] + flameStats[i] + potentialStats[i] + starforceStats[i];
+                stats[i] = baseEquip.stats[i] + flameStats[i] + potentialStats[i] + starforceStats[i];
             }
         }
 
         //flora magic conversion
         if (job == ADELE)
         {
-            if (this.baseEquip == WEAPON)
+            if (baseEquip == WEAPON)
                 stats[FINAL_ATTACK] += stats[FLAT_ATTACK] * 0.15;
-            else if (isAccessory(this.baseEquip.type))
+            else if (isAccessory(baseEquip.type))
                 stats[FINAL_ATTACK] += stats[FLAT_ATTACK] * 0.35;
         }
         if (job == ILLIUM)
         {
-            if (this.baseEquip == WEAPON)
+            if (baseEquip == WEAPON)
                 stats[FINAL_ATTACK] += stats[FLAT_ATTACK] * 0.20;
-            else if (isAccessory(this.baseEquip.type))
+            else if (isAccessory(baseEquip.type))
                 stats[FINAL_ATTACK] += stats[FLAT_ATTACK] * 0.50;
         }
         if (job == ARK)
         {
-            if (this.baseEquip == WEAPON)
+            if (baseEquip == WEAPON)
                 stats[FINAL_ATTACK] += stats[FLAT_ATTACK] * 0.10;
-            else if (isAccessory(this.baseEquip.type))
+            else if (isAccessory(baseEquip.type))
                 stats[FINAL_ATTACK] += stats[FLAT_ATTACK] * 0.25;
         }
         if (job == KHALI)
         {
-            if (this.baseEquip == WEAPON)
+            if (baseEquip == WEAPON)
                 stats[FINAL_ATTACK] += stats[FLAT_ATTACK] * 0.20;
-            else if (isAccessory(this.baseEquip.type))
+            else if (isAccessory(baseEquip.type))
                 stats[FINAL_ATTACK] += stats[FLAT_ATTACK] * 0.50;
         }
 
@@ -660,6 +661,48 @@ class Range {
         }
     }
 }
+
+var job = BOWMASTER;
+var characterLevel = 0;
+var commonLevels = new Array(9).fill(0);
+var skillIEDValue = 0;
+var VSValue = 0;
+
+var equips = new Array(24);
+
+for (let i = 0; i < equips.length; i++)
+{
+    equips[i] = new Equip("None",
+        new StarForce(0, false),
+        new Potential([BLANK, 0], [BLANK, 0], [BLANK, 0]),
+        new Flame([BLANK, 0], [BLANK, 0], [BLANK, 0], [BLANK, 0], [BLANK, 0]));
+}
+
+var famLines = new Array(2);
+famLines[0] = new Potential([BLANK, 0],[BLANK, 0],[BLANK, 0]);
+famLines[1] = new Potential([BLANK, 0],[BLANK, 0],[BLANK, 0]);
+
+var famBadges = new FamiliarBadges(new Array(8).fill(false));
+
+var hypers = new HyperStats(new Array(12).fill(0));
+
+var weaponSoul = new Potential([BLANK, 0], [FLAT_ATTACK, 20], [BLANK, 0]);
+var inner = new Potential([BLANK, 0], [BLANK, 0], [BLANK, 0]);
+var eventStats = new Array(STATS_LENGTH).fill(0);
+
+var legion = new Legion(new Array(11).fill(0));
+for (let i=0; i<CLASS_LENGTH; i++)
+{
+    legion.legionBlocks[i] = 0;
+}
+
+var links = new Array(12);
+for (let i = 0; i < 12; i++)
+{
+    links[i] = new LinkSkill(BEGINNER, 0);
+}
+
+var symbols = new Symbols(new Array(12).fill(0));
 
 function updateRange()
 {

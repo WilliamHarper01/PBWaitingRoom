@@ -1,17 +1,103 @@
-import { getDatabase, set, ref } from "firebase/database";
+const firebaseConfig = {
 
-const db = getDatabase();
+    apiKey: "AIzaSyA5ZcvaDl5a7LSzybtDN3oVHAINYnl9d4Y",
 
-function writeDB(table, key, data)
-{
-    set(ref(db, table + '/' + key), data);
-}
+    authDomain: "pbwaitingroom.firebaseapp.com",
 
-function readDB(table, key)
-{
-    let readVal = ref(db, table + '/' + key)
-    onValue(readVal, (snapshot) => {
-        let data = snapshot.val();
-        return data;
+    projectId: "pbwaitingroom",
+
+    storageBucket: "pbwaitingroom.appspot.com",
+
+    messagingSenderId: "650948440205",
+
+    appId: "1:650948440205:web:615f395f40cf5e1e98b2c4",
+
+    measurementId: "G-Y6VZ26DWPP"
+
+};
+
+// Initialize Firebase
+
+const app = firebase.initializeApp(firebaseConfig);
+const auth = firebase.auth(app);
+const storage = firebase.storage();
+var storageRef = storage.ref();
+
+document.getElementById("app").style.display = "none";
+
+var uid = "";
+
+firebase.auth().onAuthStateChanged((user) => {
+    if (user) {
+        uid = user.uid;
+
+        loadData();
+
+        let scriptNames = ["character.js", "equips.js", "familiars.js", "hyperstats.js", 
+                            "inner.js", "legion.js", "links.js", "symbols.js"];
+        
+        for (let i=0; i<scriptNames.length; i++)
+        {
+            let runScript = document.createElement("script");
+            runScript.src = "tabs/" + scriptNames[i];
+            document.getElementById("body").appendChild(runScript);
+        }
+
+        document.getElementById("app").style.display = "block";
+        document.getElementById("loadingScreen").style.display = "none";
+    } else {
+        // User is signed out
+        window.location.replace("../login/index.html");
     }
+});
+
+function saveData()
+{
+    let data = {
+        job: job,
+        characterLevel: characterLevel,
+        commonLevels: commonLevels,
+        skillIEDValue: skillIEDValue,
+        VSValue: VSValue,
+        equips: equips,
+        famLines: famLines,
+        famBadges: famBadges,
+        hypers: hypers,
+        inner: inner,
+        eventStats: eventStats,
+        weaponSoul: weaponSoul,
+        legion: legion,
+        links: links,
+        symbols: symbols,
+    }
+    
+    let message = JSON.stringify(data);
+    
+    let userRef = storageRef.child("users/" + uid + "/public");
+    let saveRef = userRef.child('save.json');
+    saveRef.putString(message).then((snapshot) => {
+        console.log('data saved');
+    });
+      
 }
+
+async function loadData()
+{
+    let userRef = storageRef.child("users/" + uid + "/public");
+    let loadRef = userRef.child('save.txt');
+    await loadRef.getDownloadURL()
+    .then((url) => {
+    })
+    .catch((error) => {
+        switch (error.code) {
+            case 'storage/object-not-found':
+            
+                console.log("file not found");
+
+                break;
+            default:
+                console.log("download error");
+                break;
+    }});
+}
+

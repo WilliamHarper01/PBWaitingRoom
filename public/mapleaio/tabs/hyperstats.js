@@ -3,8 +3,6 @@ var hyperTab = document.getElementById("hyperTab");
 var hyperOptions = ["STR", "DEX", "INT", "LUK", "HP", "MP", "CRIT DAMAGE", "IED", 
                     "DAMAGE", "BOSS DAMAGE", "NORMAL DAMAGE", "ATTACK"];
 
-var hypers = new HyperStats(new Array(12).fill(0));
-
 for (let i = 0; i < 12; i++)
 {
     let hyperLine = document.createElement("div");
@@ -26,7 +24,7 @@ for (let i = 0; i < 12; i++)
     }
 
     hyperLevel.setAttribute("onchange", "changeHyper(" + i + ")");
-    hyperLevel.value = hypers[i];
+    hyperLevel.value = hypers.values[i];
     
     hyperLine.appendChild(hyperLevel);
 }

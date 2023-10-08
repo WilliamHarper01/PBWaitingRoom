@@ -9,16 +9,6 @@ const possiblePotentialStats = [BLANK, FLAT_ATTACK, FLAT_STR, FLAT_DEX, FLAT_INT
                                 PERCENT_STR, PERCENT_INT, PERCENT_LUK, PERCENT_DEX, PERCENT_HP,
                                 PERCENT_MP, PERCENT_DEF, PERCENT_ATTACK, BOSS_DAMAGE, DAMAGE, CRIT_DAMAGE, IED];
 
-var equips = new Array(24);
-
-for (let i = 0; i < equips.length; i++)
-{
-    equips[i] = new Equip("None",
-        new StarForce(0, false),
-        new Potential([BLANK, 0], [BLANK, 0], [BLANK, 0]),
-        new Flame([BLANK, 0], [BLANK, 0], [BLANK, 0], [BLANK, 0], [BLANK, 0]));
-}
-
 var equipSelected = 0;
 
 var equipTab = document.getElementById('equipTab');
@@ -26,7 +16,7 @@ var equipTab = document.getElementById('equipTab');
 for (let i = 0; i < equips.length; i++)
 {
     let img = document.createElement("img");
-    img.src = equips[equipSelected].baseEquip.img;
+    img.src = baseEquips[equips[equipSelected].name].img;
     img.id = "equipimg" + i;
     img.style.width = "2%";
     img.style.height = "2%";

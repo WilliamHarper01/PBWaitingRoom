@@ -1,12 +1,7 @@
-var famLines = new Array(2);
-famLines[0] = new Potential([BLANK, 0],[BLANK, 0],[BLANK, 0]);
-famLines[1] = new Potential([BLANK, 0],[BLANK, 0],[BLANK, 0]);
-
 const possibleFamiliarStats = [BLANK, PERCENT_ATTACK, BOSS_DAMAGE, DAMAGE, CRIT_DAMAGE, IED, FLAT_ATTACK, FLAT_STR, FLAT_DEX, FLAT_INT , FLAT_LUK, FLAT_ALL_STAT,
     PERCENT_STR, PERCENT_INT, PERCENT_LUK, PERCENT_DEX, PERCENT_HP,
     PERCENT_MP, PERCENT_DEF];
 
-var famBadges = new FamiliarBadges(new Array(8).fill(false));
 var badgeNames = ["apocalypse", "labrynth", "void", "ocean", "swamp", "mineral", "lion", "future"];
 
 var familiarsTab = document.getElementById("familiarsTab");

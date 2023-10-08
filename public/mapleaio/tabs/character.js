@@ -1,11 +1,5 @@
-var job = BOWMASTER;
-var characterLevel = 0;
-var commonLevels = new Array(9).fill(0);
 var commonNames = ["Decent Sharp Eyes", "Decent Speed Infusion", "Rope Lift", "Blink", "Decent Advanced Blessing",
                     "Decent Combat Orders", "Decent Hyper Body", "Decent Mystic Door", "Empress's Blessing"];
-
-var skillIEDValue = 0;
-var VSValue = 0;
 
 var characterTab = document.getElementById("characterTab");
 

@@ -1,10 +1,3 @@
-var legion = new Legion(new Array(11).fill(0));
-
-for (let i=0; i<CLASS_LENGTH; i++)
-{
-    legion.legionBlocks[i] = 0;
-}
-
 var legionTab = document.getElementById("legionTab");
 
 var sectionNames = ["BOSS DAMAGE", "NORMAL DAMAGE", "IED", "CRIT DAMAGE", "ATTACK",
