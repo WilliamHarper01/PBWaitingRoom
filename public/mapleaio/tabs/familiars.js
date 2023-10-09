@@ -26,6 +26,7 @@ for (let i = 0; i<3; i++)
 
         let value = document.createElement("input");
         value.value = famLines[j].lines[i][1];
+        stat.value = statDict[famLines[j].lines[i][0]];
 
         stat.setAttribute("onchange", "changeFam(0, "+ i + ", " + j + ")");
         value.setAttribute("onchange", "changeFam(1, "+ i + ", " + j + ")");

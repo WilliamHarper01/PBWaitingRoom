@@ -59,7 +59,6 @@ function setBonuses(equips)
                     sets[i].push(luckies[j]);
             }
         }
-
         //remove item from set if we have another item in the same slot and set (no double gollux pendant)
         sets[i] = [...new Set(sets[i])];
 
@@ -76,7 +75,7 @@ function setBonuses(equips)
 
 function isAccessory(equipType)
 {
-    if (equipType == RING || equipTYPE == POCKET || equipType == PENDANT || 
+    if (equipType == RING || equipType == POCKET || equipType == PENDANT || 
         equipType == BELT || equipType == FACE_ACCESSORY || equipType == EYE_ACCESSORY || equipType == EARRINGS
         || equipType == EMBLEM || equipType == MEDAL || equipType == BADGE || equipType == HEART)
     {return true;}
@@ -703,6 +702,46 @@ for (let i = 0; i < 12; i++)
 }
 
 var symbols = new Symbols(new Array(12).fill(0));
+
+function loadFromJSON(json)
+{
+    job = json["job"];
+    VSValue = json["VSValue"];
+    characterLevel = json["characterLevel"];
+    commonLevels = json["commonLevels"];
+    skillIEDValue = json["skillIEDValue"];
+
+    for (let i=0; i<equips.length; i++)
+    {
+        let e = json["equips"][i];
+        let s = e["starforce"];
+        let p = e["potential"]["lines"];
+        let f = e["flame"]["lines"];
+        equips[i] = new Equip(e["name"],
+                        new StarForce(s["star"], s["isTransposed"]),
+                        new Potential(p[0], p[1], p[2]),
+                        new Flame(f[0], f[1], f[2], f[3], f[4]));
+    }
+
+    for (let i=0; i<links.length; i++)
+    {
+        links[i] = new LinkSkill(json["links"][i]["job"], json["links"][i]["level"]);
+    }
+
+    legion.sections = json["legion"]["sections"];
+    legion.legionBlocks = json["legion"]["legionBlocks"];
+
+    hypers.values = json["hypers"]["values"];
+    symbols.values = json["symbols"]["values"];
+
+    famLines[0].lines = json["famLines"][0]["lines"];
+    famLines[1].lines = json["famLines"][1]["lines"];
+    famBadges.badgeList = json["famBadges"]["badgeList"]; 
+
+    inner.lines = json["inner"]["lines"];
+    eventStats = json["eventStats"];
+    weaponSoul.lines = json["weaponSoul"]["lines"];
+}
 
 function updateRange()
 {

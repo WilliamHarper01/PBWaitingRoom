@@ -32,19 +32,6 @@ firebase.auth().onAuthStateChanged((user) => {
         uid = user.uid;
 
         loadData();
-
-        let scriptNames = ["character.js", "equips.js", "familiars.js", "hyperstats.js", 
-                            "inner.js", "legion.js", "links.js", "symbols.js"];
-        
-        for (let i=0; i<scriptNames.length; i++)
-        {
-            let runScript = document.createElement("script");
-            runScript.src = "tabs/" + scriptNames[i];
-            document.getElementById("body").appendChild(runScript);
-        }
-
-        document.getElementById("app").style.display = "block";
-        document.getElementById("loadingScreen").style.display = "none";
     } else {
         // User is signed out
         window.location.replace("../login/index.html");
@@ -81,12 +68,34 @@ function saveData()
       
 }
 
-async function loadData()
+function loadData()
 {
     let userRef = storageRef.child("users/" + uid + "/public");
-    let loadRef = userRef.child('save.txt');
-    await loadRef.getDownloadURL()
+    let loadRef = userRef.child('save.json');
+    loadRef.getDownloadURL()
     .then((url) => {
+        var xhr = new XMLHttpRequest();
+        xhr.responseType = 'json';
+        xhr.onload = (event) => {
+            var json = xhr.response;
+
+            loadFromJSON(json);
+
+            let scriptNames = ["character.js", "equips.js", "familiars.js", "hyperstats.js", 
+                            "inner.js", "legion.js", "links.js", "symbols.js"];
+        
+            for (let i=0; i<scriptNames.length; i++)
+            {
+                let runScript = document.createElement("script");
+                runScript.src = "tabs/" + scriptNames[i];
+                document.getElementById("body").appendChild(runScript);
+            }
+
+            document.getElementById("app").style.display = "block";
+            document.getElementById("loadingScreen").style.display = "none";
+        };
+        xhr.open('GET', url);
+        xhr.send();
     })
     .catch((error) => {
         switch (error.code) {

@@ -27,6 +27,7 @@ for (let i = 0; i < 3; i++)
     innerStat.setAttribute("onchange", "changeInner(0, " + i + ")");
     innerValue.setAttribute("onchange", "changeInner(1, " + i + ")");
     innerValue.value = inner.lines[i][1];
+    innerStat.value = statDict[inner.lines[i][0]];
 
 
     innerLine.appendChild(innerStat);
@@ -94,6 +95,7 @@ for (let j = 0; j < possibleSoulStats.length; j++)
 soulStat.onchange = function () {weaponSoul.lines[0][0] = statDict[soulStat.value]; updateRange()};
 soulValue.onchange = function () {weaponSoul.lines[0][1] = isANumber(soulValue.value); updateRange()};
 soulValue.value = weaponSoul.lines[0][1];
+soulStat.value = statDict[weaponSoul.lines[0][0]];
 
 
 soulLine.appendChild(soulStat);

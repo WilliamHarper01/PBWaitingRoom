@@ -16,7 +16,8 @@ var equipTab = document.getElementById('equipTab');
 for (let i = 0; i < equips.length; i++)
 {
     let img = document.createElement("img");
-    img.src = baseEquips[equips[equipSelected].name].img;
+    img.src = baseEquips[equips[i].name].img;
+    img.style.backgroundColor = "lightgray";
     img.id = "equipimg" + i;
     img.style.width = "2%";
     img.style.height = "2%";
