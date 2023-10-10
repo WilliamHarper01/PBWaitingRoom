@@ -13,21 +13,42 @@ var equipSelected = 0;
 
 var equipTab = document.getElementById('equipTab');
 
-for (let i = 0; i < equips.length; i++)
+var equipView = document.createElement('div');
+equipView.className = "equipView";
+equipTab.appendChild(equipView);
+
+var blankSpaces = [2, 4, 10, 18, 24, 30, 31, 32, 34];
+
+let imgIndex = 0;
+let blankIndex = 0;
+
+for (let i = 0; i < 36; i++)
 {
-    let img = document.createElement("img");
-    img.src = baseEquips[equips[i].name].img;
-    img.style.backgroundColor = "lightgray";
-    img.id = "equipimg" + i;
-    img.style.width = "2%";
-    img.style.height = "2%";
-    img.class = "equipimg";
-    img.setAttribute("onclick", "showEquipStats(" + i + ")")
-    equipTab.appendChild(img);
+    if (i == blankSpaces[blankIndex])
+    {
+        let imgDiv = document.createElement("div");
+        imgDiv.className = "notImgDiv";
+        equipView.appendChild(imgDiv);
+        blankIndex++;
+    }
+    else
+    {
+        let imgDiv = document.createElement("div");
+        imgDiv.className = "imgDiv";
+        equipView.appendChild(imgDiv);
+        
+        let img = document.createElement("img");
+        console.log(imgIndex);
+        img.src = baseEquips[equips[imgIndex].name].img;
+        img.id = "equipimg" + imgIndex;
+        img.className = "equipimg";
+        img.setAttribute("onclick", "showEquipStats(" + imgIndex + ")")
+        imgDiv.appendChild(img);
+        imgIndex++;
+    }
 }
 
 var equipStats = document.createElement("div");
-equipStats.style.display = "none";
 equipTab.appendChild(equipStats);
 
 var equipSelection = document.createElement("div");

@@ -1,12 +1,16 @@
 var commonNames = ["Decent Sharp Eyes", "Decent Speed Infusion", "Rope Lift", "Blink", "Decent Advanced Blessing",
                     "Decent Combat Orders", "Decent Hyper Body", "Decent Mystic Door", "Empress's Blessing"];
 
+var apNames = ["STR", "DEX", "INT", "LUK", "HP", "MP"];
+
 var characterTab = document.getElementById("characterTab");
 
 var jobSelection = document.createElement("div");
+jobSelection.className = "verticalSection";
 characterTab.appendChild(jobSelection);
 
 var jobSelector = document.createElement("select");
+jobSelector.className = "basicOption";
 
 for(let i=0; i<CLASS_LENGTH; i++)
 {
@@ -22,19 +26,45 @@ jobSelector.onchange = function() { job = classDict[jobSelector.value]; updateRa
 jobSelection.appendChild(jobSelector);
 
 var levelSelection = document.createElement("div");
+levelSelection.className = "verticalSection";
 characterTab.appendChild(levelSelection);
 
 var levelSelector = document.createElement("input");
+levelSelector.className = "basicOption";
 levelSelector.value = characterLevel;
 levelSelector.onchange = function() {characterLevel = isANumber(levelSelector.value); updateRange();};
 levelSelection.appendChild(levelSelector);
 
+var apSection = document.createElement("div");
+apSection.className = "horizontalSection";
+characterTab.appendChild(apSection);
+
+for (let i=0; i<ap.length; i++)
+{
+    let apDiv = document.createElement("div");
+    apDiv.className = "basicOption";
+    apSection.appendChild(apDiv);
+
+    let apLabel = document.createElement("label");
+    apLabel.innerHTML = apNames[i];
+    apLabel.htmlFor = "ap" + i;
+    apDiv.appendChild(apLabel);
+
+    let apInput = document.createElement("input");
+    apInput.value = ap[i];
+    apInput.id = "ap" + i;
+    apInput.setAttribute("onchange", "changeAP("+i+")")
+    apDiv.appendChild(apInput);
+}
+
 var commonSkills = document.createElement("div");
+commonSkills.className = "horizontalSection";
 characterTab.appendChild(commonSkills);
 
 for (let i=0; i < 9; i++)
 {
     let commonDiv = document.createElement("div");
+    commonDiv.className = "basicOption";
     commonSkills.appendChild(commonDiv);
 
     let commonLabel = document.createElement("label");
@@ -50,9 +80,11 @@ for (let i=0; i < 9; i++)
 }
 
 var specialCases = document.createElement("div");
+specialCases.className = "horizontalSection";
 characterTab.appendChild(specialCases);
 
 let skillIED = document.createElement("div");
+skillIED.className = "basicOption";
 specialCases.appendChild(skillIED);
 
 let skillIEDLabel = document.createElement("label");
@@ -67,6 +99,7 @@ skillIEDInput.onchange = function () {skillIEDValue = isANumber(skillIEDInput.va
 skillIED.appendChild(skillIEDInput);
 
 let VS = document.createElement("div");
+VS.className = "basicOption";
 specialCases.appendChild(VS);
 
 let VSLabel = document.createElement("label");
@@ -85,7 +118,12 @@ VS.appendChild(VSInput);
 function changeCommonSkill(index)
 {
     commonLevels[index] = isANumber(document.getElementById("common"+index).value);
-    console.log(commonLevels[index]);
+    updateRange();
+}
+
+function changeAP(index)
+{
+    ap[index] = isANumber(document.getElementById("ap"+index).value);
     updateRange();
 }
 

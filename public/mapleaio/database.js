@@ -32,6 +32,7 @@ firebase.auth().onAuthStateChanged((user) => {
         uid = user.uid;
 
         loadData();
+        updateRange();
     } else {
         // User is signed out
         window.location.replace("../login/index.html");
@@ -56,6 +57,7 @@ function saveData()
         legion: legion,
         links: links,
         symbols: symbols,
+        ap: ap,
     }
     
     let message = JSON.stringify(data);
@@ -88,7 +90,7 @@ function loadData()
             {
                 let runScript = document.createElement("script");
                 runScript.src = "tabs/" + scriptNames[i];
-                document.getElementById("body").appendChild(runScript);
+                document.getElementById("pageBody").appendChild(runScript);
             }
 
             document.getElementById("app").style.display = "block";
@@ -100,9 +102,6 @@ function loadData()
     .catch((error) => {
         switch (error.code) {
             case 'storage/object-not-found':
-            
-                console.log("file not found");
-
                 break;
             default:
                 console.log("download error");

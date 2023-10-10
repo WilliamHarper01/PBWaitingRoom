@@ -23,6 +23,20 @@ function rebootStats(lvl)
     return rStats;
 }
 
+function getAPStats(ap)
+{
+    let stats = new Array(STATS_LENGTH).fill(0);
+
+    stats[FLAT_STR] = ap[0];
+    stats[FLAT_DEX] = ap[1];
+    stats[FLAT_INT] = ap[2];
+    stats[FLAT_LUK] = ap[3];
+    stats[FLAT_HP] = ap[4] * 15;
+    stats[FLAT_MP] = ap[5] * 15;
+
+    return stats;
+}
+
 function setBonuses(equips)
 {
     let stats = new Array(STATS_LENGTH).fill(0);
@@ -667,7 +681,7 @@ var commonLevels = new Array(9).fill(0);
 var skillIEDValue = 0;
 var VSValue = 0;
 
-var equips = new Array(24);
+var equips = new Array(27);
 
 for (let i = 0; i < equips.length; i++)
 {
@@ -703,6 +717,16 @@ for (let i = 0; i < 12; i++)
 
 var symbols = new Symbols(new Array(12).fill(0));
 
+var ap = new Array(6).fill(4);
+
+var statstext = document.getElementById("statstext");
+for (let i=1; i<STATS_LENGTH; i++)
+{
+    let statText = document.createElement("li");
+    statstext.appendChild(statText);
+}
+
+
 function loadFromJSON(json)
 {
     job = json["job"];
@@ -711,7 +735,7 @@ function loadFromJSON(json)
     commonLevels = json["commonLevels"];
     skillIEDValue = json["skillIEDValue"];
 
-    for (let i=0; i<equips.length; i++)
+    for (let i=0; i<24; i++)
     {
         let e = json["equips"][i];
         let s = e["starforce"];
@@ -741,11 +765,15 @@ function loadFromJSON(json)
     inner.lines = json["inner"]["lines"];
     eventStats = json["eventStats"];
     weaponSoul.lines = json["weaponSoul"]["lines"];
+
+    ap = json["ap"];
 }
 
 function updateRange()
 {
     let stats = new Range(NIGHTLORD);
+
+    stats.addStats(getAPStats(ap));
 
     stats.addStats(rebootStats(characterLevel));
 
@@ -785,10 +813,9 @@ function updateRange()
     stats.addStats(weaponSoul.calculateStats());
 
     document.getElementById("damagetobosses").innerHTML = "Damage To Bosses: " + stats.damageToBosses();
-    statstext = document.getElementById("statstext");
-    statstext.innerHTML = "";
-    for (let i=1; i<STATS_LENGTH; i++)
-    {
-        statstext.innerHTML += statDict[i] + ": " + stats.stats[i] + '<br>';
-    }
+
+    let statslist = statstext.childNodes;
+
+    for (let i=0; i<statslist.length; i++)
+        statslist[i].innerHTML = statDict[i] + ": " + stats.stats[i];
 }

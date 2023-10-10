@@ -3,43 +3,42 @@
 	<head>
 		<meta charset="utf-8">
 		<title>MapleAIO</title>
+		<link rel="stylesheet" href="../styles.css">
 	</head>
-	<body id="body">
-		<div id="app">
-			<button id="showCharacterTab" onclick="showTab('characterTab')">CHARACTER</button>
-			<button id="showEquipTab" onclick="showTab('equipTab')">EQUIPS</button>
-			<button id="showLinkTab" onclick="showTab('linkTab')">LINKS</button>
-			<button id="showLegionTab" onclick="showTab('legionTab')">LEGION</button>
-			<button id="showHyperTab" onclick="showTab('hyperTab')">HYPERS</button>
-			<button id="showSymbolsTab" onclick="showTab('symbolsTab')">SYMBOLS</button>
-			<button id="showFamiliarsTab" onclick="showTab('familiarsTab')">FAMILIARS</button>
-			<button id="showInnerTab" onclick="showTab('innerTab')">MISC</button>
-
-			
-			<div id="characterTab"> </div>
-			<div id="equipTab"> </div>
-			<div id="linkTab"> </div>
-			<div id="legionTab"> </div>
-			<div id="hyperTab"> </div>
-			<div id="symbolsTab"> </div>
-			<div id="familiarsTab"> </div>
-			<div id="innerTab"> </div>
-
-			<div>
-			<h1 id="damagetobosses">Damage To Bosses: 0 </h1>
-			<h1>Stats: </h1>
-			<p id="statstext"> </p>
+	<body id="pageBody">
+		<div id="app" class="app">
+			<div class="topButtons">
+				<button id="showCharacterTab" class="btnTab" onclick="showTab('characterTab')">CHARACTER</button>
+				<button id="showEquipTab" class="btnTab" onclick="showTab('equipTab')">EQUIPS</button>
+				<button id="showLinkTab" class="btnTab" onclick="showTab('linkTab')">LINKS</button>
+				<button id="showLegionTab" class="btnTab" onclick="showTab('legionTab')">LEGION</button>
+				<button id="showHyperTab" class="btnTab" onclick="showTab('hyperTab')">HYPERS</button>
+				<button id="showSymbolsTab" class="btnTab" onclick="showTab('symbolsTab')">SYMBOLS</button>
+				<button id="showFamiliarsTab" class="btnTab" onclick="showTab('familiarsTab')">FAMILIARS</button>
+				<button id="showInnerTab" class="btnTab" onclick="showTab('innerTab')">MISC</button>
+				<button id="saveButton" class="btnSave" onclick="saveData()">SAVE</button>
 			</div>
 
-			<button id="saveButton" onclick="saveData()">SAVE</button>
+			
+			<div id="characterTab" class="tab"> </div>
+			<div id="equipTab" class="equipTab"> </div>
+			<div id="linkTab" class="tab"> </div>
+			<div id="legionTab" class="tab"> </div>
+			<div id="hyperTab" class="tab"> </div>
+			<div id="symbolsTab" class="tab"> </div>
+			<div id="familiarsTab" class="tab"> </div>
+			<div id="innerTab" class="tab"> </div>
+
+			<div id="displayRanges">
+				<h1 id="damagetobosses">Damage To Bosses: 0 </h1>
+				<h1>Stats: </h1>
+				<ul id="statstext" class="advancedInfo"> </ul>
+			</div>
 
 		</div>
-		<div id="loadingScreen">
+		<div id="loadingScreen" class="topButtons">
 			<h1> LOADING... </h1>
 		</div>
-
-
-		<style src="styles.css"></style>
 
 		<script>
 
@@ -65,7 +64,7 @@
 				
 				var tab = document.getElementById(id);
 				if (tab.style.display === "none") 
-					tab.style.display = "block";
+					tab.style.display = "flex";
 				else 
 					tab.style.display = "none";
 			}  

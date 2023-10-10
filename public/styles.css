@@ -1,0 +1,197 @@
+/* reset the styling of the page */
+@import "reset.css";
+
+/* import the Roboto Mono font  */
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body{
+    margin: auto;
+    width: 90%;
+    font-size: 18px;
+    font-family: "Roboto", normal;
+    font-weight: 400;
+}
+
+.app{
+    max-width: 1024px;
+    min-width: 360px;
+    margin: auto;
+}
+
+.tab{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 2rem;
+    border-radius: 2rem;
+    background-color: rgb(176, 176, 176);
+}
+
+.equipTab{
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 2rem;
+    border-radius: 2rem;
+    background-color: rgb(176, 176, 176);
+}
+
+ul {
+    list-style-type: none;
+}
+
+.advancedInfo {
+    font-size: 0.66rem;
+}
+
+input {
+    color: #9a0457;
+    border: #a0a0a0 1px solid;
+    border-radius: 0.5rem;
+    padding: 0.65rem;
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
+    min-width: 300px;
+}
+
+input:focus {
+    border: #E51A80 0.1rem solid;
+    outline: none;
+}
+
+label {
+    font-size: 1rem;
+    padding-right:0.5rem;
+    color: #9a0457;
+    font-weight: 400;
+}
+
+select {
+    color: #9a0457;
+    border: #a0a0a0 0.0625rem solid;
+    border-radius: 0.5rem;
+    padding: 0.6rem;
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
+    width: 100%;
+}
+
+select:focus {
+    outline: none;
+    border: #E51A80 0.0625rem solid;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+button {
+    font-size: 1rem;
+    border: 0;
+    outline: none;
+    padding: 0.6rem 1.2rem 0.6rem 1.2rem;
+    margin: 0rem 0.125rem 0rem 0.125rem;
+    border-radius: 0.6rem;
+    transition: .05s;
+}
+
+.topButtons{
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.btnTab {
+    background: rgba(236,73,142,1);
+    background: linear-gradient(-45deg, rgba(114,34,121,1) 10%, rgba(236,73,142,1) 90%);
+    color: #ffffff;
+}
+
+.btnSave {
+    background: rgb(73, 141, 236);
+    background: linear-gradient(-45deg, rgb(34, 56, 121) 10%, rgb(73, 141, 236) 90%);
+    color: #ffffff;
+}
+
+button:hover {
+    transform: scale(1.05);
+    filter: contrast(1.15);
+    color:#fff;
+}
+
+button:focus {
+    outline: none;
+}
+
+button:active {
+    outline: none;
+}
+
+button:visited {
+    outline: none;
+}
+
+.verticalSection {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+
+}
+
+.horizontalSection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.basicOption {
+    width: 300px;
+    text-align: center;
+}
+
+.smallOption {
+    width: 150px;
+    text-align: center;
+}
+
+label {
+    display: inline-block;
+}
+
+.equipView {
+    width: 360px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.imgDiv {
+    display: flex;
+    justify-content: center;
+    width:48px;
+    height:48px;
+    background-color: gray;
+    border: #E51A80 0.125rem solid;
+}
+
+.notImgDiv {
+    width:48px;
+    height:48px;
+    display: flex;
+    justify-content: center;
+    border: #E51A80 0.125rem solid;
+}
+
+.equipimg {
+    margin:auto;
+    width: 75%;
+
+}

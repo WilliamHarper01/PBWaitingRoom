@@ -4,11 +4,13 @@ var sectionNames = ["BOSS DAMAGE", "NORMAL DAMAGE", "IED", "CRIT DAMAGE", "ATTAC
                     "STR", "DEX", "INT", "LUK", "HP", "MP"];
 
 var legionSections = document.createElement("div");
+legionSections.className = "horizontalSection";
 legionTab.appendChild(legionSections);
 
 for (let i=0; i < legion.sections.length; i++)
 {
     let section = document.createElement("div");
+    section.className = "smallOption";
     section.id = "section" + i;
     legionSections.appendChild(section);
 
@@ -33,6 +35,7 @@ for (let i=0; i < legion.sections.length; i++)
 }
 
 var legionBlocks = document.createElement("div");
+legionBlocks.className = "horizontalSection";
 legionTab.appendChild(legionBlocks);
 
 for (let i=0; i < legion.legionBlocks.length; i++)
