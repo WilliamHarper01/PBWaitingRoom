@@ -56,7 +56,9 @@ input {
     font-size: 1rem;
     font-weight: 400;
     text-align: center;
-    min-width: 300px;
+    width: 100%;
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
 }
 
 input:focus {
@@ -65,7 +67,7 @@ input:focus {
 }
 
 label {
-    font-size: 1rem;
+    font-size: 0.9rem;
     padding-right:0.5rem;
     color: #9a0457;
     font-weight: 400;
@@ -142,15 +144,27 @@ button:visited {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    margin-bottom: 2rem;
-
+    justify-content: center;
+    margin-bottom: 1rem;
+    color: #9a0457;
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 1.5em;
 }
 
 .horizontalSection {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    margin-bottom: 2rem;
+    justify-content: center;
+    margin-bottom: 1rem;
+    line-height: 1.5em;
+}
+
+.sectionTitle {
+    color: #9a0457;
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 1.5em;
 }
 
 .basicOption {
@@ -167,10 +181,18 @@ label {
     display: inline-block;
 }
 
+.checkLabel {
+    display: inline-block;
+    width: 4rem;
+    text-align: right;
+}
+
 .equipView {
     width: 360px;
     display: flex;
     flex-wrap: wrap;
+    height: 300px;
+    margin-bottom: 2em;
 }
 
 .imgDiv {
@@ -195,3 +217,8 @@ label {
     width: 75%;
 
 }
+
+.checkBoxOption {
+
+}
+

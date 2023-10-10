@@ -1,13 +1,21 @@
 var linkTab = document.getElementById("linkTab");
 
+var linkTitle = document.createElement("div");
+linkTitle.className = "sectionTitle";
+linkTitle.innerHTML = "Link Skills";
+linkTab.appendChild(linkTitle);
+
 for (let i = 0; i < 12; i++)
 {
     let linkLine = document.createElement("div");
+    linkLine.className = "horizontalSection";
     linkLine.id = "linkLine" + i;
     linkTab.appendChild(linkLine);
 
     let linkClass = document.createElement("select");
+    linkClass.className = "basicOption";
     let linkLevel = document.createElement("select");
+    linkLevel.className = "basicOption";
 
     for (let j = -1; j < CLASS_LENGTH; j++)
     {

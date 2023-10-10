@@ -6,13 +6,24 @@ var badgeNames = ["apocalypse", "labrynth", "void", "ocean", "swamp", "mineral",
 
 var familiarsTab = document.getElementById("familiarsTab");
 
+var cardsTitle = document.createElement("div");
+cardsTitle.className = "sectionTitle";
+cardsTitle.innerHTML = "Cards";
+familiarsTab.appendChild(cardsTitle);
+
+var cardsSection = document.createElement("div");
+cardsSection.className = "verticalSection";
+familiarsTab.appendChild(cardsSection);
+
 for (let i = 0; i<3; i++)
 {
     let familiarCard = document.createElement("div");
+    familiarCard.className = "horizontalSection";
     for (let j=0; j<2; j++)
     {
         let line = document.createElement("div");
         line.id = "famLine" + i + j;
+        line.className = "basicOption";
 
         let stat = document.createElement("select");
 
@@ -40,7 +51,13 @@ for (let i = 0; i<3; i++)
     familiarsTab.appendChild(familiarCard);
 }
 
+var badgesTitle = document.createElement("div");
+badgesTitle.className = "sectionTitle";
+badgesTitle.innerHTML = "Badges";
+familiarsTab.appendChild(badgesTitle);
+
 var badges = document.createElement("div");
+badges.className = "horizontalSection";
 familiarsTab.appendChild(badges);
 
 for (let i=0; i<famBadges.badgeList.length; i++)
@@ -48,15 +65,17 @@ for (let i=0; i<famBadges.badgeList.length; i++)
     let badge = document.createElement("div");
     badge.id = "badge" + i;
     badges.appendChild(badge);
+    badge.className = "smallOption";
+
+    let badgeLabel = document.createElement("label");
+    badgeLabel.htmlfor = "badge" + i;
+    badgeLabel.innerHTML = badgeNames[i];
+    badgeLabel.className = "checkLabel";
 
     let badgeCheck = document.createElement("input");
     badgeCheck.type = "checkbox";
     badgeCheck.setAttribute("onchange", "selectBadge(" + i + ")");
     badgeCheck.checked = famBadges.badgeList[i];
-
-    let badgeLabel = document.createElement("label");
-    badgeLabel.htmlfor = "badge" + i;
-    badgeLabel.innerHTML = badgeNames[i];
 
     badge.appendChild(badgeCheck);
     badge.appendChild(badgeLabel);

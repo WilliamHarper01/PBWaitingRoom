@@ -3,17 +3,26 @@ var innerTab = document.getElementById("innerTab");
 var innerOptions = [BLANK, BOSS_DAMAGE, DAMAGE, NORMAL_DAMAGE, FINAL_ATTACK, FINAL_STR, FINAL_DEX, FINAL_INT, FINAL_LUK,
                     SKIP_COOLDOWN, ATTACK_SPEED, CRIT_RATE, BUFF_DURATION];
 
+var innerTitle = document.createElement("div");
+innerTitle.className = "sectionTitle";
+innerTitle.innerHTML = "Inner Ability";
+innerTab.appendChild(innerTitle);
+
 var innerLines = document.createElement("div");
+innerLines.className = "verticalSection";
 innerTab.appendChild(innerLines);
 
 for (let i = 0; i < 3; i++)
 {
     let innerLine = document.createElement("div");
     innerLine.id = "innerLine" + i;
+    innerLine.className = "horizontalSection";
     innerLines.appendChild(innerLine);
 
     let innerStat = document.createElement("select");
+    innerStat.className = "basicOption";
     let innerValue = document.createElement("input");
+    innerValue.className = "basicOption";
 
     for (let j = 0; j < innerOptions.length; j++)
     {
@@ -46,13 +55,20 @@ function changeInner(part, line)
 
 var eventOptions = [BOSS_DAMAGE, NORMAL_DAMAGE, IED, CRIT_DAMAGE, FLAT_ATTACK, FLAT_ALL_STAT, FLAT_HP];
 
+var eventTitle = document.createElement("div");
+eventTitle.className = "sectionTitle";
+eventTitle.innerHTML = "Event Stats/Title";
+innerTab.appendChild(eventTitle);
+
 var eventLines = document.createElement("div");
+eventLines.className = "horizontalSection";
 innerTab.appendChild(eventLines);
 
 for (let i=0; i<eventOptions.length; i++)
 {
     var eventLine = document.createElement("div");
     eventLine.id = "eventLine" + i;
+    eventLine.className = "basicOption";
     eventLines.appendChild(eventLine);
 
     var eventLineLabel = document.createElement("label");
@@ -77,11 +93,19 @@ const possibleSoulStats = [BLANK, FLAT_ATTACK, FLAT_STR, FLAT_DEX, FLAT_INT , FL
     PERCENT_ATTACK, BOSS_DAMAGE, IED];
 
 
+var soulTitle = document.createElement("div");
+soulTitle.className = "sectionTitle";
+soulTitle.innerHTML = "Weapon Soul";
+innerTab.appendChild(soulTitle);
+
 var soulLine = document.createElement("div");
+soulLine.className = "horizontalSection";
 innerTab.appendChild(soulLine);
 
 let soulStat = document.createElement("select");
+soulStat.className = "basicOption";
 let soulValue = document.createElement("input");
+soulValue.className = "basicOption";
 
 for (let j = 0; j < possibleSoulStats.length; j++)
 {

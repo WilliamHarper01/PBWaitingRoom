@@ -7,10 +7,10 @@ var characterTab = document.getElementById("characterTab");
 
 var jobSelection = document.createElement("div");
 jobSelection.className = "verticalSection";
+jobSelection.innerHTML = "Job";
 characterTab.appendChild(jobSelection);
 
 var jobSelector = document.createElement("select");
-jobSelector.className = "basicOption";
 
 for(let i=0; i<CLASS_LENGTH; i++)
 {
@@ -27,13 +27,18 @@ jobSelection.appendChild(jobSelector);
 
 var levelSelection = document.createElement("div");
 levelSelection.className = "verticalSection";
+levelSelection.innerHTML = "Level";
 characterTab.appendChild(levelSelection);
 
 var levelSelector = document.createElement("input");
-levelSelector.className = "basicOption";
 levelSelector.value = characterLevel;
 levelSelector.onchange = function() {characterLevel = isANumber(levelSelector.value); updateRange();};
 levelSelection.appendChild(levelSelector);
+
+var apTitle = document.createElement("div");
+apTitle.className = "sectionTitle";
+apTitle.innerHTML = "Set AP";
+characterTab.appendChild(apTitle);
 
 var apSection = document.createElement("div");
 apSection.className = "horizontalSection";
@@ -57,6 +62,11 @@ for (let i=0; i<ap.length; i++)
     apDiv.appendChild(apInput);
 }
 
+var commonTitle = document.createElement("div");
+commonTitle.className = "sectionTitle";
+commonTitle.innerHTML = "Common Skills";
+characterTab.appendChild(commonTitle);
+
 var commonSkills = document.createElement("div");
 commonSkills.className = "horizontalSection";
 characterTab.appendChild(commonSkills);
@@ -78,6 +88,11 @@ for (let i=0; i < 9; i++)
     dseInput.setAttribute("onchange", "changeCommonSkill("+i+")")
     commonDiv.appendChild(dseInput);
 }
+
+var specialTitle = document.createElement("div");
+specialTitle.className = "sectionTitle";
+specialTitle.innerHTML = "Misc";
+characterTab.appendChild(specialTitle);
 
 var specialCases = document.createElement("div");
 specialCases.className = "horizontalSection";

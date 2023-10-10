@@ -3,11 +3,21 @@ var symbolTab = document.getElementById("symbolsTab");
 var symbolOptions = ["Vanishing Journey", "Chu Chu Island", "Lachelien", "Arcana", "Morass", "Esfera", "Cernium", "Hotel Arcus", 
                     "Odium", "Shangri-La", "Arteria", "Carcion"];
 
+var symbolsTitle = document.createElement("div");
+symbolsTitle.className = "sectionTitle";
+symbolsTitle.innerHTML = "Symbols";
+symbolTab.appendChild(symbolsTitle);
+
+var symbolsSection = document.createElement("div");
+symbolsSection.className = "horizontalSection";
+symbolTab.appendChild(symbolsSection);
+
 for (let i = 0; i < 12; i++)
 {
     let symbolLine = document.createElement("div");
     symbolLine.id = "symbolLine" + i;
-    symbolTab.appendChild(symbolLine);
+    symbolLine.className = "basicOption";
+    symbolsSection.appendChild(symbolLine);
 
     let symbolLabel = document.createElement("label");
     symbolLabel.innerHTML = symbolOptions[i];

@@ -38,7 +38,6 @@ for (let i = 0; i < 36; i++)
         equipView.appendChild(imgDiv);
         
         let img = document.createElement("img");
-        console.log(imgIndex);
         img.src = baseEquips[equips[imgIndex].name].img;
         img.id = "equipimg" + imgIndex;
         img.className = "equipimg";
@@ -49,9 +48,12 @@ for (let i = 0; i < 36; i++)
 }
 
 var equipStats = document.createElement("div");
+equipStats.className="verticalSection";
 equipTab.appendChild(equipStats);
 
 var equipSelection = document.createElement("div");
+equipSelection.className = "verticalSection";
+equipSelection.innerHTML = "Equip";
 equipStats.appendChild(equipSelection);
 
 var equipSelector = document.createElement("select");
@@ -70,6 +72,8 @@ equipSelector.setAttribute("onchange", "changeStat('baseEquip', 0, 0)");
 equipSelection.appendChild(equipSelector);
 
 var flameTab = document.createElement("div");
+flameTab.innerHTML = "Flames"
+flameTab.className = "verticalSection";
 equipStats.appendChild(flameTab);
 for (let i = 0; i < 5; i++)
 {
@@ -78,7 +82,9 @@ for (let i = 0; i < 5; i++)
     flameTab.appendChild(flameLine);
 
     let flameStat = document.createElement("select");
+    flameStat.className = "smallOption";
     let flameValue = document.createElement("input");
+    flameValue.className = "smallOption";
 
     for (let j = 0; j < possibleFlameStats.length; j++)
     {
@@ -99,6 +105,8 @@ for (let i = 0; i < 5; i++)
 }
 
 var potentialTab = document.createElement("div");
+potentialTab.className = "verticalSection";
+potentialTab.innerHTML = "Potential";
 equipStats.appendChild(potentialTab);
 for (let i = 0; i < 3; i++)
 {
@@ -107,7 +115,9 @@ for (let i = 0; i < 3; i++)
     potentialTab.appendChild(potentialLine);
 
     let potentialStat = document.createElement("select");
+    potentialStat.className = "smallOption";
     let potentialValue = document.createElement("input");
+    potentialValue.className = "smallOption";
 
     for (let j = 0; j < possiblePotentialStats.length; j++)
     {
@@ -128,6 +138,8 @@ for (let i = 0; i < 3; i++)
 }
 
 var starforceTab = document.createElement("div");
+starforceTab.className = "verticalSection";
+starforceTab.innerHTML = "StarForce";
 equipStats.appendChild(starforceTab);
 
 var starforceValue = document.createElement("select");
