@@ -281,8 +281,12 @@ class Equip {
 
     calculateStats(job) {
         let baseEquip = baseEquips[this.name];
-        
+
         let stats = new Array(STATS_LENGTH).fill(0)
+
+        if (this.name == "None")
+            return stats;
+
         let flameStats = this.flame.calculateStats();
         let potentialStats = this.potential.calculateStats();
         let starforceStats = this.starforce.calculateStats(baseEquip.level, 

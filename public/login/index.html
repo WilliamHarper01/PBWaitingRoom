@@ -8,19 +8,28 @@
 	<body id="body">
     
     <script src="login.js" type="module"></script>
-
-    <div id="loginMenu">
-    <input id="loginUsername" type="email">
-    <input id="loginPassword" type="password">
-    <button id="submitLogin">LOGIN</button>
-    <label for="loginMenu" id="loginError"><label>
-    </div>
-    <div id="signupMenu">
-    <input id="signupUsername" type="email">
-    <input id="signupPassword" type="password">
-    <input id="confirmPassword" type="password">
-    <button id="submitSignup">SIGN UP</button>
-    <label for="signupMenu" id="signupError"><label>
+    <div class="loginScreen">
+        <div id="loginMenu" class="tab">
+            <div class="formTitle"> Log In </div>
+            <input id="loginUsername" type="email" placeholder="Email Address" class="formField">
+            <input id="loginPassword" type="password" placeholder="Password" class="formField">
+            <div class="submitButtons">
+                <button id="gotoSignup" class="btnLowkey"> CREATE ACCOUNT </button>
+                <button id="submitLogin" class="btnSave">LOGIN</button>
+            </div>
+            <label for="loginMenu" id="loginError"><label>
+        </div>
+        <div id="signupMenu" class="tab">
+            <div class="formTitle"> Sign Up </div>
+            <input id="signupUsername" type="email" class="formField" placeholder="Email Address">
+            <input id="signupPassword" type="password" class="formField"  placeholder="Password">
+            <input id="confirmPassword" type="password" class="formField"  placeholder="Password">
+            <div class="submitButtons">
+                <button id="gotoLogin" class="btnLowkey"> LOG IN </button>
+                <button id="submitSignup" class="btnSave">CREATE ACCOUNT</button>
+            </div>
+            <label for="signupMenu" id="signupError"><label>
+        </div>
     </div>
 
     </body>

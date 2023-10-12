@@ -35,6 +35,8 @@ for (let i = 0; i < 36; i++)
     {
         let imgDiv = document.createElement("div");
         imgDiv.className = "imgDiv";
+        imgDiv.id = "imgDiv" + imgIndex;
+        imgDiv.setAttribute("onclick", "showEquipStats(" + imgIndex + ")")
         equipView.appendChild(imgDiv);
         
         let img = document.createElement("img");
@@ -160,8 +162,11 @@ starforceTab.appendChild(starforceValue);
 //sets all the values of the flame, starforce, and pot elements to the values in the equip we just selected
 function showEquipStats(id)
 {
-    equipStats.style.display = "block";
+    document.getElementById("imgDiv" + equipSelected).className = "imgDiv";
+    
     equipSelected = id;
+
+    document.getElementById("imgDiv" + equipSelected).className = "selectedImgDiv";
 
     equipSelector.value = equips[equipSelected].name;
     for(let i = 0; i<5; i++)

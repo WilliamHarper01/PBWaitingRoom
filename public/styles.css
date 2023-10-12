@@ -12,6 +12,12 @@ body{
     font-weight: 400;
 }
 
+.loginScreen {
+    max-width: 480px;
+    min-width: 360px;
+    margin: auto;
+}
+
 .app{
     max-width: 1024px;
     min-width: 360px;
@@ -26,7 +32,7 @@ body{
     justify-content: center;
     padding: 2rem;
     border-radius: 2rem;
-    background-color: rgb(176, 176, 176);
+    background-color: rgb(220, 220, 220);
 }
 
 .equipTab{
@@ -37,7 +43,7 @@ body{
     justify-content: space-between;
     padding: 2rem;
     border-radius: 2rem;
-    background-color: rgb(176, 176, 176);
+    background-color: rgb(220, 220, 220);
 }
 
 ul {
@@ -59,6 +65,10 @@ input {
     width: 100%;
     box-sizing:border-box;
     -moz-box-sizing:border-box;
+}
+
+input.formField {
+    text-align: start;
 }
 
 input:focus {
@@ -108,6 +118,43 @@ button {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+}
+
+.btnSubmit {
+    all: unset;
+    font-size: 1rem;
+    border: 0;
+    outline: none;
+    padding: 0.6rem 1.2rem 0.6rem 1.2rem;
+    margin: 0rem 0.125rem 0rem 0.125rem;
+    border-radius: 0.6rem;
+    transition: .05s;
+    background: rgb(73, 141, 236);
+    background: linear-gradient(-45deg, rgb(34, 56, 121) 10%, rgb(73, 141, 236) 90%);
+    color: #ffffff;
+}
+
+.btnSubmit:hover {
+    transform: scale(1.05);
+    filter: contrast(1.15);
+    color:#fff;
+}
+
+.btnSubmit:focus {
+    outline: none;
+}
+
+.btnSubmit:active {
+    outline: none;
+}
+
+.btnSubmit:visited {
+    outline: none;
+}
+
+.btnLowkey {
+    font-size: 0.9rem;
+    background-color: rgb(176, 176, 176);
 }
 
 .btnTab {
@@ -192,7 +239,12 @@ label {
     display: flex;
     flex-wrap: wrap;
     height: 300px;
-    margin-bottom: 2em;
+    padding: 1em 0em 1em 0em;
+    margin: 1em;
+    background-color: rgb(190, 190, 190);
+    justify-content: center;
+    border-radius: 1em;
+
 }
 
 .imgDiv {
@@ -204,12 +256,25 @@ label {
     border: #E51A80 0.125rem solid;
 }
 
+.imgDiv:hover {
+    background-color: rgb(118, 155, 158);
+}
+
+.selectedImgDiv {
+    display: flex;
+    justify-content: center;
+    width:48px;
+    height:48px;
+    background-color: rgb(95, 197, 185);
+    border: #E51A80 0.125rem solid;
+}
+
 .notImgDiv {
     width:48px;
     height:48px;
     display: flex;
     justify-content: center;
-    border: #E51A80 0.125rem solid;
+    border: rgb(190, 190, 190) 0.125rem solid;
 }
 
 .equipimg {
@@ -218,7 +283,19 @@ label {
 
 }
 
-.checkBoxOption {
-
+.submitButtons {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
 }
 
+.formField {
+    color: black;
+    margin: 0rem 0rem 1rem 0rem;
+}
+
+.formTitle {
+    color: black;
+    font-size: 1.5rem;
+    padding: 0rem 0rem 1rem 0rem;
+}

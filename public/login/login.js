@@ -21,6 +21,18 @@ const firebaseConfig = {
 
 };
 
+document.getElementById("signupMenu").style.display = "none";
+
+document.getElementById("gotoSignup").onclick = function () {
+    document.getElementById("signupMenu").style.display = "flex";
+    document.getElementById("loginMenu").style.display = "none";
+}
+
+document.getElementById("gotoLogin").onclick = function () {
+    document.getElementById("signupMenu").style.display = "none";
+    document.getElementById("loginMenu").style.display = "flex";
+}
+
 // Initialize Firebase
 
 const app = initializeApp(firebaseConfig);
