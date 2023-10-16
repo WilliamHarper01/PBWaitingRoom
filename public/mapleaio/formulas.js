@@ -111,7 +111,6 @@ class Flame {
     //structure for line is [stat, value]
     constructor(line1, line2, line3, line4, line5) {
         this.lines = [line1, line2, line3, line4, line5];
-        this.name = 'test';
     }
 
     calculateStats() {
@@ -199,13 +198,13 @@ class StarForce {
             if (i < 6) {
                 flatMainStat += 2;
                 if (equipType == WEAPON)
-                    flatAttack += visibleAtt * 0.02
+                    flatAttack += Math.round((visibleAtt + flatAttack) * 0.02)
             }
             else if (i < 16) {
                 flatMainStat += 3;
                 
                 if (equipType == WEAPON)
-                    flatAttack += visibleAtt * 0.02
+                    flatAttack += Math.round((visibleAtt + flatAttack) * 0.02)
 
             }
             else
@@ -259,7 +258,7 @@ class StarForce {
             stats[FLAT_LUK] = flatMainStat;
             stats[FLAT_ATTACK] = flatAttack;
         }
-        else if (branch == THEIF) {
+        else if (branch == THIEF) {
             stats[FLAT_DEX] = flatMainStat;
             stats[FLAT_LUK] = flatMainStat;
             stats[FLAT_ATTACK] = flatAttack;
@@ -309,30 +308,30 @@ class Equip {
         if (job == ADELE)
         {
             if (baseEquip == WEAPON)
-                stats[FINAL_ATTACK] += stats[FLAT_ATTACK] * 0.15;
+                stats[FINAL_ATTACK] += Math.floor(stats[FLAT_ATTACK] * 0.15);
             else if (isAccessory(baseEquip.type))
-                stats[FINAL_ATTACK] += stats[FLAT_ATTACK] * 0.35;
+                stats[FINAL_ATTACK] += Math.floor(stats[FLAT_ATTACK] * 0.35);
         }
         if (job == ILLIUM)
         {
             if (baseEquip == WEAPON)
-                stats[FINAL_ATTACK] += stats[FLAT_ATTACK] * 0.20;
+                stats[FINAL_ATTACK] += Math.floor(stats[FLAT_ATTACK] * 0.20);
             else if (isAccessory(baseEquip.type))
-                stats[FINAL_ATTACK] += stats[FLAT_ATTACK] * 0.50;
+                stats[FINAL_ATTACK] += Math.floor(stats[FLAT_ATTACK] * 0.50);
         }
         if (job == ARK)
         {
             if (baseEquip == WEAPON)
-                stats[FINAL_ATTACK] += stats[FLAT_ATTACK] * 0.10;
+                stats[FINAL_ATTACK] += Math.floor(stats[FLAT_ATTACK] * 0.10);
             else if (isAccessory(baseEquip.type))
-                stats[FINAL_ATTACK] += stats[FLAT_ATTACK] * 0.25;
+                stats[FINAL_ATTACK] += Math.floor(stats[FLAT_ATTACK] * 0.25);
         }
         if (job == KHALI)
         {
             if (baseEquip == WEAPON)
-                stats[FINAL_ATTACK] += stats[FLAT_ATTACK] * 0.20;
+                stats[FINAL_ATTACK] += Math.floor(stats[FLAT_ATTACK] * 0.20);
             else if (isAccessory(baseEquip.type))
-                stats[FINAL_ATTACK] += stats[FLAT_ATTACK] * 0.50;
+                stats[FINAL_ATTACK] += Math.floor(stats[FLAT_ATTACK] * 0.50);
         }
 
         //DEMON AVENGER HP
@@ -397,16 +396,96 @@ class Legion
         stats[FLAT_HP] += this.sections[9] * 500;
         stats[FLAT_MP] += this.sections[10] * 500;
 
+        let statTable = [0, 10, 20, 40, 80, 100];
+        let hpTable = [0, 2, 3, 4, 5, 6];
+
         for (let i=0; i<this.legionBlocks.length; i++)
         {
             
             let job = i;
             let level = this.legionBlocks[i];
 
-            if (job == DEMON_AVENGER)
-                stats[BOSS_DAMAGE] += Math.round(1.15 * level); //1, 2, 3, 5, 6
-            else if (level != 0)
-                console.log("legion block for " + classDict[job] + " is not implemented yet");
+            switch(job)
+            {
+                case DEMON_AVENGER:
+                case KANNA:
+                    stats[BOSS_DAMAGE] += Math.round(1.15 * level); //1, 2, 3, 5, 6
+                    break;
+                
+                case HERO:
+                case PALADIN:
+                case ADELE:
+                case ARK:
+                case CANNON_MASTER:
+                case BUCCANEER:
+                case KAISER:
+                case THUNDER_BREAKER:
+                    stats[FINAL_STR] += statTable[level];
+                    break;
+                
+                case BOWMASTER:
+                case PATHFINDER:
+                case WIND_ARCHER:
+                case ANGELIC_BUSTER:
+                case KAIN:
+                    stats[FINAL_DEX] += statTable[level];
+                    break;
+                
+                case ICE_LIGHTNING:
+                case BISHOP:
+                case ILLIUM:
+                case LUMINOUS:
+                case BLAZE_WIZARD:
+                case BATTLE_MAGE:
+                case LARA:
+                case KINESIS:
+                    stats[FINAL_INT] += statTable[level];
+                    break;
+                
+                case SHADOWER:
+                case DUAL_BLADE:
+                case NIGHT_WALKER:
+                case CADENA:
+                case HOYOUNG:
+                case KHALI:
+                    stats[FINAL_LUK] += statTable[level];
+                    break;
+                
+                case SHADE:
+                case HAYATO:
+                    stats[CRIT_DAMAGE] += Math.round(1.15 * level);
+                    break;
+
+                case BLASTER:
+                case BEAST_TAMER:
+                    stats[IED] = addIEDSource(stats[IED], Math.round(1.15 * level));
+                    break;
+
+                case WILD_HUNTER:
+                    stats[DAMAGE] += Math.round(statTable[level]/5);
+                    break;
+
+                case MIHILE:
+                    stats[FINAL_HP] += 250 * level;
+                    break;
+
+                case DARK_KNIGHT:
+                    stats[PERCENT_HP] += hpTable[level];
+                    break;
+                case FIRE_POISON:
+                    stats[PERCENT_MP] += hpTable[level];
+                    break;
+                case DEMON_AVENGER:
+                    stats[BOSS_DAMAGE] += Math.round(1.15 * level); //1, 2, 3, 5, 6
+                    break;
+                case XENON:
+                    stats[FINAL_STR] += statTable[level]/2;
+                    stats[FINAL_DEX] += statTable[level]/2;
+                    stats[FINAL_LUK] += statTable[level]/2;
+                    break;
+                default:
+                    break;
+            }
         }
 
         return stats;
@@ -489,19 +568,19 @@ class Symbols
             {
                 stats[FINAL_HP] += (this.values[i] >= 1 ? 200 : 0) + (this.values[i]) * 100;
             }
-            else if ((job >= BOWMASTER && job <= PATHFINDER) || job == CORSAIR)
+            else if (dexJobs.includes(job))
             {
                 stats[FINAL_DEX] += (this.values[i] >= 1 ? 200 : 0) + (this.values[i]) * 100;
             }
-            else if ((job >= HERO && job <= DARK_KNIGHT) || job == BUCCANEER || job == CANNON_MASTER)
+            else if (strJobs.includes(job))
             {
                 stats[FINAL_STR] += (this.values[i] >= 1 ? 200 : 0) + (this.values[i]) * 100;
             }
-            else if ((job >= FIRE_POISON && job <= BISHOP) || job == KANNA)
+            else if (intJobs.includes(job) || job == KANNA)
             {
                 stats[FINAL_INT] += (this.values[i] >= 1 ? 200 : 0) + (this.values[i]) * 100;
             }
-            else if (job >= NIGHTLORD && job <= DUAL_BLADE)
+            else if (lukJobs.includes(job) || lukStrJobs.includes(job))
             {
                 stats[FINAL_LUK] += (this.values[i] >= 1 ? 200 : 0) + (this.values[i]) * 100;
             }
@@ -523,19 +602,19 @@ class Symbols
             {
                 stats[FINAL_HP] += (this.values[i] >= 1 ? 400 : 0) + (this.values[i]) * 200;
             }
-            else if ((job >= BOWMASTER && job <= PATHFINDER) || job == CORSAIR)
+            else if (dexJobs.includes(job))
             {
                 stats[FINAL_DEX] += (this.values[i] >= 1 ? 400 : 0) + (this.values[i]) * 200;
             }
-            else if ((job >= HERO && job <= DARK_KNIGHT) || job == BUCCANEER || job == CANNON_MASTER)
+            else if (strJobs.includes(job))
             {
                 stats[FINAL_STR] += (this.values[i] >= 1 ? 400 : 0) + (this.values[i]) * 200;
             }
-            else if ((job >= FIRE_POISON && job <= BISHOP) || job == KANNA)
+            else if (intJobs.includes(job) || job == KANNA)
             {
                 stats[FINAL_INT] += (this.values[i] >= 1 ? 400 : 0) + (this.values[i]) * 200;
             }
-            else if (job >= NIGHTLORD && job <= DUAL_BLADE)
+            else if (lukJobs.includes(job) || lukStrJobs.includes(job))
             {
                 stats[FINAL_LUK] += (this.values[i] >= 1 ? 400 : 0) + (this.values[i]) * 200;
             }
@@ -567,7 +646,8 @@ class Range {
         let bonusDamagePercent = (1.0 + (this.stats[DAMAGE] + this.stats[BOSS_DAMAGE]) / 100.0);
         let critDamagePercent = (1.0 + (35 + this.stats[CRIT_DAMAGE]) / 100.0); //crit damage ranges from +20 to +50, so i averaged it to 35
         let finalDamagePercent = (1.0 + this.stats[FINAL_DAMAGE] / 100.0);
-        return Math.floor(actualDamageRange * bonusDamagePercent * critDamagePercent * finalDamagePercent * this.calculateDefenceReduction(300));
+        return Math.floor(actualDamageRange * bonusDamagePercent * 
+            critDamagePercent * finalDamagePercent * this.calculateDefenceReduction(300));
     }
 
     damageToMobs() {
@@ -578,7 +658,8 @@ class Range {
         let bonusDamagePercent = (1.0 + (this.stats[DAMAGE] + this.stats[NORMAL_DAMAGE]) / 100.0);
         let critDamagePercent = (1.0 + (35 + this.stats[CRIT_DAMAGE]) / 100.0); //crit damage ranges from +20 to +50, so i averaged it to 35
         let finalDamagePercent = (1.0 + this.stats[FINAL_DAMAGE] / 100.0);
-        return Math.floor(actualDamageRange * bonusDamagePercent * critDamagePercent * finalDamagePercent * this.calculateDefenceReduction(300));
+        return Math.floor(actualDamageRange * bonusDamagePercent * 
+            critDamagePercent * finalDamagePercent * this.calculateDefenceReduction(300));
     }
 
     inGameRange()
@@ -621,31 +702,31 @@ class Range {
             secondaryStat = 0;
             attack = this.setTotalStat(this.stats[FLAT_ATTACK], this.stats[PERCENT_ATTACK], this.stats[FINAL_ATTACK]);
         }
-        if ((this.job >= HERO && this.job <= DARK_KNIGHT) || (this.job >= BUCCANEER && this.job <= CANNON_MASTER))
+        if (strJobs.includes(this.job))
         {
             mainStat = this.setTotalStatPlusAll(this.stats[FLAT_STR], this.stats[PERCENT_STR], this.stats[FINAL_STR]);
             secondaryStat = this.setTotalStatPlusAll(this.stats[FLAT_DEX], this.stats[PERCENT_DEX], this.stats[FINAL_DEX]);
             attack = this.setTotalStat(this.stats[FLAT_ATTACK], this.stats[PERCENT_ATTACK], this.stats[FINAL_ATTACK]);
         }
-        if (this.job >= FIRE_POISON && this.job <= BISHOP)
+        if (intJobs.includes(this.job))
         {
             mainStat = this.setTotalStatPlusAll(this.stats[FLAT_INT], this.stats[PERCENT_INT], this.stats[FINAL_INT]);
             secondaryStat = this.setTotalStatPlusAll(this.stats[FLAT_LUK], this.stats[PERCENT_LUK], this.stats[FINAL_LUK]);
             attack = this.setTotalStat(this.stats[FLAT_ATTACK], this.stats[PERCENT_ATTACK], this.stats[FINAL_ATTACK]);
         }
-        if ((this.job >= BOWMASTER && this.job <= PATHFINDER) || (this.job >= CORSAIR && this.job < CORSAIR))
+        if (dexJobs.includes(this.job))
         {
             mainStat = this.setTotalStatPlusAll(this.stats[FLAT_DEX], this.stats[PERCENT_DEX], this.stats[FINAL_DEX]);
             secondaryStat = this.setTotalStatPlusAll(this.stats[FLAT_STR], this.stats[PERCENT_STR], this.stats[FINAL_STR]);
             attack = this.setTotalStat(this.stats[FLAT_ATTACK], this.stats[PERCENT_ATTACK], this.stats[FINAL_ATTACK]);
         }
-        if (this.job >= NIGHTLORD && this.job < NIGHTLORD)
+        if (lukJobs.includes(job))
         {
             mainStat = this.setTotalStatPlusAll(this.stats[FLAT_LUK], this.stats[PERCENT_LUK], this.stats[FINAL_LUK]);
             secondaryStat = this.setTotalStatPlusAll(this.stats[FLAT_DEX], this.stats[PERCENT_DEX], this.stats[FINAL_DEX]);
             attack = this.setTotalStat(this.stats[FLAT_ATTACK], this.stats[PERCENT_ATTACK], this.stats[FINAL_ATTACK]);
         }
-        if (this.job >= SHADOWER && this.job < DUAL_BLADE)
+        if (lukStrJobs.includes(job))
         {
             mainStat = this.setTotalStatPlusAll(this.stats[FLAT_LUK], this.stats[PERCENT_LUK], this.stats[FINAL_LUK]);
             secondaryStat = this.setTotalStatPlusAll(this.stats[FLAT_DEX], this.stats[PERCENT_DEX], this.stats[FINAL_DEX]) +
@@ -677,149 +758,4 @@ class Range {
             else this.stats[i] += stats[i];
         }
     }
-}
-
-var job = BOWMASTER;
-var characterLevel = 0;
-var commonLevels = new Array(9).fill(0);
-var skillIEDValue = 0;
-var VSValue = 0;
-
-var equips = new Array(27);
-
-for (let i = 0; i < equips.length; i++)
-{
-    equips[i] = new Equip("None",
-        new StarForce(0, false),
-        new Potential([BLANK, 0], [BLANK, 0], [BLANK, 0]),
-        new Flame([BLANK, 0], [BLANK, 0], [BLANK, 0], [BLANK, 0], [BLANK, 0]));
-}
-
-var famLines = new Array(2);
-famLines[0] = new Potential([BLANK, 0],[BLANK, 0],[BLANK, 0]);
-famLines[1] = new Potential([BLANK, 0],[BLANK, 0],[BLANK, 0]);
-
-var famBadges = new FamiliarBadges(new Array(8).fill(false));
-
-var hypers = new HyperStats(new Array(12).fill(0));
-
-var weaponSoul = new Potential([BLANK, 0], [FLAT_ATTACK, 20], [BLANK, 0]);
-var inner = new Potential([BLANK, 0], [BLANK, 0], [BLANK, 0]);
-var eventStats = new Array(STATS_LENGTH).fill(0);
-
-var legion = new Legion(new Array(11).fill(0));
-for (let i=0; i<CLASS_LENGTH; i++)
-{
-    legion.legionBlocks[i] = 0;
-}
-
-var links = new Array(12);
-for (let i = 0; i < 12; i++)
-{
-    links[i] = new LinkSkill(BEGINNER, 0);
-}
-
-var symbols = new Symbols(new Array(12).fill(0));
-
-var ap = new Array(6).fill(4);
-
-var statstext = document.getElementById("statstext");
-for (let i=1; i<STATS_LENGTH; i++)
-{
-    let statText = document.createElement("li");
-    statstext.appendChild(statText);
-}
-
-
-function loadFromJSON(json)
-{
-    job = json["job"];
-    VSValue = json["VSValue"];
-    characterLevel = json["characterLevel"];
-    commonLevels = json["commonLevels"];
-    skillIEDValue = json["skillIEDValue"];
-
-    for (let i=0; i<24; i++)
-    {
-        let e = json["equips"][i];
-        let s = e["starforce"];
-        let p = e["potential"]["lines"];
-        let f = e["flame"]["lines"];
-        equips[i] = new Equip(e["name"],
-                        new StarForce(s["star"], s["isTransposed"]),
-                        new Potential(p[0], p[1], p[2]),
-                        new Flame(f[0], f[1], f[2], f[3], f[4]));
-    }
-
-    for (let i=0; i<links.length; i++)
-    {
-        links[i] = new LinkSkill(json["links"][i]["job"], json["links"][i]["level"]);
-    }
-
-    legion.sections = json["legion"]["sections"];
-    legion.legionBlocks = json["legion"]["legionBlocks"];
-
-    hypers.values = json["hypers"]["values"];
-    symbols.values = json["symbols"]["values"];
-
-    famLines[0].lines = json["famLines"][0]["lines"];
-    famLines[1].lines = json["famLines"][1]["lines"];
-    famBadges.badgeList = json["famBadges"]["badgeList"]; 
-
-    inner.lines = json["inner"]["lines"];
-    eventStats = json["eventStats"];
-    weaponSoul.lines = json["weaponSoul"]["lines"];
-
-    ap = json["ap"];
-}
-
-function updateRange()
-{
-    let stats = new Range(NIGHTLORD);
-
-    stats.addStats(getAPStats(ap));
-
-    stats.addStats(rebootStats(characterLevel));
-
-    stats.addStats(getJobStats(job, commonLevels[0],
-        commonLevels[1],
-        commonLevels[2],
-        commonLevels[3],
-        commonLevels[4],
-        commonLevels[5],
-        commonLevels[6],
-        commonLevels[7],
-        commonLevels[8],));
-
-    for (let i=0; i<equips.length; i++)
-    {
-        stats.addStats(equips[i].calculateStats(job));
-    }
-    stats.addStats(setBonuses(equips));
-
-    stats.addStats(inner.calculateStats());
-    
-    for (let i=0; i<links.length; i++)
-    {
-        stats.addStats(links[i].calculateStats());
-    }
-
-    stats.addStats(legion.calculateStats());
-
-    stats.addStats(hypers.calculateStats());
-    stats.addStats(symbols.calculateStats(job));
-
-    stats.addStats(famLines[0].calculateStats());
-    stats.addStats(famLines[1].calculateStats());
-    stats.addStats(famBadges.calculateStats());
-
-    stats.addStats(eventStats);
-    stats.addStats(weaponSoul.calculateStats());
-
-    document.getElementById("damagetobosses").innerHTML = "Damage To Bosses: " + stats.damageToBosses();
-
-    let statslist = statstext.childNodes;
-
-    for (let i=0; i<statslist.length; i++)
-        statslist[i].innerHTML = statDict[i] + ": " + stats.stats[i];
 }

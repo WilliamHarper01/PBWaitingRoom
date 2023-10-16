@@ -1,35 +1,76 @@
+const TOTEM = 0;
 const RING = 1;
-const POCKET = 5;
+const HAT = 2;
+const EMBLEM = 3;
 const PENDANT = 6;
-const WEAPON = 8;
-const BELT = 9;
-const HAT = 10;
-const FACE_ACCESSORY = 11;
+const FACE_ACCESSORY = 7;
+const BADGE = 8;
 const EYE_ACCESSORY = 12;
-const TOP = 13;
-const BOTTOM = 14;
-const BOOTS = 15;
-const EARRINGS = 16;
-const SHOULDER = 17;
-const GLOVES = 18;
-const EMBLEM = 19;
-const BADGE = 20;
-const MEDAL = 21;
-const SECONDARY = 22;
-const CAPE = 23;
-const HEART = 24;
+const EARRINGS = 13;
+const MEDAL = 14;
+const WEAPON = 16;
+const TOP = 17;
+const SHOULDER = 18;
+const SECONDARY = 19;
+const POCKET = 20;
+const BELT = 21;
+const BOTTOM = 22;
+const GLOVES = 23;
+const CAPE = 24;
+const BOOTS = 25;
+const HEART = 26;
+
+const typeDict = {};
+
+typeDict["RING"] = RING;
+typeDict["POCKET"] = POCKET;
+typeDict["PENDANT"] = PENDANT;
+typeDict["WEAPON"] = WEAPON;
+typeDict["BELT"] = BELT;
+typeDict["HAT"] = HAT;
+typeDict["FACE_ACCESSORY"] = FACE_ACCESSORY;
+typeDict["EYE_ACCESSORY"] = EYE_ACCESSORY;
+typeDict["TOP"] = TOP;
+typeDict["BOTTOM"] = BOTTOM;
+typeDict["BOOTS"] = BOOTS;
+typeDict["EARRINGS"] = EARRINGS;
+typeDict["SHOULDER"] = SHOULDER;
+typeDict["GLOVES"] = GLOVES;
+typeDict["EMBLEM"] = EMBLEM;
+typeDict["BADGE"] = BADGE;
+typeDict["MEDAL"] = MEDAL;
+typeDict["SECONDARY"] = SECONDARY;
+typeDict["CAPE"] = CAPE;
+typeDict["HEART"] = HEART;
 
 const ALL_CLASS = 0;
 const WARRIOR = 1;
 const MAGE = 2;
 const BOWMAN = 3;
-const THEIF = 4;
+const THIEF = 4;
 const PIRATE = 5;
+
+const branchDict = {};
+
+branchDict["ALL_CLASS"] = ALL_CLASS;
+branchDict["WARRIOR"] = WARRIOR;
+branchDict["MAGE"] = MAGE;
+branchDict["BOWMAN"] = BOWMAN;
+branchDict["THIEF"] = THIEF;
+branchDict["PIRATE"] = PIRATE;
 
 const NO_SET = -1;
 const LUCKY = -2;
 const PITCHED = 0;
 const SET_LENGTH = 1;
+
+const setDict = {};
+
+setDict["NO_SET"] = NO_SET;
+setDict["LUCKY"] = LUCKY;
+setDict["PITCHED"] = PITCHED;
+
+
 
 const setBonusTable = [
     //pitched
@@ -124,47 +165,5 @@ baseEquips["None"].stats[FLAT_ATTACK] = 0;
 baseEquips["None"].stats[FLAT_DEF] = 0;
 
 
-baseEquips["Magic Eyepatch"] = {};
-baseEquips["Magic Eyepatch"].level = 160;
-baseEquips["Magic Eyepatch"].type = EYE_ACCESSORY;
-baseEquips["Magic Eyepatch"].branch = ALL_CLASS;
-baseEquips["Magic Eyepatch"].set = PITCHED;
-baseEquips["Magic Eyepatch"].img = "https://static.wikia.nocookie.net/maplestory/images/8/89/Eqp_Magic_Eyepatch.png"
-baseEquips["Magic Eyepatch"].stats = new Array(STATS_LENGTH).fill(0);
-baseEquips["Magic Eyepatch"].stats[FLAT_STR] = 10;
-baseEquips["Magic Eyepatch"].stats[FLAT_DEX] = 10;
-baseEquips["Magic Eyepatch"].stats[FLAT_INT] = 10;
-baseEquips["Magic Eyepatch"].stats[FLAT_LUK] = 10;
-baseEquips["Magic Eyepatch"].stats[FLAT_ATTACK] = 10;
-baseEquips["Magic Eyepatch"].stats[FLAT_DEF] = 200;
 
-baseEquips["Berserked"] = {};
-baseEquips["Berserked"].level = 160;
-baseEquips["Berserked"].type = FACE_ACCESSORY;
-baseEquips["Berserked"].branch = ALL_CLASS;
-baseEquips["Berserked"].set = PITCHED;
-baseEquips["Berserked"].img = "https://static.wikia.nocookie.net/maplestory/images/8/89/Eqp_Berserked.png"
-baseEquips["Berserked"].stats = new Array(STATS_LENGTH).fill(0);
-baseEquips["Berserked"].stats[FLAT_STR] = 10;
-baseEquips["Berserked"].stats[FLAT_DEX] = 10;
-baseEquips["Berserked"].stats[FLAT_INT] = 10;
-baseEquips["Berserked"].stats[FLAT_LUK] = 10;
-baseEquips["Berserked"].stats[FLAT_ATTACK] = 10;
-baseEquips["Berserked"].stats[FLAT_DEF] = 200;
-
-baseEquips["Genesis Guards"] = {};
-baseEquips["Genesis Guards"].level = 200;
-baseEquips["Genesis Guards"].type = WEAPON;
-baseEquips["Genesis Guards"].branch = THEIF;
-baseEquips["Genesis Guards"].set = LUCKY;
-baseEquips["Genesis Guards"].img = "https://static.wikia.nocookie.net/maplestory/images/9/97/Eqp_Genesis_Guards.png"
-baseEquips["Genesis Guards"].stats = new Array(STATS_LENGTH).fill(0);
-baseEquips["Genesis Guards"].stats[FLAT_STR] = 0;
-baseEquips["Genesis Guards"].stats[FLAT_DEX] = 150;
-baseEquips["Genesis Guards"].stats[FLAT_INT] = 0;
-baseEquips["Genesis Guards"].stats[FLAT_LUK] = 150;
-baseEquips["Genesis Guards"].stats[FLAT_ATTACK] = 172;
-baseEquips["Genesis Guards"].stats[FLAT_DEF] = 0;
-baseEquips["Genesis Guards"].stats[BOSS_DAMAGE] = 30;
-baseEquips["Genesis Guards"].stats[IED] = 20;
 

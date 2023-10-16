@@ -1,0 +1,43 @@
+name, level, type, branch, set, img, str, dex, int, luk, att, def, bossdamage, ied, finaldamage,flathp,flatmp,%hp,%mp
+Genesis Guards,200,WEAPON,THIEF,LUCKY,https://static.wikia.nocookie.net/maplestory/images/9/97/Eqp_Genesis_Guards.png,0,150,0,150,172,0,30,20,0,0,0,0,0
+Magic Eyepatch,160,EYE_ACCESSORY,ALL_CLASS,PITCHED,https://static.wikia.nocookie.net/maplestory/images/c/c1/Eqp_Magic_Eyepatch.png,15,15,15,15,3,300,0,0,0,0,0,0,0
+Berserked,160,FACE_ACCESSORY,ALL_CLASS,PITCHED,https://static.wikia.nocookie.net/maplestory/images/8/89/Eqp_Berserked.png,10,10,10,10,10,200,0,0,0,0,0,0,0
+Black Heart,120,HEART,ALL_CLASS,PITCHED,https://static.wikia.nocookie.net/maplestory/images/9/99/Eqp_Black_Heart.png,10,10,10,10,77,0,0,0,0,100,0,0,0
+Source of Suffering,160,PENDANT,ALL_CLASS,PITCHED,https://static.wikia.nocookie.net/maplestory/images/b/bb/Eqp_Source_of_Suffering.png,10,10,10,10,3,300,0,0,0,0,0,5,0
+Cursed Red Spellbook,160,POCKET,ALL_CLASS,PITCHED,https://static.wikia.nocookie.net/maplestory/images/c/cb/Eqp_Cursed_Red_Spellbook.png,20,10,10,10,10,0,0,0,0,100,100,0,0
+Cursed Blue Spellbook,160,POCKET,ALL_CLASS,PITCHED,https://static.wikia.nocookie.net/maplestory/images/f/f3/Eqp_Cursed_Blue_Spellbook.png,20,10,10,10,10,0,0,0,0,100,100,0,0
+Cursed Green Spellbook,160,POCKET,ALL_CLASS,PITCHED,https://static.wikia.nocookie.net/maplestory/images/f/f7/Eqp_Cursed_Green_Spellbook.png,20,10,10,10,10,0,0,0,0,100,100,0,0
+Cursed Yellow Spellbook,160,POCKET,ALL_CLASS,PITCHED,https://static.wikia.nocookie.net/maplestory/images/d/d4/Eqp_Cursed_Yellow_Spellbook.png,20,10,10,10,10,0,0,0,0,100,100,0,0
+Commanding Force Earring,200,EARRINGS,ALL_CLASS,PITCHED,https://static.wikia.nocookie.net/maplestory/images/9/98/Eqp_Commanding_Force_Earring.png,7,7,7,7,5,100,0,0,0,500,500,0,0
+Endless Terror,200,RING,ALL_CLASS,PITCHED,https://static.wikia.nocookie.net/maplestory/images/8/83/Eqp_Endless_Terror.png,5,5,5,5,4,0,0,0,0,250,250,0,0
+Dreamy Belt,200,BELT,ALL_CLASS,PITCHED,https://static.wikia.nocookie.net/maplestory/images/0/02/Eqp_Dreamy_Belt.png,50,50,50,50,6,150,0,0,0,150,150,0,0
+Genesis Badge,200,BADGE,ALL_CLASS,PITCHED,https://static.wikia.nocookie.net/maplestory/images/d/d2/Eqp_Genesis_Badge.png,15,15,15,15,10,0,0,0,0,0,0,0,0
+Mitra's Rage: Warrior,200,EMBLEM,WARRIOR,PITCHED,https://static.wikia.nocookie.net/maplestory/images/5/5f/Eqp_Mitra's_Rage_Warrior.png,40,40,0,0,5,0,0,0,0,0,0,700,0
+Mitra's Rage: Bowman,200,EMBLEM,BOWMAN,PITCHED,https://static.wikia.nocookie.net/maplestory/images/5/5f/Eqp_Mitra's_Rage_Warrior.png,40,40,0,0,5,0,0,0,0,0,0,0,0
+Mitra's Rage: Pirate,200,EMBLEM,PIRATE,PITCHED,https://static.wikia.nocookie.net/maplestory/images/5/5f/Eqp_Mitra's_Rage_Warrior.png,40,40,0,0,5,0,0,0,0,0,0,700,0
+Mitra's Rage: Magician,200,EMBLEM,MAGE,PITCHED,https://static.wikia.nocookie.net/maplestory/images/5/5f/Eqp_Mitra's_Rage_Warrior.png,0,0,40,40,5,0,0,0,0,0,0,700,0
+Mitra's Rage: Thief,200,EMBLEM,THIEF,PITCHED,https://static.wikia.nocookie.net/maplestory/images/5/5f/Eqp_Mitra's_Rage_Warrior.png,0,40,0,40,5,0,0,0,0,0,0,700,0
+Genesis Guards,200,WEAPON,THIEF,LUCKY,https://static.wikia.nocookie.net/maplestory/images/9/97/Eqp_Genesis_Guards.png,0,150,0,150,172,0,30,20,0,0,0,0,0
+,,,,,,0,0,0,0,0,0,0,0,0,0,0,0,0
+,,,,,,0,0,0,0,0,0,0,0,0,0,0,0,0
+,,,,,,0,0,0,0,0,0,0,0,0,0,0,0,0
+,,,,,,0,0,0,0,0,0,0,0,0,0,0,0,0
+,,,,,,0,0,0,0,0,0,0,0,0,0,0,0,0
+,,,,,,0,0,0,0,0,0,0,0,0,0,0,0,0
+,,,,,,0,0,0,0,0,0,0,0,0,0,0,0,0
+,,,,,,0,0,0,0,0,0,0,0,0,0,0,0,0
+,,,,,,0,0,0,0,0,0,0,0,0,0,0,0,0
+,,,,,,0,0,0,0,0,0,0,0,0,0,0,0,0
+,,,,,,0,0,0,0,0,0,0,0,0,0,0,0,0
+,,,,,,0,0,0,0,0,0,0,0,0,0,0,0,0
+,,,,,,0,0,0,0,0,0,0,0,0,0,0,0,0
+,,,,,,0,0,0,0,0,0,0,0,0,0,0,0,0
+,,,,,,0,0,0,0,0,0,0,0,0,0,0,0,0
+,,,,,,0,0,0,0,0,0,0,0,0,0,0,0,0
+,,,,,,0,0,0,0,0,0,0,0,0,0,0,0,0
+,,,,,,0,0,0,0,0,0,0,0,0,0,0,0,0
+,,,,,,0,0,0,0,0,0,0,0,0,0,0,0,0
+,,,,,,0,0,0,0,0,0,0,0,0,0,0,0,0
+,,,,,,,,,,,,,,,0,0,0,0
+,,,,,,,,,,,,,,,0,0,0,0
+,,,,,,,,,,,,,,,0,0,0,0

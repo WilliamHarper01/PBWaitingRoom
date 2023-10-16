@@ -9,7 +9,7 @@ const possiblePotentialStats = [BLANK, FLAT_ATTACK, FLAT_STR, FLAT_DEX, FLAT_INT
                                 PERCENT_STR, PERCENT_INT, PERCENT_LUK, PERCENT_DEX, PERCENT_HP,
                                 PERCENT_MP, PERCENT_DEF, PERCENT_ATTACK, BOSS_DAMAGE, DAMAGE, CRIT_DAMAGE, IED];
 
-var equipSelected = 0;
+var equipSelected = WEAPON;
 
 var equipTab = document.getElementById('equipTab');
 
@@ -183,6 +183,19 @@ function showEquipStats(id)
     }
     document.getElementById("starforceValue").value = equips[equipSelected].starforce.star;
 
+    let equipOptions = equipSelector.childNodes;
+    for (let i=0; i<equipOptions.length; i++)
+    {
+        if (equipOptions[i].value == "None")
+            continue;
+        else
+        {
+            equipOptions[i].style.display = "none";
+            if (equipSelected == baseEquips[equipOptions[i].value].type)
+            equipOptions[i].style.display = "block";
+        }
+    }
+
 }
 
 //called when the user changes the html value of one of the flame, pot, or starforce stat elements
@@ -198,22 +211,24 @@ function changeStat(type, part, index)
     if (type == "flame")
     {
         if (part == 0)
-            equips[equipSelected].flame.lines[index][0] = statDict[flameTab.childNodes[index].firstChild.value];
+            equips[equipSelected].flame.lines[index][0] = statDict[flameTab.childNodes[index + 1].firstChild.value];
         else
-            equips[equipSelected].flame.lines[index][1] = isANumber(flameTab.childNodes[index].lastChild.value);
+            equips[equipSelected].flame.lines[index][1] = isANumber(flameTab.childNodes[index + 1].lastChild.value);
     }
     else if (type == "starforce")
         equips[equipSelected].starforce.star = isANumber(document.getElementById("starforceValue").value);
     else if (type == "potential")
     {
         if (part == 0)
-            equips[equipSelected].potential.lines[index][0] = statDict[potentialTab.childNodes[index].firstChild.value];
+            equips[equipSelected].potential.lines[index][0] = statDict[potentialTab.childNodes[index + 1].firstChild.value];
         else
-            equips[equipSelected].potential.lines[index][1] = isANumber(potentialTab.childNodes[index].lastChild.value);
+            equips[equipSelected].potential.lines[index][1] = isANumber(potentialTab.childNodes[index + 1].lastChild.value);
     }
 
     updateRange();
 }
+
+showEquipStats(equipSelected);
 
 
 

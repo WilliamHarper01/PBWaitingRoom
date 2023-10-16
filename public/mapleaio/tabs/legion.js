@@ -48,6 +48,8 @@ var legionBlocks = document.createElement("div");
 legionBlocks.className = "horizontalSection";
 legionTab.appendChild(legionBlocks);
 
+console.log(legion.legionBlocks.length)
+
 for (let i=0; i < legion.legionBlocks.length; i++)
 {
     let block = document.createElement("div");
