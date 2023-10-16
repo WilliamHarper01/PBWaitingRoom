@@ -82,6 +82,7 @@ const setBonusTable = [
                 [BOSS_DAMAGE, 10], 
                 [FLAT_ALL_STAT, 10], 
                 [FLAT_ATTACK, 10],
+                [FLAT_MATT, 10],
                 [FLAT_HP, 250],
             ]
         ],
@@ -90,6 +91,7 @@ const setBonusTable = [
                 [IED, 10], 
                 [FLAT_ALL_STAT, 10], 
                 [FLAT_ATTACK, 10],
+                [FLAT_MATT, 10],
                 [FLAT_HP, 250],
             ]
         ],
@@ -98,6 +100,7 @@ const setBonusTable = [
                 [CRIT_DAMAGE, 5], 
                 [FLAT_ALL_STAT, 15], 
                 [FLAT_ATTACK, 15],
+                [FLAT_MATT, 10],
                 [FLAT_HP, 375],
             ]
         ],
@@ -106,6 +109,7 @@ const setBonusTable = [
                 [BOSS_DAMAGE, 10], 
                 [FLAT_ALL_STAT, 15], 
                 [FLAT_ATTACK, 15],
+                [FLAT_MATT, 15],
                 [FLAT_HP, 375],
             ]
         ],
@@ -114,6 +118,7 @@ const setBonusTable = [
                 [IED, 10], 
                 [FLAT_ALL_STAT, 15], 
                 [FLAT_ATTACK, 15],
+                [FLAT_MATT, 15],
                 [FLAT_HP, 375],
             ]
         ],
@@ -122,6 +127,7 @@ const setBonusTable = [
                 [CRIT_DAMAGE, 5], 
                 [FLAT_ALL_STAT, 15], 
                 [FLAT_ATTACK, 15],
+                [FLAT_MATT, 15],
                 [FLAT_HP, 375],
             ]
         ],
@@ -130,6 +136,7 @@ const setBonusTable = [
                 [BOSS_DAMAGE, 10], 
                 [FLAT_ALL_STAT, 15], 
                 [FLAT_ATTACK, 15],
+                [FLAT_MATT, 15],
                 [FLAT_HP, 375],
             ]
         ],
@@ -138,6 +145,7 @@ const setBonusTable = [
                 [CRIT_DAMAGE, 5], 
                 [FLAT_ALL_STAT, 15], 
                 [FLAT_ATTACK, 15],
+                [FLAT_MATT, 15],
                 [FLAT_HP, 375],
             ]
         ],

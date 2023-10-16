@@ -4,6 +4,7 @@ function rebootStats(lvl)
 {
     let rStats = new Array(STATS_LENGTH).fill(0);
     rStats[FLAT_ATTACK] += 5;
+    rStats[FLAT_MATT] += 5;
     rStats[FLAT_HP] += 200;
     rStats[FLAT_MP] += 100;
 
@@ -247,6 +248,7 @@ class StarForce {
             stats[FLAT_INT] = flatMainStat;
             stats[FLAT_LUK] = flatMainStat;
             stats[FLAT_ATTACK] = flatAttack;
+            stats[FLAT_MATT] = flatAttack;
         }
         else if (branch == WARRIOR || branch == BOWMAN || branch == PIRATE) {
             stats[FLAT_STR] = flatMainStat;
@@ -256,7 +258,7 @@ class StarForce {
         else if (branch == MAGE) {
             stats[FLAT_INT] = flatMainStat;
             stats[FLAT_LUK] = flatMainStat;
-            stats[FLAT_ATTACK] = flatAttack;
+            stats[FLAT_MATT] = flatAttack;
         }
         else if (branch == THIEF) {
             stats[FLAT_DEX] = flatMainStat;
@@ -308,30 +310,30 @@ class Equip {
         if (job == ADELE)
         {
             if (baseEquip == WEAPON)
-                stats[FINAL_ATTACK] += Math.floor(stats[FLAT_ATTACK] * 0.15);
+                stats[FINAL_ATTACK] += Math.floor(stats[FLAT_MATT] * 0.15);
             else if (isAccessory(baseEquip.type))
-                stats[FINAL_ATTACK] += Math.floor(stats[FLAT_ATTACK] * 0.35);
+                stats[FINAL_ATTACK] += Math.floor(stats[FLAT_MATT] * 0.35);
         }
         if (job == ILLIUM)
         {
             if (baseEquip == WEAPON)
-                stats[FINAL_ATTACK] += Math.floor(stats[FLAT_ATTACK] * 0.20);
+                stats[FINAL_MATT] += Math.floor(stats[FLAT_ATTACK] * 0.20);
             else if (isAccessory(baseEquip.type))
-                stats[FINAL_ATTACK] += Math.floor(stats[FLAT_ATTACK] * 0.50);
+                stats[FINAL_MATT] += Math.floor(stats[FLAT_ATTACK] * 0.50);
         }
         if (job == ARK)
         {
             if (baseEquip == WEAPON)
-                stats[FINAL_ATTACK] += Math.floor(stats[FLAT_ATTACK] * 0.10);
+                stats[FINAL_ATTACK] += Math.floor(stats[FLAT_MATT] * 0.10);
             else if (isAccessory(baseEquip.type))
-                stats[FINAL_ATTACK] += Math.floor(stats[FLAT_ATTACK] * 0.25);
+                stats[FINAL_ATTACK] += Math.floor(stats[FLAT_MATT] * 0.25);
         }
         if (job == KHALI)
         {
             if (baseEquip == WEAPON)
-                stats[FINAL_ATTACK] += Math.floor(stats[FLAT_ATTACK] * 0.20);
+                stats[FINAL_ATTACK] += Math.floor(stats[FLAT_MATT] * 0.20);
             else if (isAccessory(baseEquip.type))
-                stats[FINAL_ATTACK] += Math.floor(stats[FLAT_ATTACK] * 0.50);
+                stats[FINAL_ATTACK] += Math.floor(stats[FLAT_MATT] * 0.50);
         }
 
         //DEMON AVENGER HP
@@ -359,14 +361,92 @@ class LinkSkill
     {
         let stats = new Array(STATS_LENGTH).fill(0);
 
-        if (this.job == DEMON_AVENGER)
-            stats[DAMAGE] += 5 * this.level;
-        else if (this.job == BOWMASTER)
+        if (this.level == 0)
             return stats;
-        else if (this.job == BEGINNER)
-            return stats;
-        else
-            console.log("link skill for job " + this.job + " not implemented yet!");
+
+        switch (this.job)
+        {
+            case NIGHTLORD:
+            case SHADOWER:
+            case DUAL_BLADE:
+                stats[DAMAGE] += Math.ceil((3 * this.level) / 2.0);
+                break;
+            
+            case ICE_LIGHTNING:
+            case FIRE_POISON:
+            case BISHOP:
+                stats[IED] += addIEDSource(stats[IED], 3 * Math.ceil(this.level/2.0));
+                stats[DAMAGE] += 3 * Math.ceil(this.level/2.0);
+                break;
+            
+            case CORSAIR:
+            case BUCCANEER:
+            case CANNON_MASTER:
+                stats[FLAT_ALL_STAT] += 10 + 10 * this.level;
+                stats[FLAT_HP] += 175 + 175 * this.level;
+                stats[FLAT_MP] += 175 + 175 * this.level;
+                break;
+            
+            case DAWN_WARRIOR:
+            case WIND_ARCHER:
+            case THUNDER_BREAKER:
+            case BLAZE_WIZARD:
+            case NIGHT_WALKER:
+                stats[FLAT_ATTACK] += 5 + 2 * this.level;
+                stats[FLAT_MATT] += 5 + 2 * this.level;
+                break;
+            
+            case DEMON_AVENGER:
+                stats[DAMAGE] += 5 * this.level;
+                break;
+            case XENON:
+                stats[PERCENT_ALL_STAT] += 5 * this.level;
+                break;
+            case KANNA:
+                stats[DAMAGE] += 5 * this.level;
+                break;
+            case DEMON_SLAYER:
+                stats[BOSS_DAMAGE] += (5 * this.level) + 5;
+                break;
+            case CADENA:
+                stats[DAMAGE] += 6 * this.level;
+                break;
+            case ADELE:
+                stats[BOSS_DAMAGE] += 2 * this.level;
+                break;
+            case ILLIUM:
+                stats[DAMAGE] += 6 * this.level;
+                break;
+            case KHALI:
+                stats[DAMAGE] += Math.ceil(2.5 * this.level);
+                break;
+            case ARK:
+                stats[DAMAGE] += 6 * this.level;
+                break;
+            case HAYATO:
+                stats[FLAT_ALL_STAT] += 5 + 10 * this.level;
+                stats[FLAT_ATTACK] += 5 + 5 * this.level;
+                stats[FLAT_MATT] += 5 + 5 * this.level;
+                break;
+            case HOYOUNG:
+                stats[IED] += addIEDSource(stats[IED], 5 * this.level);
+                stats[NORMAL_DAMAGE] += 4 + 5 * this.level;
+                break;
+            case LARA:
+                stats[DAMAGE] += Math.ceil(2.5 * this.level);
+                stats[NORMAL_DAMAGE] += 3 + 4 * this.level;
+                break;
+            case BEAST_TAMER:
+                stats[BOSS_DAMAGE] += 1 + 3 * this.level;
+                stats[PERCENT_HP] += 2 + 1 * this.level;
+                stats[PERCENT_MP] += 2 + 1 * this.level;
+                break;
+            case ZERO:
+                stats[IED] += addIEDSource(stats[ied], 2 * this.level);
+                break;
+            case KINESIS:
+                stats[CRIT_DAMAGE] += 2 * this.level;
+        }
 
         return stats;
     }
@@ -389,12 +469,13 @@ class Legion
         stats[IED] += this.sections[2];
         stats[CRIT_DAMAGE] += this.sections[3] / 2;
         stats[FLAT_ATTACK] += this.sections[4];
-        stats[FLAT_STR] += this.sections[5] * 5;
-        stats[FLAT_DEX] += this.sections[6] * 5;
-        stats[FLAT_INT] += this.sections[7] * 5;
-        stats[FLAT_LUK] += this.sections[8] * 5;
-        stats[FLAT_HP] += this.sections[9] * 500;
-        stats[FLAT_MP] += this.sections[10] * 500;
+        stats[FLAT_MATT] += this.sections[5];
+        stats[FLAT_STR] += this.sections[6] * 5;
+        stats[FLAT_DEX] += this.sections[7] * 5;
+        stats[FLAT_INT] += this.sections[8] * 5;
+        stats[FLAT_LUK] += this.sections[9] * 5;
+        stats[FLAT_HP] += this.sections[10] * 500;
+        stats[FLAT_MP] += this.sections[11] * 500;
 
         let statTable = [0, 10, 20, 40, 80, 100];
         let hpTable = [0, 2, 3, 4, 5, 6];
@@ -505,7 +586,7 @@ class FamiliarBadges
 
         if (this.badgeList[0]) {stats[PERCENT_ATTACK] += 1; stats[FLAT_ATTACK] += 2;}; //apocalypse
         if (this.badgeList[1]) {stats[PERCENT_ALL_STAT] += 1; stats[DAMAGE] += 1;}; //lab
-        if (this.badgeList[2]) {stats[PERCENT_ATTACK] += 1; stats[FLAT_ATTACK] += 2;}; //void
+        if (this.badgeList[2]) {stats[PERCENT_MATT] += 1; stats[FLAT_MATT] += 2;}; //void
         if (this.badgeList[3]) {stats[DAMAGE] += 1;}; //ocean
         if (this.badgeList[4]) {stats[PERCENT_ALL_STAT] += 1; stats[FLAT_ATTACK] += 2;}; //swamp
         if (this.badgeList[5]) {stats[IED] += 3;}; //mineral
@@ -540,6 +621,7 @@ class HyperStats
         stats[BOSS_DAMAGE] = 4 * this.values[9] - Math.min(5, this.values[9]); 
         stats[NORMAL_DAMAGE] = 4 * this.values[10] - Math.min(5, this.values[10]);
         stats[FINAL_ATTACK] = 3 * this.values[11];
+        stats[FINAL_MATT] = 3 * this.values[11];
 
         return stats;
     }
@@ -691,8 +773,8 @@ class Range {
             secondaryStat = this.setTotalStatPlusAll(this.stats[FLAT_LUK], this.stats[PERCENT_LUK], this.stats[FINAL_LUK]);
             let totalHp = this.setTotalStat(this.stats[FLAT_HP] + this.stats[FLAT_MP],
                 this.stats[PERCENT_HP] + this.stats[PERCENT_MP], FINAL_HP);
-            attack = this.setTotalStat(this.stats[FLAT_ATTACK], this.stats[PERCENT_ATTACK], 
-                this.stats[FINAL_ATTACK] + Math.max(Math.floor(totalHp/700), 500000));
+            attack = this.setTotalStat(this.stats[FLAT_MATT], this.stats[PERCENT_MATT], 
+                this.stats[FINAL_MATT] + Math.max(Math.floor(totalHp/700), 500000));
         }
         if (this.job == XENON)
         {
@@ -712,7 +794,7 @@ class Range {
         {
             mainStat = this.setTotalStatPlusAll(this.stats[FLAT_INT], this.stats[PERCENT_INT], this.stats[FINAL_INT]);
             secondaryStat = this.setTotalStatPlusAll(this.stats[FLAT_LUK], this.stats[PERCENT_LUK], this.stats[FINAL_LUK]);
-            attack = this.setTotalStat(this.stats[FLAT_ATTACK], this.stats[PERCENT_ATTACK], this.stats[FINAL_ATTACK]);
+            attack = this.setTotalStat(this.stats[FLAT_MATT], this.stats[PERCENT_MATT], this.stats[FINAL_MATT]);
         }
         if (dexJobs.includes(this.job))
         {
@@ -754,7 +836,10 @@ class Range {
     addStats(stats) {
         for (let i=0; i<STATS_LENGTH; i++)
         {
-            if (i == IED) this.stats[i] = addIEDSource(this.stats[IED], stats[IED])
+            if (i == IED) 
+                this.stats[i] = addIEDSource(this.stats[IED], stats[IED]);
+            else if (i == FINAL_DAMAGE) 
+                this.stats[i] = addFDSource(this.stats[FINAL_DAMAGE], stats[FINAL_DAMAGE]);
             else this.stats[i] += stats[i];
         }
     }

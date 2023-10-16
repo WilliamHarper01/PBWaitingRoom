@@ -1,5 +1,10 @@
 function addIEDSource(a, b) {
-    return (100.0 - (100.0 * (1.0 - a / 100.0) * (1.0 - b / 100.0))).toFixed(2);
+    return isANumber((100.0 - (100.0 * (1.0 - a / 100.0) * (1.0 - b / 100.0))).toFixed(2));
+}
+
+function addFDSource(a, b) {
+    
+    return isANumber(((((a + 100)/100.0) * ((b + 100)/100.0) * 100.0 - 100).toFixed(2)));
 }
 
 function isANumber(str)

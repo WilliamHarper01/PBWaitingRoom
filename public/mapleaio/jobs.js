@@ -209,6 +209,11 @@ function getJobStats(job, dse=0, dsi=0, rope=0, blink=0, dab=0,
             
 
             break;
+        case MARKSMAN:
+            jStats[FLAT_DEX] = 20;
+            jStats[FLAT_ATTACK] = 30;
+            jStats[FINAL_DAMAGE] = 20;
+            break;
     }
 
     if(dse >= 1)

@@ -24,11 +24,11 @@ var famBadges = new FamiliarBadges(new Array(8).fill(false));
 
 var hypers = new HyperStats(new Array(12).fill(0));
 
-var weaponSoul = new Potential([BLANK, 0], [FLAT_ATTACK, 20], [BLANK, 0]);
+var weaponSoul = new Potential([BLANK, 0], [FLAT_ATTACK, 20], [FLAT_MATT, 0]);
 var inner = new Potential([BLANK, 0], [BLANK, 0], [BLANK, 0]);
 var eventStats = new Array(STATS_LENGTH).fill(0);
 
-var legion = new Legion(new Array(11).fill(0));
+var legion = new Legion(new Array(12).fill(0));
 for (let i=0; i<CLASS_LENGTH; i++)
 {
     legion.legionBlocks[i] = 0;

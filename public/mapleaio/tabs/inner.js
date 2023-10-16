@@ -1,6 +1,6 @@
 var innerTab = document.getElementById("innerTab");
 
-var innerOptions = [BLANK, BOSS_DAMAGE, DAMAGE, NORMAL_DAMAGE, FINAL_ATTACK, FINAL_STR, FINAL_DEX, FINAL_INT, FINAL_LUK,
+var innerOptions = [BLANK, BOSS_DAMAGE, DAMAGE, NORMAL_DAMAGE, FINAL_ATTACK, FINAL_MATT, FINAL_STR, FINAL_DEX, FINAL_INT, FINAL_LUK,
                     SKIP_COOLDOWN, ATTACK_SPEED, CRIT_RATE, BUFF_DURATION];
 
 var innerTitle = document.createElement("div");

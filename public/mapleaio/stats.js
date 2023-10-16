@@ -36,7 +36,10 @@ const FINAL_DAMAGE = 29;
 const PERCENT_ALL_STAT = 30;
 const FLAT_ALL_STAT = 31;
 const NORMAL_DAMAGE = 32;
-const STATS_LENGTH = 33;
+const FLAT_MATT = 33;
+const PERCENT_MATT = 34;
+const FINAL_MATT = 35;
+const STATS_LENGTH = 36;
 
 //placeholder stats that don't do anything
 const FLAT_COOLDOWN_REDUCTION = 50;
@@ -70,9 +73,9 @@ const statDict = {
     "Final HP":         FINAL_HP,
     "Final MP":         FINAL_MP,
     "Final DEF":        FINAL_DEF,
-    "ATT/MATT":         FLAT_ATTACK,
-    "%ATT/MATT":        PERCENT_ATTACK,
-    "Final ATT/MATT":   FINAL_ATTACK,
+    "ATT":         FLAT_ATTACK,
+    "%ATT":        PERCENT_ATTACK,
+    "Final ATT":   FINAL_ATTACK,
     "%Damage":          DAMAGE,
     "%Boss Damage":     BOSS_DAMAGE,
     "%IED":             IED,
@@ -81,6 +84,9 @@ const statDict = {
     "%All Stats":       PERCENT_ALL_STAT,
     "All Stats":        FLAT_ALL_STAT,
     "Normal Damage":    NORMAL_DAMAGE,
+    "MATT":         FLAT_MATT,
+    "%MATT":        PERCENT_MATT,
+    "Final MATT":   FINAL_MATT,
 }
 
 statDict[BLANK] = "-none-";
@@ -105,9 +111,9 @@ statDict[FINAL_LUK] = "Final LUK";
 statDict[FINAL_HP] = "Final HP";
 statDict[FINAL_MP] = "Final MP";
 statDict[FINAL_DEF] = "Final DEF";
-statDict[FLAT_ATTACK] = "ATT/MATT";
-statDict[PERCENT_ATTACK] = "%ATT/MATT";
-statDict[FINAL_ATTACK] = "Final ATT/MATT";
+statDict[FLAT_ATTACK] = "ATT";
+statDict[PERCENT_ATTACK] = "%ATT";
+statDict[FINAL_ATTACK] = "Final ATT";
 statDict[DAMAGE] = "%Damage";
 statDict[BOSS_DAMAGE] = "%Boss Damage";
 statDict[IED] = "%IED";
@@ -116,6 +122,9 @@ statDict[FINAL_DAMAGE] = "%Final Damage";
 statDict[PERCENT_ALL_STAT] = "%All Stats";
 statDict[FLAT_ALL_STAT] ="All Stats";
 statDict[NORMAL_DAMAGE] = "Normal Damage";
+statDict[FLAT_MATT] = "MATT";
+statDict[PERCENT_MATT] = "%MATT";
+statDict[FINAL_MATT] = "Final MATT";
 
 statDict[FLAT_COOLDOWN_REDUCTION] = "cooldown reduction";
 statDict[PERCENT_COOLDOWN_REDUCTION] = "%cooldown reduction";

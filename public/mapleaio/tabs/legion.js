@@ -1,6 +1,6 @@
 var legionTab = document.getElementById("legionTab");
 
-var sectionNames = ["BOSS DAMAGE", "NORMAL DAMAGE", "IED", "CRIT DAMAGE", "ATTACK",
+var sectionNames = ["BOSS DAMAGE", "NORMAL DAMAGE", "IED", "CRIT DAMAGE", "ATTACK", "MATT",
                     "STR", "DEX", "INT", "LUK", "HP", "MP"];
 
 var sectionTitle = document.createElement("div");

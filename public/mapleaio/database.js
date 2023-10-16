@@ -124,14 +124,15 @@ function doneLoading()
             baseEquips[col[0]].stats[FLAT_INT] = isANumber(col[8]);
             baseEquips[col[0]].stats[FLAT_LUK] = isANumber(col[9]);
             baseEquips[col[0]].stats[FLAT_ATTACK] = isANumber(col[10]);
-            baseEquips[col[0]].stats[FLAT_DEF] = isANumber(col[11]);
-            baseEquips[col[0]].stats[BOSS_DAMAGE] = isANumber(col[12]);
-            baseEquips[col[0]].stats[IED] = isANumber(col[13]);
-            baseEquips[col[0]].stats[FINAL_DAMAGE] = isANumber(col[14]);
-            baseEquips[col[0]].stats[FLAT_HP] = isANumber(col[15]);
-            baseEquips[col[0]].stats[FLAT_MP] = isANumber(col[16]);
-            baseEquips[col[0]].stats[PERCENT_HP] = isANumber(col[17]);
-            baseEquips[col[0]].stats[PERCENT_MP] = isANumber(col[18]);
+            baseEquips[col[0]].stats[FLAT_MATT] = isANumber(col[10]);
+            baseEquips[col[0]].stats[FLAT_DEF] = isANumber(col[12]);
+            baseEquips[col[0]].stats[BOSS_DAMAGE] = isANumber(col[13]);
+            baseEquips[col[0]].stats[IED] = isANumber(col[14]);
+            baseEquips[col[0]].stats[FINAL_DAMAGE] = isANumber(col[15]);
+            baseEquips[col[0]].stats[FLAT_HP] = isANumber(col[16]);
+            baseEquips[col[0]].stats[FLAT_MP] = isANumber(col[17]);
+            baseEquips[col[0]].stats[PERCENT_HP] = isANumber(col[18]);
+            baseEquips[col[0]].stats[PERCENT_MP] = isANumber(col[19]);
         }
 
         let scriptNames = ["character.js", "equips.js", "familiars.js", "hyperstats.js", 
