@@ -44,10 +44,14 @@ document.getElementById("submitSignup").onclick = function ()
     let email = document.getElementById("signupUsername").value;
     let password = document.getElementById("signupPassword").value;
     let cpassword = document.getElementById("confirmPassword").value;
-    let error = document.getElementById("signupError");
+    let errorMsg = document.getElementById("signupError");
 
     if (password != cpassword)
-        error.innerHTML = "passwords don't match";
+    { 
+        errorMsg.innerHTML = "passwords don't match"; 
+        errorMsg.style.display = "flex"; 
+        return;
+    }
 
     getAuth();
     createUserWithEmailAndPassword(auth, email, password)
@@ -62,14 +66,13 @@ document.getElementById("submitSignup").onclick = function ()
             // ...
         })
         .catch((error) => {
-            const errorCode = error.code;
-            const errorMessage = error.message;
+            errorMsg.innerHTML = error.message;
+            errorMsg.style.display = "flex";
         });
     })
     .catch((error) => {
-        console.log( error.code);
-        console.log( error.message);
-        error.innerHTML = error.code + error.message;
+        errorMsg.innerHTML = error.message;
+        errorMsg.style.display = "flex";
         // ..
     });
 };
@@ -80,6 +83,7 @@ document.getElementById("submitLogin").onclick = function ()
 {
     let email = document.getElementById("loginUsername").value;
     let password = document.getElementById("loginPassword").value;
+    let errorMsg = document.getElementById("loginError");
 
     const auth = getAuth();
     signInWithEmailAndPassword(auth, email, password)
@@ -90,7 +94,7 @@ document.getElementById("submitLogin").onclick = function ()
         // ...
     })
     .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
+        errorMsg.innerHTML = error.message;
+        errorMsg.style.display = "flex";
     });
 };

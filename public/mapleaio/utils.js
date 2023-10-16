@@ -13,5 +13,9 @@ function isANumber(str)
 
 function isValidString(str)
 {
+    let list = ['/', '\\', '&', ';', '!', "?", "<", ">"];
+    for (char in list) {
+        str = str.replace(char, '');
+    }
     return str;
 }
