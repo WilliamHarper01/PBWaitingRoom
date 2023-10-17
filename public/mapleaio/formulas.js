@@ -42,47 +42,36 @@ function setBonuses(equips)
 {
     let stats = new Array(STATS_LENGTH).fill(0);
 
-    let sets = new Array(SET_LENGTH);
-    for (let i=0; i<sets.length; i++)
-        sets[i] = [];
-
-    let luckies = [];
-
-    for (let i=0; i<equips.length; i++)
+    for (let i=0; i<SET_LENGTH; i++)
     {
-        let set = baseEquips[equips[i].name].set;
-        switch(set)
+        let setCount = 0;
+        for (let j=0; j<equips.length; j++)
         {
-            case NO_SET:
-                break;
-            case LUCKY:
-                luckies.push(baseEquips[equips[i].name].type);
-                break;
-            default:
-                sets[set].push(baseEquips[equips[i].name].type);
-                break;
-        }
-    }
+            let set = baseEquips[equips[j].name].set;
+            let type = baseEquips[equips[j].name].type;
 
-    for (let i=0; i<sets.length; i++)
-    {
-        if (sets[i].length >= 3)
-        {
-            for (let j=0; j<luckies.length; j++)
-            {
-                if (isLuckyInSet(i, luckies[j]))
-                    sets[i].push(luckies[j]);
+            for (let k = 0; k<setBonusTable[k].length; k++)
+            { 
+                if (set == i && type == setBonusTable[i][k][0])
+                {
+                    setCount++;
+                    break;
+                }
             }
         }
-        //remove item from set if we have another item in the same slot and set (no double gollux pendant)
-        sets[i] = [...new Set(sets[i])];
 
-        for (let j=1; j<=sets[i].length; j++)
+        for (let j=0; j<= setCount; j++)
         {
-            let setBonusEntry = setBonusTable[i][j][1];
-            for (let k=0; k<setBonusEntry.length; k++)
-                stats[setBonusEntry[k][0]] += setBonusEntry[k][1];
+            let setStats = setBonusTable[i][j][1];
+            for (let k=0; k<setStats.length; k++)
+            {
+                stats[setStats[k][0]] += setStats[k][1];
+            }
+            
         }
+
+        if (setCount != 0)
+            console.log(i, setCount);
     }
 
     return stats;

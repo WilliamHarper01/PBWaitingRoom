@@ -41,6 +41,9 @@ firebase.auth().onAuthStateChanged((user) => {
 
 function saveData()
 {
+    if (!unsavedChanges)
+        return;
+    
     let data = {
         job: job,
         characterLevel: characterLevel,
@@ -67,6 +70,7 @@ function saveData()
     saveRef.putString(message).then((snapshot) => {
         console.log('data saved');
     });
+    unsavedChanges = false;
       
 }
 
@@ -149,8 +153,24 @@ function doneLoading()
         document.getElementById("loadingScreen").style.display = "none";
 
         updateRange();
+
+        unsavedChanges = false;
     }
 
     csv.open('GET', "equips.csv");
     csv.send();
 }
+
+window.addEventListener('beforeunload', function (e) {
+    if (!unsavedChanges)
+        return;
+    
+    if (confirm("Are you sure you want to quit? Unsaved progress may be lost")) {
+        return;
+    } 
+    else {
+        e.preventDefault();
+    } 
+    e.returnValue = '';
+    
+});

@@ -51,7 +51,19 @@ ul {
 }
 
 .advancedInfo {
-    font-size: 0.66rem;
+    font-size: 0.8rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 12em;
+}
+
+.advancedInfoStat {
+    min-width: 16%;
+    padding: 0.125rem 2rem 0.125rem 2rem;
+    text-align: center;
+
 }
 
 input {
@@ -235,7 +247,7 @@ label {
 }
 
 .equipView {
-    width: 360px;
+    width: 350px;
     display: flex;
     flex-wrap: wrap;
     height: 300px;
@@ -302,5 +314,5 @@ label {
 
 .errorMsg {
     color: red;
-    display: hidden;
+    display: none;
 }

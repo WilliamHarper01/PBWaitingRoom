@@ -1,5 +1,7 @@
 "use strict";
 
+var unsavedChanges = false;
+
 var job = BOWMASTER;
 var characterLevel = 0;
 var commonLevels = new Array(9).fill(0);
@@ -34,8 +36,8 @@ for (let i=0; i<CLASS_LENGTH; i++)
     legion.legionBlocks[i] = 0;
 }
 
-var links = new Array(12);
-for (let i = 0; i < 12; i++)
+var links = new Array(13);
+for (let i = 0; i < 13; i++)
 {
     links[i] = new LinkSkill(BEGINNER, 0);
 }
@@ -48,6 +50,7 @@ var statstext = document.getElementById("statstext");
 for (let i=1; i<STATS_LENGTH; i++)
 {
     let statText = document.createElement("li");
+    statText.className = "advancedInfoStat";
     statstext.appendChild(statText);
 }
 
@@ -95,6 +98,8 @@ function loadFromJSON(json)
     ap = json["ap"];
 }
 
+var lastRange = 1;
+
 function updateRange()
 {
     let stats = new Range(job);
@@ -111,7 +116,10 @@ function updateRange()
         commonLevels[5],
         commonLevels[6],
         commonLevels[7],
-        commonLevels[8],));
+        commonLevels[8],
+        skillIEDValue,
+        VSValue,
+        characterLevel));
 
     for (let i=0; i<equips.length; i++)
     {
@@ -138,10 +146,20 @@ function updateRange()
     stats.addStats(eventStats);
     stats.addStats(weaponSoul.calculateStats());
 
-    document.getElementById("damagetobosses").innerHTML = "Damage To Bosses: " + stats.damageToBosses();
+    let damageToBosses = stats.damageToBosses();
+
+    document.getElementById("damagetobosses").innerHTML = "Damage To Bosses: " + damageToBosses;
+
+    let fdGain = (lastRange > 0) ? ((damageToBosses / lastRange) - 1.0) * 100 : 0;
+
+    document.getElementById("fdGain").innerHTML = "FD Gain: " + fdGain.toFixed(2) + "%";
+
+    lastRange = damageToBosses;
 
     let statslist = statstext.childNodes;
 
     for (let i=0; i<statslist.length; i++)
         statslist[i].innerHTML = statDict[i] + ": " + stats.stats[i];
+
+    unsavedChanges = true;
 }

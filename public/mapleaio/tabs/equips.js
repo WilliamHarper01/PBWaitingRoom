@@ -40,7 +40,7 @@ for (let i = 0; i < 36; i++)
         equipView.appendChild(imgDiv);
         
         let img = document.createElement("img");
-        img.src = baseEquips[equips[imgIndex].name].img;
+        img.src = baseEquips[equips[imgIndex].name].img.split(".png")[0] + ".png"; //remove any junk that may be after the .png
         img.id = "equipimg" + imgIndex;
         img.className = "equipimg";
         img.setAttribute("onclick", "showEquipStats(" + imgIndex + ")")
@@ -192,10 +192,24 @@ function showEquipStats(id)
         {
             equipOptions[i].style.display = "none";
             if (equipSelected == baseEquips[equipOptions[i].value].type)
-            equipOptions[i].style.display = "block";
+                equipOptions[i].style.display = "block";
+            else if (equipSelected == 5 || equipSelected == 10 || equipSelected == 15)
+            {
+                if (baseEquips[equipOptions[i].value].type == RING)
+                    equipOptions[i].style.display = "block";
+            }
+            else if (equipSelected == 0 || equipSelected == 4 || equipSelected == 9)
+            {
+                if (baseEquips[equipOptions[i].value].type == TOTEM)
+                    equipOptions[i].style.display = "block";
+            }
+            else if (equipSelected == 11)
+            {
+                if (baseEquips[equipOptions[i].value].type == PENDANT)
+                    equipOptions[i].style.display = "block";
+            }
         }
     }
-
 }
 
 //called when the user changes the html value of one of the flame, pot, or starforce stat elements
@@ -206,7 +220,7 @@ function changeStat(type, part, index)
     {
         equips[equipSelected].baseEquip = baseEquips[equipSelector.value]
         equips[equipSelected].name = equipSelector.value;
-        document.getElementById("equipimg" + equipSelected).src = equips[equipSelected].baseEquip.img;
+        document.getElementById("equipimg" + equipSelected).src = equips[equipSelected].baseEquip.img.split(".png")[0] + ".png";
     }
     if (type == "flame")
     {

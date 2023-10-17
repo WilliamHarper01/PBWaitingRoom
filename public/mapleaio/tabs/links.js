@@ -5,7 +5,7 @@ linkTitle.className = "sectionTitle";
 linkTitle.innerHTML = "Link Skills";
 linkTab.appendChild(linkTitle);
 
-for (let i = 0; i < 12; i++)
+for (let i = 0; i < links.length; i++)
 {
     let linkLine = document.createElement("div");
     linkLine.className = "horizontalSection";
