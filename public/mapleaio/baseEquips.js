@@ -75,7 +75,8 @@ const DAYS = 9;
 const BOSS = 10;
 const AFTERLANDS = 11;
 const ANTIQUE = 12;
-const SET_LENGTH = 13;
+const ETERNAL = 13
+const SET_LENGTH = 14;
 
 const setDict = {};
 
@@ -94,6 +95,7 @@ setDict["DAYS"] = DAYS;
 setDict["BOSS"] = BOSS;
 setDict["AFTERLANDS"] = AFTERLANDS;
 setDict["ANTIQUE"] = ANTIQUE;
+setDict["ETERNAL"] = ETERNAL;
 
 
 
@@ -495,6 +497,46 @@ setBonusTable[ANTIQUE] =
     ],
 ];
 
+setBonusTable[ETERNAL] = 
+[
+    [BLANK, []], 
+    [HAT, []], 
+    [TOP, 
+        [
+            [FLAT_HP, 2500],
+            [FLAT_MP, 2500],
+            [FLAT_MATT, 40],
+            [FLAT_ATTACK, 40],
+            [BOSS_DAMAGE, 10],
+        ]
+    ],
+    [BOTTOM, 
+        [
+            [FLAT_MATT, 40],
+            [FLAT_ATTACK, 40],
+            [BOSS_DAMAGE, 10],
+            [FLAT_DEF, 600],
+            [FLAT_ALL_STAT, 50],
+        ]
+    ],
+    [WEAPON, 
+        [
+            [FLAT_MATT, 40],
+            [FLAT_ATTACK, 40],
+            [BOSS_DAMAGE, 10],
+            [PERCENT_HP, 15],
+            [PERCENT_MP, 15],
+        ]
+    ],
+    [SHOULDER, 
+        [
+            [FLAT_MATT, 40],
+            [FLAT_ATTACK, 40],
+            [IED, 20],
+        ]
+    ],
+];
+
 const baseEquips = {};
 
 baseEquips["None"] = {};
@@ -502,6 +544,7 @@ baseEquips["None"].level = 0;
 baseEquips["None"].type = RING;
 baseEquips["None"].branch = ALL_CLASS;
 baseEquips["None"].set = NO_SET;
+baseEquips["None"].isLucky = 0;
 baseEquips["None"].img = "Blank.png"
 baseEquips["None"].stats = new Array(STATS_LENGTH).fill(0);
 baseEquips["None"].stats[FLAT_STR] = 0;

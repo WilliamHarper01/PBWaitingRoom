@@ -1,97 +1,267 @@
-name, level, type, branch, set, img, str, dex, int, luk, att,matt, def, bossdamage, ied, finaldamage,flathp,flatmp,%hp,%mp
-Genesis Guards,200,WEAPON,THIEF,LUCKY,https://static.wikia.nocookie.net/maplestory/images/9/97/Eqp_Genesis_Guards.png,0,150,0,150,172,0,0,30,20,0,0,0,0,0
-Magic Eyepatch,160,EYE_ACCESSORY,ALL_CLASS,PITCHED,https://static.wikia.nocookie.net/maplestory/images/c/c1/Eqp_Magic_Eyepatch.png,15,15,15,15,3,3,300,0,0,0,0,0,0,0
-Berserked,160,FACE_ACCESSORY,ALL_CLASS,PITCHED,https://static.wikia.nocookie.net/maplestory/images/8/89/Eqp_Berserked.png,10,10,10,10,10,10,200,0,0,0,0,0,0,0
-Black Heart,120,HEART,ALL_CLASS,PITCHED,https://static.wikia.nocookie.net/maplestory/images/9/99/Eqp_Black_Heart.png,10,10,10,10,77,77,0,0,0,0,100,0,0,0
-Source of Suffering,160,PENDANT,ALL_CLASS,PITCHED,https://static.wikia.nocookie.net/maplestory/images/b/bb/Eqp_Source_of_Suffering.png,10,10,10,10,3,3,300,0,0,0,0,0,5,0
-Cursed Red Spellbook,160,POCKET,ALL_CLASS,PITCHED,https://static.wikia.nocookie.net/maplestory/images/c/cb/Eqp_Cursed_Red_Spellbook.png,20,10,10,10,10,10,0,0,0,0,100,100,0,0
-Cursed Blue Spellbook,160,POCKET,ALL_CLASS,PITCHED,https://static.wikia.nocookie.net/maplestory/images/f/f3/Eqp_Cursed_Blue_Spellbook.png,20,10,10,10,10,10,0,0,0,0,100,100,0,0
-Cursed Green Spellbook,160,POCKET,ALL_CLASS,PITCHED,https://static.wikia.nocookie.net/maplestory/images/f/f7/Eqp_Cursed_Green_Spellbook.png,20,10,10,10,10,10,0,0,0,0,100,100,0,0
-Cursed Yellow Spellbook,160,POCKET,ALL_CLASS,PITCHED,https://static.wikia.nocookie.net/maplestory/images/d/d4/Eqp_Cursed_Yellow_Spellbook.png,20,10,10,10,10,10,0,0,0,0,100,100,0,0
-Commanding Force Earring,200,EARRINGS,ALL_CLASS,PITCHED,https://static.wikia.nocookie.net/maplestory/images/9/98/Eqp_Commanding_Force_Earring.png,7,7,7,7,5,5,100,0,0,0,500,500,0,0
-Endless Terror,200,RING,ALL_CLASS,PITCHED,https://static.wikia.nocookie.net/maplestory/images/8/83/Eqp_Endless_Terror.png,5,5,5,5,4,4,0,0,0,0,250,250,0,0
-Dreamy Belt,200,BELT,ALL_CLASS,PITCHED,https://static.wikia.nocookie.net/maplestory/images/0/02/Eqp_Dreamy_Belt.png,50,50,50,50,6,6,150,0,0,0,150,150,0,0
-Genesis Badge,200,BADGE,ALL_CLASS,PITCHED,https://static.wikia.nocookie.net/maplestory/images/d/d2/Eqp_Genesis_Badge.png,15,15,15,15,10,10,0,0,0,0,0,0,0,0
-Mitra's Rage: Warrior,200,EMBLEM,WARRIOR,PITCHED,https://static.wikia.nocookie.net/maplestory/images/5/5f/Eqp_Mitra's_Rage_Warrior.png,40,40,0,0,5,5,0,0,0,0,0,0,700,0
-Mitra's Rage: Bowman,200,EMBLEM,BOWMAN,PITCHED,https://static.wikia.nocookie.net/maplestory/images/5/5f/Eqp_Mitra's_Rage_Warrior.png,40,40,0,0,5,5,0,0,0,0,0,0,0,0
-Mitra's Rage: Pirate,200,EMBLEM,PIRATE,PITCHED,https://static.wikia.nocookie.net/maplestory/images/5/5f/Eqp_Mitra's_Rage_Warrior.png,40,40,0,0,5,5,0,0,0,0,0,0,700,0
-Mitra's Rage: Magician,200,EMBLEM,MAGE,PITCHED,https://static.wikia.nocookie.net/maplestory/images/5/5f/Eqp_Mitra's_Rage_Warrior.png,0,0,40,40,5,5,0,0,0,0,0,0,700,0
-Mitra's Rage: Thief,200,EMBLEM,THIEF,PITCHED,https://static.wikia.nocookie.net/maplestory/images/5/5f/Eqp_Mitra's_Rage_Warrior.png,0,40,0,40,5,5,0,0,0,0,0,0,700,0
-Genesis Guards,200,WEAPON,THIEF,LUCKY,https://static.wikia.nocookie.net/maplestory/images/9/97/Eqp_Genesis_Guards.png,0,150,0,150,172,0,0,30,20,0,0,0,0,0
-Twilight Mark,140,FACE_ACCESSORY,ALL_CLASS,DAWN,https://static.wikia.nocookie.net/maplestory/images/4/46/Eqp_Twilight_Mark.png,5,5,5,5,5,5,100,0,0,0,0,0,0,0
-Daybreak Pendant,140,PENDANT,ALL_CLASS,DAWN,https://static.wikia.nocookie.net/maplestory/images/e/e9/Eqp_Daybreak_Pendant.png,8,8,8,8,2,2,100,0,0,0,0,0,5,0
-Estella Earrings,160,EARRINGS,ALL_CLASS,DAWN,https://static.wikia.nocookie.net/maplestory/images/a/aa/Eqp_Estella_Earrings.png,7,7,7,7,2,2,100,0,0,0,300,300,0,0
-Guardian Angel Ring,160,RING,ALL_CLASS,BOSS,https://static.wikia.nocookie.net/maplestory/images/a/aa/Eqp_Guardian_Angel_Ring.png,5,5,5,5,2,2,0,0,0,0,200,200,0,0
-Dawn Guardian Angel Ring,160,RING,ALL_CLASS,DAWN,https://static.wikia.nocookie.net/maplestory/images/a/aa/Eqp_Guardian_Angel_Ring.png,5,5,5,5,2,2,0,0,0,0,200,200,0,0
-Superior Gollux Ring,150,RING,ALL_CLASS,SUPERIOR_GOLLUX,https://static.wikia.nocookie.net/maplestory/images/6/61/Eqp_Superior_Gollux_Ring.png/revision/latest?cb=20140927222747,10,10,10,10,8,8,150,0,0,0,250,250,0,0
-Superior Engraved Gollux Pendant,150,PENDANT,ALL_CLASS,SUPERIOR_GOLLUX,https://static.wikia.nocookie.net/maplestory/images/4/4c/Eqp_Superior_Engraved_Gollux_Pendant.png/revision/latest?cb=20150922083727,28,28,28,28,5,5,100,0,0,0,250,250,0,0
-Superior Engraved Gollux Belt,150,BELT,ALL_CLASS,SUPERIOR_GOLLUX,https://static.wikia.nocookie.net/maplestory/images/f/f7/Eqp_Superior_Engraved_Gollux_Belt.png/revision/latest?cb=20150922083726,60,60,60,60,35,35,100,0,0,0,300,300,0,0
-Superior Gollux Earrings,150,EARRINGS,ALL_CLASS,SUPERIOR_GOLLUX,https://static.wikia.nocookie.net/maplestory/images/9/91/Eqp_Superior_Gollux_Earrings.png/revision/latest?cb=20140829183324,15,15,15,15,10,10,100,0,0,0,150,150,0,0
-Royal Warrior Helm,150,HAT,WARRIOR,RA_WARRIOR,https://static.wikia.nocookie.net/maplestory/images/a/a1/Eqp_Royal_Warrior_Helm.png/revision/latest?cb=20150112211030,40,40,0,0,2,0,390,0,10,0,360,360,0,0
-Eagle Eye Warrior Armor,150,TOP,WARRIOR,RA_WARRIOR,https://static.wikia.nocookie.net/maplestory/images/5/5e/Eqp_Eagle_Eye_Warrior_Armor.png/revision/latest?cb=20160501235236,30,30,0,0,2,0,210,0,5,0,0,0,0,0
-Trixter Warrior Pants,150,BOTTOM,WARRIOR,RA_WARRIOR,https://static.wikia.nocookie.net/maplestory/images/0/09/Eqp_Trixter_Warrior_Pants.png/revision/latest?cb=20160502025844,30,30,0,0,2,0,210,0,5,0,0,0,0,0
-Royal Dunwitch Helm,150,HAT,MAGE,RA_MAGE,https://static.wikia.nocookie.net/maplestory/images/f/fa/Eqp_Royal_Dunwitch_Hat.png/revision/latest?cb=20141212194412,40,40,0,0,2,0,180,0,10,0,360,360,0,0
-Eagle Eye Dunwitch Armor,150,TOP,MAGE,RA_MAGE,https://static.wikia.nocookie.net/maplestory/images/6/69/Eqp_Eagle_Eye_Dunwitch_Robe.png/revision/latest?cb=20160501235242,0,0,30,30,0,2,120,0,5,0,0,0,0,0
-Trixter Dunwitch Pants,150,BOTTOM,MAGE,RA_MAGE,https://static.wikia.nocookie.net/maplestory/images/7/79/Eqp_Trixter_Dunwitch_Pants.png/revision/latest?cb=20160502024720,0,0,30,30,0,2,120,0,5,0,0,0,0,0
-Royal Ranger Helm,150,HAT,BOWMAN,RA_BOWMAN,https://static.wikia.nocookie.net/maplestory/images/f/f7/Eqp_Royal_Ranger_Beret.png/revision/latest?cb=20150112211028,40,40,0,0,2,0,390,0,10,0,360,360,0,0
-Eagle Eye Ranger Top,150,TOP,BOWMAN,RA_BOWMAN,https://static.wikia.nocookie.net/maplestory/images/8/8c/Eqp_Eagle_Eye_Ranger_Cowl.png/revision/latest?cb=20160501234942,30,30,0,0,2,0,210,0,5,0,0,0,0,0
-Trixter Ranger Pants,150,BOTTOM,BOWMAN,RA_BOWMAN,https://static.wikia.nocookie.net/maplestory/images/a/a2/Eqp_Trixter_Ranger_Pants.png/revision/latest?cb=20160502023550,30,30,0,0,2,0,210,0,5,0,0,0,0,0
-Royal Wanderer Helm,150,HAT,PIRATE,RA_PIRATE,https://static.wikia.nocookie.net/maplestory/images/f/fa/Eqp_Royal_Wanderer_Hat.png/revision/latest?cb=20150112201908,40,40,0,0,2,0,390,0,10,0,360,360,0,0
-Eagle Eye Wanderer Armor,150,TOP,PIRATE,RA_PIRATE,https://static.wikia.nocookie.net/maplestory/images/8/8c/Eqp_Eagle_Eye_Wanderer_Coat.png/revision/latest?cb=20160501234952,30,30,0,0,2,0,210,0,5,0,0,0,0,0
-Trixter Wanderer Pants,150,BOTTOM,PIRATE,RA_PIRATE,https://static.wikia.nocookie.net/maplestory/images/e/e0/Eqp_Trixter_Wanderer_Pants.png/revision/latest?cb=20160502022705,30,30,0,0,2,0,210,0,5,0,0,0,0,0
-Royal Assassin Helm,150,HAT,THIEF,RA_THIEF,https://static.wikia.nocookie.net/maplestory/images/8/88/Eqp_Royal_Assassin_Hood.png/revision/latest?cb=20150112211026,0,40,0,40,2,0,390,0,10,0,360,360,0,0
-Eagle Eye Assassin Armor,150,TOP,THIEF,RA_THIEF,https://static.wikia.nocookie.net/maplestory/images/c/cb/Eqp_Eagle_Eye_Assassin_Shirt.png/revision/latest?cb=20160501234946,0,30,0,30,2,0,210,0,5,0,0,0,0,0
-Trixter Assassin Pants,150,BOTTOM,THIEF,RA_THIEF,https://static.wikia.nocookie.net/maplestory/images/c/c8/Eqp_Trixter_Assassin_Pants.png/revision/latest?cb=20160502023353,0,30,0,30,2,0,210,0,5,0,0,0,0,0
-Deimos Sage Shield,130,SECONDARY,MAGE,NO_SET,https://static.wikia.nocookie.net/maplestory/images/d/d1/Eqp_Deimos_Sage_Shield.png/revision/latest?cb=20180830075149,10,10,0,0,0,0,118,0,0,0,0,0,0,0
-Deimos Shadow Shield,130,SECONDARY,THIEF,NO_SET,https://static.wikia.nocookie.net/maplestory/images/8/80/Eqp_Deimos_Shadow_Shield.png/revision/latest?cb=20180830075204,0,0,0,10,0,0,0,0,0,0,0,0,0,0
-Deimos Warrior Shield,130,SECONDARY,WARRIOR,NO_SET,https://static.wikia.nocookie.net/maplestory/images/b/b6/Eqp_Deimos_Warrior_Shield.png/revision/latest?cb=20180830075214,0,0,10,0,0,0,0,0,0,0,0,0,0,0
-Princess No's Medal,140,SECONDARY,WARRIOR,NO_SET,https://static.wikiahttps://static.wikia.nocookie.net/maplestory/images/4/44/Eqp_Princess_No%27s_Medal.png/revision/latest?cb=20170902231500.nocookie.net/maplestory/images/c/cd/Eqp_Princess_No%27s_Feather.png/revision/latest?cb=20170902232433,14,14,0,0,9,0,0,0,0,0,0,0,0,0
-Princess No's Falcon Eye,140,SECONDARY,PIRATE,NO_SET,https://static.wikia.nocookie.net/maplestory/images/d/dd/Eqp_Princess_No%27s_Falcon_Eye.png/revision/latest?cb=20170903030628,14,14,0,0,9,0,0,0,0,0,0,0,0,0
-Princess No's Feather,140,SECONDARY,BOWMAN,NO_SET,https://static.wikia.nocookie.net/maplestory/images/c/cd/Eqp_Princess_No%27s_Feather.png/revision/latest?cb=20170902232433,14,14,0,0,9,0,0,0,0,0,0,0,0,0
-Princess No's Charm,140,SECONDARY,THIEF,NO_SET,https://static.wikia.nocookie.net/maplestory/images/4/49/Eqp_Princess_No%27s_Charm.png/revision/latest?cb=20150628094008,0,14,0,14,9,0,0,0,0,0,0,0,0,0
-Princess No's Flaming Book,140,SECONDARY,MAGE,NO_SET,https://maplestory.fandom.com/wiki/Princess_No%27s_Flaming_Book,0,0,14,14,0,9,0,0,0,0,0,0,0,0
-Arcane Umbra Knight Gloves,200,GLOVES,WARRIOR,ARCANE,https://static.wikia.nocookie.net/maplestory/images/6/61/Eqp_Arcane_Umbra_Gloves.png/revision/latest?cb=20170122011728,40,40,0,0,9,0,250,0,0,0,0,0,0,0
-Arcane Umbra Knight Shoes,200,SHOES,WARRIOR,ARCANE,https://static.wikia.nocookie.net/maplestory/images/5/54/Eqp_Arcane_Umbra_Shoes.png/revision/latest?cb=20170122013051,40,40,0,0,9,0,250,0,0,0,0,0,0,0
-Arcane Umbra Knight Cape,200,CAPE,WARRIOR,ARCANE,https://static.wikia.nocookie.net/maplestory/images/3/3c/Eqp_Arcane_Umbra_Cape.png/revision/latest?cb=20161214031238,35,35,35,35,5,0,450,0,0,0,0,0,0,0
-Arcane Umbra Knight Shoulder,200,SHOULDER,WARRIOR,ARCANE,https://static.wikia.nocookie.net/maplestory/images/b/b8/Eqp_Arcane_Umbra_Shoulder.png/revision/latest?cb=20161209035635,35,35,35,35,20,0,300,0,0,0,0,0,0,0
-Arcane Umbra Archer Gloves,200,GLOVES,BOWMAN,ARCANE,https://static.wikia.nocookie.net/maplestory/images/6/61/Eqp_Arcane_Umbra_Gloves.png/revision/latest?cb=20170122011728,40,40,0,0,9,0,250,0,0,0,0,0,0,0
-Arcane Umbra Archer Shoes,200,SHOES,BOWMAN,ARCANE,https://static.wikia.nocookie.net/maplestory/images/5/54/Eqp_Arcane_Umbra_Shoes.png/revision/latest?cb=20170122013051,40,40,0,0,9,0,250,0,0,0,0,0,0,0
-Arcane Umbra Archer Cape,200,CAPE,BOWMAN,ARCANE,https://static.wikia.nocookie.net/maplestory/images/3/3c/Eqp_Arcane_Umbra_Cape.png/revision/latest?cb=20161214031238,35,35,35,35,5,0,450,0,0,0,0,0,0,0
-Arcane Umbra Archer Shoulder,200,SHOULDER,BOWMAN,ARCANE,https://static.wikia.nocookie.net/maplestory/images/b/b8/Eqp_Arcane_Umbra_Shoulder.png/revision/latest?cb=20161209035635,35,35,35,35,20,0,300,0,0,0,0,0,0,0
-Arcane Umbra Pirate Gloves,200,GLOVES,PIRATE,ARCANE,https://static.wikia.nocookie.net/maplestory/images/6/61/Eqp_Arcane_Umbra_Gloves.png/revision/latest?cb=20170122011728,40,40,0,0,9,0,250,0,0,0,0,0,0,0
-Arcane Umbra Pirate Shoes,200,SHOES,PIRATE,ARCANE,https://static.wikia.nocookie.net/maplestory/images/5/54/Eqp_Arcane_Umbra_Shoes.png/revision/latest?cb=20170122013051,40,40,0,0,9,0,250,0,0,0,0,0,0,0
-Arcane Umbra Pirate Cape,200,CAPE,PIRATE,ARCANE,https://static.wikia.nocookie.net/maplestory/images/3/3c/Eqp_Arcane_Umbra_Cape.png/revision/latest?cb=20161214031238,35,35,35,35,5,0,450,0,0,0,0,0,0,0
-Arcane Umbra Pirate Shoulder,200,SHOULDER,PIRATE,ARCANE,https://static.wikia.nocookie.net/maplestory/images/b/b8/Eqp_Arcane_Umbra_Shoulder.png/revision/latest?cb=20161209035635,35,35,35,35,20,0,300,0,0,0,0,0,0,0
-Arcane Umbra Mage Gloves,200,GLOVES,MAGE,ARCANE,https://static.wikia.nocookie.net/maplestory/images/6/61/Eqp_Arcane_Umbra_Gloves.png/revision/latest?cb=20170122011728,0,0,40,40,0,9,250,0,0,0,0,0,0,0
-Arcane Umbra Mage Shoes,200,SHOES,MAGE,ARCANE,https://static.wikia.nocookie.net/maplestory/images/5/54/Eqp_Arcane_Umbra_Shoes.png/revision/latest?cb=20170122013051,0,0,40,40,0,9,250,0,0,0,0,0,0,0
-Arcane Umbra Mage Cape,200,CAPE,MAGE,ARCANE,https://static.wikia.nocookie.net/maplestory/images/3/3c/Eqp_Arcane_Umbra_Cape.png/revision/latest?cb=20161214031238,35,35,35,35,0,5,450,0,0,0,0,0,0,0
-Arcane Umbra Mage Shoulder,200,SHOULDER,MAGE,ARCANE,https://static.wikia.nocookie.net/maplestory/images/b/b8/Eqp_Arcane_Umbra_Shoulder.png/revision/latest?cb=20161209035635,35,35,35,35,0,20,300,0,0,0,0,0,0,0
-Arcane Umbra Thief Gloves,200,GLOVES,THIEF,ARCANE,https://static.wikia.nocookie.net/maplestory/images/6/61/Eqp_Arcane_Umbra_Gloves.png/revision/latest?cb=20170122011728,0,40,0,40,9,0,250,0,0,0,0,0,0,0
-Arcane Umbra Thief Shoes,200,SHOES,THIEF,ARCANE,https://static.wikia.nocookie.net/maplestory/images/5/54/Eqp_Arcane_Umbra_Shoes.png/revision/latest?cb=20170122013051,0,40,0,40,9,0,250,0,0,0,0,0,0,0
-Arcane Umbra Thief Cape,200,CAPE,THIEF,ARCANE,https://static.wikia.nocookie.net/maplestory/images/3/3c/Eqp_Arcane_Umbra_Cape.png/revision/latest?cb=20161214031238,35,35,35,35,5,0,450,0,0,0,0,0,0,0
-Arcane Umbra Thief Shoulder,200,SHOULDER,THIEF,ARCANE,https://static.wikia.nocookie.net/maplestory/images/b/b8/Eqp_Arcane_Umbra_Shoulder.png/revision/latest?cb=20161209035635,35,35,35,35,20,0,300,0,0,0,0,0,0,0
-Gold Maple Leaf Emblem,100,EMBLEM,ALL_CLASS,NO_SET,https://static.wikia.nocookie.net/maplestory/images/d/d1/Eqp_Gold_Maple_Leaf_Emblem.png/revision/latest?cb=20150105204637,10,10,10,10,2,2,0,0,0,0,0,0,0,0
-Crystal Ventus Badge,130,BADGE,ALL_CLASS,BOSS,https://static.wikia.nocookie.net/maplestory/images/a/af/Eqp_Crystal_Ventus_Badge.png/revision/latest?cb=20150911184149,10,10,10,10,5,5,0,0,0,0,0,0,0,0
-Seven Days Badge,100,BADGE,ALL_CLASS,DAYS,https://static.wikia.nocookie.net/maplestory/images/1/1a/Eqp_Seven_Days_Badge.png/revision/latest?cb=20191006085741,7,7,7,7,7,7,0,0,10,0,0,0,0,0
-Ghost Ship Exorcist,150,BADGE,ALL_CLASS,NO_SET,https://static.wikia.nocookie.net/maplestory/images/4/4a/Eqp_Ghost_Ship_Exorcist.png/revision/latest?cb=20140103054036,3,3,3,3,2,2,0,0,0,0,0,0,0,0
-Sengoku Hakase Badge,160,BADGE,ALL_CLASS,NO_SET,https://static.wikia.nocookie.net/maplestory/images/c/c9/Eqp_Sengoku_Hakase_Badge.png/revision/latest?cb=20170121172037,10,10,10,10,10,10,0,0,0,0,0,0,0,0
-7 Day Monster Parker,100,MEDAL,ALL_CLASS,DAYS,https://static.wikia.nocookie.net/maplestory/images/c/cd/Eqp_Seven_Day_Monster_Parker.png/revision/latest?cb=20180524151134,7,7,7,7,7,7,0,0,10,0,0,0,0,0
-Meister Ring,140,RING,ALL_CLASS,NO_SET,https://static.wikia.nocookie.net/maplestory/images/e/e1/Eqp_Meister_Ring.png/revision/latest?cb=20171123033157,5,5,5,5,1,1,150,0,0,0,200,200,0,0
-Kanna's Treasure,140,RING,ALL_CLASS,NO_SET,https://static.wikia.nocookie.net/maplestory/images/5/59/Eqp_Kanna%27s_Treasure.png/revision/latest?cb=20181024054842,5,5,5,5,1,1,150,0,0,0,200,200,0,0
-Reinforced Gollux Ring,140,RING,ALL_CLASS,NO_SET,https://static.wikia.nocookie.net/maplestory/images/b/b7/Eqp_Reinforced_Gollux_Ring.png/revision/latest?cb=20151120013622,8,8,8,8,5,5,150,0,0,0,200,200,0,0
-Pink Holy Cup,140,POCKET,ALL_CLASS,BOSS,https://static.wikia.nocookie.net/maplestory/images/a/af/Eqp_Pink_Holy_Cup.png/revision/latest?cb=20151122085210,5,5,5,5,5,5,0,0,0,0,50,50,0,0
-Dominator Pendant,140,PENDANT,ALL_CLASS,BOSS,https://static.wikia.nocookie.net/maplestory/images/c/c3/Eqp_Dominator_Pendant.png/revision/latest?cb=20160106061857,20,20,20,20,3,3,0,0,0,0,0,0,10,10
-Black Bean Mark,135,EYE_ACCESSORY,ALL_CLASS,BOSS,https://static.wikia.nocookie.net/maplestory/images/7/77/Eqp_Black_Bean_Mark.png/revision/latest?cb=20150915005354,7,7,7,7,1,1,0,0,0,0,0,0,0,0
-Papulautus Mark,145,EYE_ACCESSORY,ALL_CLASS,BOSS,https://static.wikia.nocookie.net/maplestory/images/b/b7/Eqp_Papulatus_Mark.png/revision/latest?cb=20171210184421,8,8,8,8,1,1,0,0,0,0,0,0,0,0
-Beodog Figurine,90,TOTEM,ALL_CLASS,AFTERLANDS,https://static.wikia.nocookie.net/maplestory/images/d/d0/Eqp_Beodog_Figurine.png/revision/latest?cb=20170121172854,20,0,0,0,7,7,0,0,0,0,0,0,0,0
-Billy Figurine,90,TOTEM,ALL_CLASS,AFTERLANDS,https://static.wikia.nocookie.net/maplestory/images/9/95/Eqp_Billy_Figurine.png/revision/latest?cb=20170121172901,0,20,0,0,7,7,0,0,0,0,0,0,0,0
-Adler Figurine,90,TOTEM,ALL_CLASS,AFTERLANDS,https://static.wikia.nocookie.net/maplestory/images/0/08/Eqp_Adler_Figurine.png/revision/latest?cb=20170121172908,0,0,20,0,7,7,0,0,0,0,0,0,0,0
-Mansa Figurine,90,TOTEM,ALL_CLASS,AFTERLANDS,https://static.wikia.nocookie.net/maplestory/images/c/c1/Eqp_Mansa_Figurine.png/revision/latest?cb=20170121172915,0,0,0,20,7,7,0,0,0,0,0,0,0,0
-Horseback Riding Doll Totem,125,TOTEM,ALL_CLASS,ANTIQUE,https://static.wikia.nocookie.net/maplestory/images/d/d6/Eqp_Horseback_Riding_Doll_Totem.png/revision/latest?cb=20200323215029,20,20,20,20,10,10,0,0,0,0,0,0,0,0
-Jade Kettle Totem,125,TOTEM,ALL_CLASS,ANTIQUE,https://static.wikia.nocookie.net/maplestory/images/c/c9/Eqp_Jade_Kettle_Totem.png/revision/latest?cb=20200323215111,20,20,20,20,10,10,0,0,0,0,0,0,0,0
-Bronze Incense Burner Totem,125,TOTEM,ALL_CLASS,ANTIQUE,https://static.wikia.nocookie.net/maplestory/images/d/d2/Eqp_Bronze_Incense_Burner_Totem.png/revision/latest?cb=20200323215158,22,22,22,22,12,12,0,0,0,0,0,0,0,0
-Ancient Slate Replica,200,TOTEM,ALL_CLASS,NO_SET,https://static.wikia.nocookie.net/maplestory/images/6/63/Eqp_Ancient_Slate_Replica.png/revision/latest?cb=20221219064032,20,20,20,20,5,5,0,0,0,0,0,0,0,0
-Dark Doom Totem,10,TOTEM,ALL_CLASS,NO_SET,https://static.wikia.nocookie.net/maplestory/images/3/3d/Eqp_Dark_Doom_Totem.png/revision/latest?cb=20190227024026,36,0,0,0,15,15,0,0,0,0,0,0,0,0
-Dark Avenger Totem,10,TOTEM,ALL_CLASS,NO_SET,https://static.wikia.nocookie.net/maplestory/images/3/32/Eqp_Dark_Avenger_Totem.png/revision/latest?cb=20190227024026,0,36,0,0,15,15,0,0,0,0,0,0,0,0
-Dark Hellia Totem,10,TOTEM,ALL_CLASS,NO_SET,https://static.wikia.nocookie.net/maplestory/images/3/39/Eqp_Dark_Hellia_Totem.png/revision/latest?cb=20190227024026,0,0,36,0,15,15,0,0,0,0,0,0,0,0
-Dark Grin Totem,10,TOTEM,ALL_CLASS,NO_SET,https://static.wikia.nocookie.net/maplestory/images/0/02/Eqp_Dark_Grin_Totem.png/revision/latest?cb=20190227024026,0,0,0,36,15,15,0,0,0,0,0,0,0,0
+name, level, type, branch, set,lucky, img, str, dex, int, luk, att,matt, def, bossdamage, ied, finaldamage,flathp,flatmp,%hp,%mp
+,,,,,,,,,,,,,,,,,,,,
+Magic Eyepatch,160,EYE_ACCESSORY,ALL_CLASS,PITCHED,0,https://static.wikia.nocookie.net/maplestory/images/c/c1/Eqp_Magic_Eyepatch.png,15,15,15,15,3,3,300,0,0,0,0,0,0,0
+Berserked,160,FACE_ACCESSORY,ALL_CLASS,PITCHED,0,https://static.wikia.nocookie.net/maplestory/images/8/89/Eqp_Berserked.png,10,10,10,10,10,10,200,0,0,0,0,0,0,0
+Black Heart,120,HEART,ALL_CLASS,PITCHED,0,https://static.wikia.nocookie.net/maplestory/images/9/99/Eqp_Black_Heart.png,10,10,10,10,77,77,0,0,0,0,100,0,0,0
+Source of Suffering,160,PENDANT,ALL_CLASS,PITCHED,0,https://static.wikia.nocookie.net/maplestory/images/b/bb/Eqp_Source_of_Suffering.png,10,10,10,10,3,3,300,0,0,0,0,0,5,0
+Cursed Red Spellbook,160,POCKET,ALL_CLASS,PITCHED,0,https://static.wikia.nocookie.net/maplestory/images/c/cb/Eqp_Cursed_Red_Spellbook.png,20,10,10,10,10,10,0,0,0,0,100,100,0,0
+Cursed Blue Spellbook,160,POCKET,ALL_CLASS,PITCHED,0,https://static.wikia.nocookie.net/maplestory/images/f/f3/Eqp_Cursed_Blue_Spellbook.png,20,10,10,10,10,10,0,0,0,0,100,100,0,0
+Cursed Green Spellbook,160,POCKET,ALL_CLASS,PITCHED,0,https://static.wikia.nocookie.net/maplestory/images/f/f7/Eqp_Cursed_Green_Spellbook.png,20,10,10,10,10,10,0,0,0,0,100,100,0,0
+Cursed Yellow Spellbook,160,POCKET,ALL_CLASS,PITCHED,0,https://static.wikia.nocookie.net/maplestory/images/d/d4/Eqp_Cursed_Yellow_Spellbook.png,20,10,10,10,10,10,0,0,0,0,100,100,0,0
+Commanding Force Earring,200,EARRINGS,ALL_CLASS,PITCHED,0,https://static.wikia.nocookie.net/maplestory/images/9/98/Eqp_Commanding_Force_Earring.png,7,7,7,7,5,5,100,0,0,0,500,500,0,0
+Endless Terror,200,RING,ALL_CLASS,PITCHED,0,https://static.wikia.nocookie.net/maplestory/images/8/83/Eqp_Endless_Terror.png,5,5,5,5,4,4,0,0,0,0,250,250,0,0
+Dreamy Belt,200,BELT,ALL_CLASS,PITCHED,0,https://static.wikia.nocookie.net/maplestory/images/0/02/Eqp_Dreamy_Belt.png,50,50,50,50,6,6,150,0,0,0,150,150,0,0
+Genesis Badge,200,BADGE,ALL_CLASS,PITCHED,0,https://static.wikia.nocookie.net/maplestory/images/d/d2/Eqp_Genesis_Badge.png,15,15,15,15,10,10,0,0,0,0,0,0,0,0
+Mitra's Rage: Warrior,200,EMBLEM,WARRIOR,PITCHED,0,https://static.wikia.nocookie.net/maplestory/images/5/5f/Eqp_Mitra's_Rage_Warrior.png,40,40,0,0,5,5,0,0,0,0,0,0,700,0
+Mitra's Rage: Bowman,200,EMBLEM,BOWMAN,PITCHED,0,https://static.wikia.nocookie.net/maplestory/images/5/5f/Eqp_Mitra's_Rage_Warrior.png,40,40,0,0,5,5,0,0,0,0,0,0,0,0
+Mitra's Rage: Pirate,200,EMBLEM,PIRATE,PITCHED,0,https://static.wikia.nocookie.net/maplestory/images/5/5f/Eqp_Mitra's_Rage_Warrior.png,40,40,0,0,5,5,0,0,0,0,0,0,700,0
+Mitra's Rage: Magician,200,EMBLEM,MAGE,PITCHED,0,https://static.wikia.nocookie.net/maplestory/images/5/5f/Eqp_Mitra's_Rage_Warrior.png,0,0,40,40,5,5,0,0,0,0,0,0,700,0
+Mitra's Rage: Thief,200,EMBLEM,THIEF,PITCHED,0,https://static.wikia.nocookie.net/maplestory/images/5/5f/Eqp_Mitra's_Rage_Warrior.png,0,40,0,40,5,5,0,0,0,0,0,0,700,0
+,,,,,,,,,,,,,,,,,,,,
+Twilight Mark,140,FACE_ACCESSORY,ALL_CLASS,DAWN,0,https://static.wikia.nocookie.net/maplestory/images/4/46/Eqp_Twilight_Mark.png,5,5,5,5,5,5,100,0,0,0,0,0,0,0
+Daybreak Pendant,140,PENDANT,ALL_CLASS,DAWN,0,https://static.wikia.nocookie.net/maplestory/images/e/e9/Eqp_Daybreak_Pendant.png,8,8,8,8,2,2,100,0,0,0,0,0,5,0
+Estella Earrings,160,EARRINGS,ALL_CLASS,DAWN,0,https://static.wikia.nocookie.net/maplestory/images/a/aa/Eqp_Estella_Earrings.png,7,7,7,7,2,2,100,0,0,0,300,300,0,0
+Guardian Angel Ring,160,RING,ALL_CLASS,BOSS,0,https://static.wikia.nocookie.net/maplestory/images/a/aa/Eqp_Guardian_Angel_Ring.png,5,5,5,5,2,2,0,0,0,0,200,200,0,0
+Dawn Guardian Angel Ring,160,RING,ALL_CLASS,DAWN,0,https://static.wikia.nocookie.net/maplestory/images/a/aa/Eqp_Guardian_Angel_Ring.png,5,5,5,5,2,2,0,0,0,0,200,200,0,0
+Superior Gollux Ring,150,RING,ALL_CLASS,SUPERIOR_GOLLUX,0,https://static.wikia.nocookie.net/maplestory/images/6/61/Eqp_Superior_Gollux_Ring.png/revision/latest?cb=20140927222747,10,10,10,10,8,8,150,0,0,0,250,250,0,0
+Superior Engraved Gollux Pendant,150,PENDANT,ALL_CLASS,SUPERIOR_GOLLUX,0,https://static.wikia.nocookie.net/maplestory/images/4/4c/Eqp_Superior_Engraved_Gollux_Pendant.png/revision/latest?cb=20150922083727,28,28,28,28,5,5,100,0,0,0,250,250,0,0
+Superior Engraved Gollux Belt,150,BELT,ALL_CLASS,SUPERIOR_GOLLUX,0,https://static.wikia.nocookie.net/maplestory/images/f/f7/Eqp_Superior_Engraved_Gollux_Belt.png/revision/latest?cb=20150922083726,60,60,60,60,35,35,100,0,0,0,300,300,0,0
+Superior Gollux Earrings,150,EARRINGS,ALL_CLASS,SUPERIOR_GOLLUX,0,https://static.wikia.nocookie.net/maplestory/images/9/91/Eqp_Superior_Gollux_Earrings.png/revision/latest?cb=20140829183324,15,15,15,15,10,10,100,0,0,0,150,150,0,0
+Royal Warrior Helm,150,HAT,WARRIOR,RA_WARRIOR,0,https://static.wikia.nocookie.net/maplestory/images/a/a1/Eqp_Royal_Warrior_Helm.png/revision/latest?cb=20150112211030,40,40,0,0,2,0,390,0,10,0,360,360,0,0
+Eagle Eye Warrior Armor,150,TOP,WARRIOR,RA_WARRIOR,0,https://static.wikia.nocookie.net/maplestory/images/5/5e/Eqp_Eagle_Eye_Warrior_Armor.png/revision/latest?cb=20160501235236,30,30,0,0,2,0,210,0,5,0,0,0,0,0
+Trixter Warrior Pants,150,BOTTOM,WARRIOR,RA_WARRIOR,0,https://static.wikia.nocookie.net/maplestory/images/0/09/Eqp_Trixter_Warrior_Pants.png/revision/latest?cb=20160502025844,30,30,0,0,2,0,210,0,5,0,0,0,0,0
+Royal Dunwitch Helm,150,HAT,MAGE,RA_MAGE,0,https://static.wikia.nocookie.net/maplestory/images/f/fa/Eqp_Royal_Dunwitch_Hat.png/revision/latest?cb=20141212194412,40,40,0,0,2,0,180,0,10,0,360,360,0,0
+Eagle Eye Dunwitch Armor,150,TOP,MAGE,RA_MAGE,0,https://static.wikia.nocookie.net/maplestory/images/6/69/Eqp_Eagle_Eye_Dunwitch_Robe.png/revision/latest?cb=20160501235242,0,0,30,30,0,2,120,0,5,0,0,0,0,0
+Trixter Dunwitch Pants,150,BOTTOM,MAGE,RA_MAGE,0,https://static.wikia.nocookie.net/maplestory/images/7/79/Eqp_Trixter_Dunwitch_Pants.png/revision/latest?cb=20160502024720,0,0,30,30,0,2,120,0,5,0,0,0,0,0
+Royal Ranger Helm,150,HAT,BOWMAN,RA_BOWMAN,0,https://static.wikia.nocookie.net/maplestory/images/f/f7/Eqp_Royal_Ranger_Beret.png/revision/latest?cb=20150112211028,40,40,0,0,2,0,390,0,10,0,360,360,0,0
+Eagle Eye Ranger Top,150,TOP,BOWMAN,RA_BOWMAN,0,https://static.wikia.nocookie.net/maplestory/images/8/8c/Eqp_Eagle_Eye_Ranger_Cowl.png/revision/latest?cb=20160501234942,30,30,0,0,2,0,210,0,5,0,0,0,0,0
+Trixter Ranger Pants,150,BOTTOM,BOWMAN,RA_BOWMAN,0,https://static.wikia.nocookie.net/maplestory/images/a/a2/Eqp_Trixter_Ranger_Pants.png/revision/latest?cb=20160502023550,30,30,0,0,2,0,210,0,5,0,0,0,0,0
+Royal Wanderer Helm,150,HAT,PIRATE,RA_PIRATE,0,https://static.wikia.nocookie.net/maplestory/images/f/fa/Eqp_Royal_Wanderer_Hat.png/revision/latest?cb=20150112201908,40,40,0,0,2,0,390,0,10,0,360,360,0,0
+Eagle Eye Wanderer Armor,150,TOP,PIRATE,RA_PIRATE,0,https://static.wikia.nocookie.net/maplestory/images/8/8c/Eqp_Eagle_Eye_Wanderer_Coat.png/revision/latest?cb=20160501234952,30,30,0,0,2,0,210,0,5,0,0,0,0,0
+Trixter Wanderer Pants,150,BOTTOM,PIRATE,RA_PIRATE,0,https://static.wikia.nocookie.net/maplestory/images/e/e0/Eqp_Trixter_Wanderer_Pants.png/revision/latest?cb=20160502022705,30,30,0,0,2,0,210,0,5,0,0,0,0,0
+Royal Assassin Helm,150,HAT,THIEF,RA_THIEF,0,https://static.wikia.nocookie.net/maplestory/images/8/88/Eqp_Royal_Assassin_Hood.png/revision/latest?cb=20150112211026,0,40,0,40,2,0,390,0,10,0,360,360,0,0
+Eagle Eye Assassin Armor,150,TOP,THIEF,RA_THIEF,0,https://static.wikia.nocookie.net/maplestory/images/c/cb/Eqp_Eagle_Eye_Assassin_Shirt.png/revision/latest?cb=20160501234946,0,30,0,30,2,0,210,0,5,0,0,0,0,0
+Trixter Assassin Pants,150,BOTTOM,THIEF,RA_THIEF,0,https://static.wikia.nocookie.net/maplestory/images/c/c8/Eqp_Trixter_Assassin_Pants.png/revision/latest?cb=20160502023353,0,30,0,30,2,0,210,0,5,0,0,0,0,0
+Deimos Sage Shield,130,SECONDARY,MAGE,NO_SET,0,https://static.wikia.nocookie.net/maplestory/images/d/d1/Eqp_Deimos_Sage_Shield.png/revision/latest?cb=20180830075149,10,10,0,0,0,0,118,0,0,0,0,0,0,0
+Deimos Shadow Shield,130,SECONDARY,THIEF,NO_SET,0,https://static.wikia.nocookie.net/maplestory/images/8/80/Eqp_Deimos_Shadow_Shield.png/revision/latest?cb=20180830075204,0,0,0,10,0,0,0,0,0,0,0,0,0,0
+Deimos Warrior Shield,130,SECONDARY,WARRIOR,NO_SET,0,https://static.wikia.nocookie.net/maplestory/images/b/b6/Eqp_Deimos_Warrior_Shield.png/revision/latest?cb=20180830075214,0,0,10,0,0,0,0,0,0,0,0,0,0,0
+Princess No's Medal,140,SECONDARY,WARRIOR,NO_SET,0,https://static.wikiahttps://static.wikia.nocookie.net/maplestory/images/4/44/Eqp_Princess_No%27s_Medal.png/revision/latest?cb=20170902231500.nocookie.net/maplestory/images/c/cd/Eqp_Princess_No%27s_Feather.png/revision/latest?cb=20170902232433,14,14,0,0,9,0,0,0,0,0,0,0,0,0
+Princess No's Falcon Eye,140,SECONDARY,PIRATE,NO_SET,0,https://static.wikia.nocookie.net/maplestory/images/d/dd/Eqp_Princess_No%27s_Falcon_Eye.png/revision/latest?cb=20170903030628,14,14,0,0,9,0,0,0,0,0,0,0,0,0
+Princess No's Feather,140,SECONDARY,BOWMAN,NO_SET,0,https://static.wikia.nocookie.net/maplestory/images/c/cd/Eqp_Princess_No%27s_Feather.png/revision/latest?cb=20170902232433,14,14,0,0,9,0,0,0,0,0,0,0,0,0
+Princess No's Charm,140,SECONDARY,THIEF,NO_SET,0,https://static.wikia.nocookie.net/maplestory/images/4/49/Eqp_Princess_No%27s_Charm.png/revision/latest?cb=20150628094008,0,14,0,14,9,0,0,0,0,0,0,0,0,0
+Princess No's Flaming Book,140,SECONDARY,MAGE,NO_SET,0,https://maplestory.fandom.com/wiki/Princess_No%27s_Flaming_Book,0,0,14,14,0,9,0,0,0,0,0,0,0,0
+Arcane Umbra Knight Gloves,200,GLOVES,WARRIOR,ARCANE,0,https://static.wikia.nocookie.net/maplestory/images/6/61/Eqp_Arcane_Umbra_Gloves.png/revision/latest?cb=20170122011728,40,40,0,0,9,0,250,0,0,0,0,0,0,0
+Arcane Umbra Knight Shoes,200,SHOES,WARRIOR,ARCANE,0,https://static.wikia.nocookie.net/maplestory/images/5/54/Eqp_Arcane_Umbra_Shoes.png/revision/latest?cb=20170122013051,40,40,0,0,9,0,250,0,0,0,0,0,0,0
+Arcane Umbra Knight Cape,200,CAPE,WARRIOR,ARCANE,0,https://static.wikia.nocookie.net/maplestory/images/3/3c/Eqp_Arcane_Umbra_Cape.png/revision/latest?cb=20161214031238,35,35,35,35,5,0,450,0,0,0,0,0,0,0
+Arcane Umbra Knight Shoulder,200,SHOULDER,WARRIOR,ARCANE,0,https://static.wikia.nocookie.net/maplestory/images/b/b8/Eqp_Arcane_Umbra_Shoulder.png/revision/latest?cb=20161209035635,35,35,35,35,20,0,300,0,0,0,0,0,0,0
+Arcane Umbra Archer Gloves,200,GLOVES,BOWMAN,ARCANE,0,https://static.wikia.nocookie.net/maplestory/images/6/61/Eqp_Arcane_Umbra_Gloves.png/revision/latest?cb=20170122011728,40,40,0,0,9,0,250,0,0,0,0,0,0,0
+Arcane Umbra Archer Shoes,200,SHOES,BOWMAN,ARCANE,0,https://static.wikia.nocookie.net/maplestory/images/5/54/Eqp_Arcane_Umbra_Shoes.png/revision/latest?cb=20170122013051,40,40,0,0,9,0,250,0,0,0,0,0,0,0
+Arcane Umbra Archer Cape,200,CAPE,BOWMAN,ARCANE,0,https://static.wikia.nocookie.net/maplestory/images/3/3c/Eqp_Arcane_Umbra_Cape.png/revision/latest?cb=20161214031238,35,35,35,35,5,0,450,0,0,0,0,0,0,0
+Arcane Umbra Archer Shoulder,200,SHOULDER,BOWMAN,ARCANE,0,https://static.wikia.nocookie.net/maplestory/images/b/b8/Eqp_Arcane_Umbra_Shoulder.png/revision/latest?cb=20161209035635,35,35,35,35,20,0,300,0,0,0,0,0,0,0
+Arcane Umbra Pirate Gloves,200,GLOVES,PIRATE,ARCANE,0,https://static.wikia.nocookie.net/maplestory/images/6/61/Eqp_Arcane_Umbra_Gloves.png/revision/latest?cb=20170122011728,40,40,0,0,9,0,250,0,0,0,0,0,0,0
+Arcane Umbra Pirate Shoes,200,SHOES,PIRATE,ARCANE,0,https://static.wikia.nocookie.net/maplestory/images/5/54/Eqp_Arcane_Umbra_Shoes.png/revision/latest?cb=20170122013051,40,40,0,0,9,0,250,0,0,0,0,0,0,0
+Arcane Umbra Pirate Cape,200,CAPE,PIRATE,ARCANE,0,https://static.wikia.nocookie.net/maplestory/images/3/3c/Eqp_Arcane_Umbra_Cape.png/revision/latest?cb=20161214031238,35,35,35,35,5,0,450,0,0,0,0,0,0,0
+Arcane Umbra Pirate Shoulder,200,SHOULDER,PIRATE,ARCANE,0,https://static.wikia.nocookie.net/maplestory/images/b/b8/Eqp_Arcane_Umbra_Shoulder.png/revision/latest?cb=20161209035635,35,35,35,35,20,0,300,0,0,0,0,0,0,0
+Arcane Umbra Mage Gloves,200,GLOVES,MAGE,ARCANE,0,https://static.wikia.nocookie.net/maplestory/images/6/61/Eqp_Arcane_Umbra_Gloves.png/revision/latest?cb=20170122011728,0,0,40,40,0,9,250,0,0,0,0,0,0,0
+Arcane Umbra Mage Shoes,200,SHOES,MAGE,ARCANE,0,https://static.wikia.nocookie.net/maplestory/images/5/54/Eqp_Arcane_Umbra_Shoes.png/revision/latest?cb=20170122013051,0,0,40,40,0,9,250,0,0,0,0,0,0,0
+Arcane Umbra Mage Cape,200,CAPE,MAGE,ARCANE,0,https://static.wikia.nocookie.net/maplestory/images/3/3c/Eqp_Arcane_Umbra_Cape.png/revision/latest?cb=20161214031238,35,35,35,35,0,5,450,0,0,0,0,0,0,0
+Arcane Umbra Mage Shoulder,200,SHOULDER,MAGE,ARCANE,0,https://static.wikia.nocookie.net/maplestory/images/b/b8/Eqp_Arcane_Umbra_Shoulder.png/revision/latest?cb=20161209035635,35,35,35,35,0,20,300,0,0,0,0,0,0,0
+Arcane Umbra Thief Gloves,200,GLOVES,THIEF,ARCANE,0,https://static.wikia.nocookie.net/maplestory/images/6/61/Eqp_Arcane_Umbra_Gloves.png/revision/latest?cb=20170122011728,0,40,0,40,9,0,250,0,0,0,0,0,0,0
+Arcane Umbra Thief Shoes,200,SHOES,THIEF,ARCANE,0,https://static.wikia.nocookie.net/maplestory/images/5/54/Eqp_Arcane_Umbra_Shoes.png/revision/latest?cb=20170122013051,0,40,0,40,9,0,250,0,0,0,0,0,0,0
+Arcane Umbra Thief Cape,200,CAPE,THIEF,ARCANE,0,https://static.wikia.nocookie.net/maplestory/images/3/3c/Eqp_Arcane_Umbra_Cape.png/revision/latest?cb=20161214031238,35,35,35,35,5,0,450,0,0,0,0,0,0,0
+Arcane Umbra Thief Shoulder,200,SHOULDER,THIEF,ARCANE,0,https://static.wikia.nocookie.net/maplestory/images/b/b8/Eqp_Arcane_Umbra_Shoulder.png/revision/latest?cb=20161209035635,35,35,35,35,20,0,300,0,0,0,0,0,0,0
+Gold Maple Leaf Emblem,100,EMBLEM,ALL_CLASS,NO_SET,0,https://static.wikia.nocookie.net/maplestory/images/d/d1/Eqp_Gold_Maple_Leaf_Emblem.png/revision/latest?cb=20150105204637,10,10,10,10,2,2,0,0,0,0,0,0,0,0
+Crystal Ventus Badge,130,BADGE,ALL_CLASS,BOSS,0,https://static.wikia.nocookie.net/maplestory/images/a/af/Eqp_Crystal_Ventus_Badge.png/revision/latest?cb=20150911184149,10,10,10,10,5,5,0,0,0,0,0,0,0,0
+Seven Days Badge,100,BADGE,ALL_CLASS,DAYS,0,https://static.wikia.nocookie.net/maplestory/images/1/1a/Eqp_Seven_Days_Badge.png/revision/latest?cb=20191006085741,7,7,7,7,7,7,0,0,10,0,0,0,0,0
+Ghost Ship Exorcist,150,BADGE,ALL_CLASS,NO_SET,0,https://static.wikia.nocookie.net/maplestory/images/4/4a/Eqp_Ghost_Ship_Exorcist.png/revision/latest?cb=20140103054036,3,3,3,3,2,2,0,0,0,0,0,0,0,0
+Sengoku Hakase Badge,160,BADGE,ALL_CLASS,NO_SET,0,https://static.wikia.nocookie.net/maplestory/images/c/c9/Eqp_Sengoku_Hakase_Badge.png/revision/latest?cb=20170121172037,10,10,10,10,10,10,0,0,0,0,0,0,0,0
+7 Day Monster Parker,100,MEDAL,ALL_CLASS,DAYS,0,https://static.wikia.nocookie.net/maplestory/images/c/cd/Eqp_Seven_Day_Monster_Parker.png/revision/latest?cb=20180524151134,7,7,7,7,7,7,0,0,10,0,0,0,0,0
+Meister Ring,140,RING,ALL_CLASS,NO_SET,0,https://static.wikia.nocookie.net/maplestory/images/e/e1/Eqp_Meister_Ring.png/revision/latest?cb=20171123033157,5,5,5,5,1,1,150,0,0,0,200,200,0,0
+Kanna's Treasure,140,RING,ALL_CLASS,NO_SET,0,https://static.wikia.nocookie.net/maplestory/images/5/59/Eqp_Kanna%27s_Treasure.png/revision/latest?cb=20181024054842,5,5,5,5,1,1,150,0,0,0,200,200,0,0
+Reinforced Gollux Ring,140,RING,ALL_CLASS,NO_SET,0,https://static.wikia.nocookie.net/maplestory/images/b/b7/Eqp_Reinforced_Gollux_Ring.png/revision/latest?cb=20151120013622,8,8,8,8,5,5,150,0,0,0,200,200,0,0
+Pink Holy Cup,140,POCKET,ALL_CLASS,BOSS,0,https://static.wikia.nocookie.net/maplestory/images/a/af/Eqp_Pink_Holy_Cup.png/revision/latest?cb=20151122085210,5,5,5,5,5,5,0,0,0,0,50,50,0,0
+Dominator Pendant,140,PENDANT,ALL_CLASS,BOSS,0,https://static.wikia.nocookie.net/maplestory/images/c/c3/Eqp_Dominator_Pendant.png/revision/latest?cb=20160106061857,20,20,20,20,3,3,0,0,0,0,0,0,10,10
+Black Bean Mark,135,EYE_ACCESSORY,ALL_CLASS,BOSS,0,https://static.wikia.nocookie.net/maplestory/images/7/77/Eqp_Black_Bean_Mark.png/revision/latest?cb=20150915005354,7,7,7,7,1,1,0,0,0,0,0,0,0,0
+Papulautus Mark,145,EYE_ACCESSORY,ALL_CLASS,BOSS,0,https://static.wikia.nocookie.net/maplestory/images/b/b7/Eqp_Papulatus_Mark.png/revision/latest?cb=20171210184421,8,8,8,8,1,1,0,0,0,0,0,0,0,0
+Beodog Figurine,90,TOTEM,ALL_CLASS,AFTERLANDS,0,https://static.wikia.nocookie.net/maplestory/images/d/d0/Eqp_Beodog_Figurine.png/revision/latest?cb=20170121172854,20,0,0,0,7,7,0,0,0,0,0,0,0,0
+Billy Figurine,90,TOTEM,ALL_CLASS,AFTERLANDS,0,https://static.wikia.nocookie.net/maplestory/images/9/95/Eqp_Billy_Figurine.png/revision/latest?cb=20170121172901,0,20,0,0,7,7,0,0,0,0,0,0,0,0
+Adler Figurine,90,TOTEM,ALL_CLASS,AFTERLANDS,0,https://static.wikia.nocookie.net/maplestory/images/0/08/Eqp_Adler_Figurine.png/revision/latest?cb=20170121172908,0,0,20,0,7,7,0,0,0,0,0,0,0,0
+Mansa Figurine,90,TOTEM,ALL_CLASS,AFTERLANDS,0,https://static.wikia.nocookie.net/maplestory/images/c/c1/Eqp_Mansa_Figurine.png/revision/latest?cb=20170121172915,0,0,0,20,7,7,0,0,0,0,0,0,0,0
+Horseback Riding Doll Totem,125,TOTEM,ALL_CLASS,ANTIQUE,0,https://static.wikia.nocookie.net/maplestory/images/d/d6/Eqp_Horseback_Riding_Doll_Totem.png/revision/latest?cb=20200323215029,20,20,20,20,10,10,0,0,0,0,0,0,0,0
+Jade Kettle Totem,125,TOTEM,ALL_CLASS,ANTIQUE,0,https://static.wikia.nocookie.net/maplestory/images/c/c9/Eqp_Jade_Kettle_Totem.png/revision/latest?cb=20200323215111,20,20,20,20,10,10,0,0,0,0,0,0,0,0
+Bronze Incense Burner Totem,125,TOTEM,ALL_CLASS,ANTIQUE,0,https://static.wikia.nocookie.net/maplestory/images/d/d2/Eqp_Bronze_Incense_Burner_Totem.png/revision/latest?cb=20200323215158,22,22,22,22,12,12,0,0,0,0,0,0,0,0
+Ancient Slate Replica,200,TOTEM,ALL_CLASS,NO_SET,0,https://static.wikia.nocookie.net/maplestory/images/6/63/Eqp_Ancient_Slate_Replica.png/revision/latest?cb=20221219064032,20,20,20,20,5,5,0,0,0,0,0,0,0,0
+Dark Doom Totem,10,TOTEM,ALL_CLASS,NO_SET,0,https://static.wikia.nocookie.net/maplestory/images/3/3d/Eqp_Dark_Doom_Totem.png/revision/latest?cb=20190227024026,36,0,0,0,15,15,0,0,0,0,0,0,0,0
+Dark Avenger Totem,10,TOTEM,ALL_CLASS,NO_SET,0,https://static.wikia.nocookie.net/maplestory/images/3/32/Eqp_Dark_Avenger_Totem.png/revision/latest?cb=20190227024026,0,36,0,0,15,15,0,0,0,0,0,0,0,0
+Dark Hellia Totem,10,TOTEM,ALL_CLASS,NO_SET,0,https://static.wikia.nocookie.net/maplestory/images/3/39/Eqp_Dark_Hellia_Totem.png/revision/latest?cb=20190227024026,0,0,36,0,15,15,0,0,0,0,0,0,0,0
+Dark Grin Totem,10,TOTEM,ALL_CLASS,NO_SET,0,https://static.wikia.nocookie.net/maplestory/images/0/02/Eqp_Dark_Grin_Totem.png/revision/latest?cb=20190227024026,0,0,0,36,15,15,0,0,0,0,0,0,0,0
+Arcane Umbra Bladecaster,200,WEAPON,WARRIOR,ARCANE,0,https://static.wikia.nocookie.net/maplestory/images/c/c2/Eqp_Arcane_Umbra_Bladecaster.png/revision/latest?cb=20200612064219,100,100,0,0,295,0,0,30,20,0,0,0,0,0
+Arcane Umbra Desperado,200,WEAPON,WARRIOR,ARCANE,0,https://static.wikia.nocookie.net/maplestory/images/6/64/Eqp_Arcane_Umbra_Desperado.png/revision/latest?cb=20161210184137,100,100,0,0,295,0,0,30,20,0,0,0,0,0
+Arcane Umbra Saber,200,WEAPON,WARRIOR,ARCANE,0,https://static.wikia.nocookie.net/maplestory/images/2/22/Eqp_Arcane_Umbra_Saber.png/revision/latest?cb=20161222220021,100,100,0,0,283,0,0,30,20,0,0,0,0,0
+Arcane Umbra Axe,200,WEAPON,WARRIOR,ARCANE,0,https://static.wikia.nocookie.net/maplestory/images/9/92/Eqp_Arcane_Umbra_Axe.png/revision/latest?cb=20161222223811,100,100,0,0,283,0,0,30,20,0,0,0,0,0
+Arcane Umbra Hammer,200,WEAPON,WARRIOR,ARCANE,0,https://static.wikia.nocookie.net/maplestory/images/6/6d/Eqp_Arcane_Umbra_Hammer.png/revision/latest?cb=20161223004833,100,100,0,0,283,0,0,30,20,0,0,0,0,0
+Arcane Umbra Two-handed Sword,200,WEAPON,WARRIOR,ARCANE,0,https://static.wikia.nocookie.net/maplestory/images/b/b3/Eqp_Arcane_Umbra_Two-handed_Sword.png/revision/latest?cb=20161223192218,100,100,0,0,295,0,0,30,20,0,0,0,0,0
+Arcane Umbra Two-handed Axe,200,WEAPON,WARRIOR,ARCANE,0,https://static.wikia.nocookie.net/maplestory/images/a/a7/Eqp_Arcane_Umbra_Two-handed_Axe.png/revision/latest?cb=20161223192650,100,100,0,0,295,0,0,30,20,0,0,0,0,0
+Arcane Umbra Two-handed Hammer,200,WEAPON,WARRIOR,ARCANE,0,https://static.wikia.nocookie.net/maplestory/images/e/ed/Eqp_Arcane_Umbra_Two-Handed_Hammer.png/revision/latest?cb=20161223192825,100,100,0,0,295,0,0,30,20,0,0,0,0,0
+Arcane Umbra Spear,200,WEAPON,WARRIOR,ARCANE,0,https://static.wikia.nocookie.net/maplestory/images/e/e5/Eqp_Arcane_Umbra_Spear.png/revision/latest?cb=20161223193444,100,100,0,0,295,0,0,30,20,0,0,0,0,0
+Arcane Umbra Polearm,200,WEAPON,WARRIOR,ARCANE,0,https://static.wikia.nocookie.net/maplestory/images/a/a0/Eqp_Arcane_Umbra_Polearm.png/revision/latest?cb=20161223193630,100,100,0,0,264,0,0,30,20,0,0,0,0,0
+Arcane Umbra Katana,200,WEAPON,WARRIOR,ARCANE,0,https://static.wikia.nocookie.net/maplestory/images/c/cc/Eqp_Arcane_Umbra_Katana.png/revision/latest?cb=20161223204841,100,100,0,0,283,0,0,30,20,0,0,0,0,0
+Arcane Umbra Ellaha,200,WEAPON,WARRIOR,ARCANE,0,https://static.wikia.nocookie.net/maplestory/images/6/64/Eqp_Arcane_Umbra_Ellaha.png/revision/latest?cb=20161223200910,100,100,0,0,221,0,0,30,20,0,0,0,0,0
+Arcane Umbra Bow,200,WEAPON,BOWMAN,ARCANE,0,https://static.wikia.nocookie.net/maplestory/images/0/0e/Eqp_Arcane_Umbra_Bow.png/revision/latest?cb=20161223193813,100,100,0,0,276,0,0,30,20,0,0,0,0,0
+Arcane Umbra Whispershot,200,WEAPON,BOWMAN,ARCANE,0,https://static.wikia.nocookie.net/maplestory/images/a/a7/Eqp_Arcane_Umbra_Whispershot.png/revision/latest?cb=20210607174325,100,100,0,0,276,0,0,30,20,0,0,0,0,0
+Arcane Umbra Crossbow,200,WEAPON,BOWMAN,ARCANE,0,https://static.wikia.nocookie.net/maplestory/images/7/71/Eqp_Arcane_Umbra_Crossbow.png/revision/latest?cb=20161223194106,100,100,0,0,283,0,0,30,20,0,0,0,0,0
+Arcane Umbra Dual Bowguns,200,WEAPON,BOWMAN,ARCANE,0,https://static.wikia.nocookie.net/maplestory/images/d/de/Eqp_Arcane_Umbra_Dual_Bowguns.png/revision/latest?cb=20161223200416,100,100,0,0,276,0,0,30,20,0,0,0,0,0
+Arcane Umbra Ancient Bow,200,WEAPON,BOWMAN,ARCANE,0,https://static.wikia.nocookie.net/maplestory/images/e/e0/Eqp_Arcane_Umbra_Ancient_Bow.png/revision/latest?cb=20190614003458,100,100,0,0,276,0,0,30,20,0,0,0,0,0
+Arcane Umbra Shining Rod,200,WEAPON,MAGE,ARCANE,0,https://static.wikia.nocookie.net/maplestory/images/d/d7/Eqp_Arcane_Umbra_Shining_Rod.png/revision/latest?cb=20161210001643,0,0,100,100,206,347,0,30,20,0,0,0,0,0
+Arcane Umbra Scepter,200,WEAPON,MAGE,ARCANE,0,https://static.wikia.nocookie.net/maplestory/images/a/ad/Eqp_Arcane_Umbra_Scepter.png/revision/latest?cb=20161223205522,0,0,100,100,206,347,0,30,20,0,0,0,0,0
+Arcane Umbra Psy-limiter,200,WEAPON,MAGE,ARCANE,0,https://static.wikia.nocookie.net/maplestory/images/c/c7/Eqp_Arcane_Umbra_Psy-limiter.png/revision/latest?cb=20161223204427,0,0,100,100,206,347,0,30,20,0,0,0,0,0
+Arcane Umbra Lucent Gauntlet,200,WEAPON,MAGE,ARCANE,0,https://static.wikia.nocookie.net/maplestory/images/4/40/Eqp_Arcane_Umbra_Lucent_Gauntlet.png/revision/latest?cb=20171122222103,0,0,100,100,206,347,0,30,20,0,0,0,0,0
+Arcane Umbra Wand,200,WEAPON,MAGE,ARCANE,0,https://static.wikia.nocookie.net/maplestory/images/4/48/Eqp_Arcane_Umbra_Wand.png/revision/latest?cb=20161223053619,0,0,100,100,206,347,0,30,20,0,0,0,0,0
+Arcane Umbra Staff,200,WEAPON,MAGE,ARCANE,0,https://static.wikia.nocookie.net/maplestory/images/8/84/Eqp_Arcane_Umbra_Staff.png/revision/latest?cb=20161223054133,0,0,100,100,218,353,0,30,20,0,0,0,0,0
+Arcane Umbra Fan,200,WEAPON,MAGE,ARCANE,0,https://static.wikia.nocookie.net/maplestory/images/1/1c/Eqp_Arcane_Umbra_Fan.png/revision/latest?cb=20161223205249,0,0,100,100,206,347,0,30,20,0,0,0,0,0
+Arcane Umbra Soul Shooter,200,WEAPON,PIRATE,ARCANE,0,https://static.wikia.nocookie.net/maplestory/images/1/12/Eqp_Arcane_Umbra_Soul_Shooter.png/revision/latest?cb=20161210170957,100,100,0,0,221,0,0,30,20,0,0,0,0,0
+Arcane Umbra Knuckle,200,WEAPON,PIRATE,ARCANE,0,https://static.wikia.nocookie.net/maplestory/images/e/eb/Eqp_Arcane_Umbra_Knuckle.png/revision/latest?cb=20161223195738,100,100,0,0,221,0,0,30,20,0,0,0,0,0
+Arcane Umbra Pistol,200,WEAPON,PIRATE,ARCANE,0,https://static.wikia.nocookie.net/maplestory/images/2/28/Eqp_Arcane_Umbra_Pistol.png/revision/latest?cb=20161223195933,100,100,0,0,216,0,0,30,20,0,0,0,0,0
+Arcane Umbra Siege Gun,200,WEAPON,PIRATE,ARCANE,0,https://static.wikia.nocookie.net/maplestory/images/0/01/Eqp_Arcane_Umbra_Siege_Gun.png/revision/latest?cb=20161223200641,100,100,0,0,302,0,0,30,20,0,0,0,0,0
+Arcane Umbra Chain,200,WEAPON,THIEF,ARCANE,0,https://static.wikia.nocookie.net/maplestory/images/5/54/Eqp_Arcane_Umbra_Chain.png/revision/latest?cb=20171121070732,0,100,0,100,276,0,0,30,20,0,0,0,0,0
+Arcane Umbra Super Ritual Fan,200,WEAPON,THIEF,ARCANE,0,https://static.wikia.nocookie.net/maplestory/images/a/af/Eqp_Arcane_Umbra_Super_Ritual_Fan.png/revision/latest?cb=20191127145311,0,100,0,100,276,0,0,30,20,0,0,0,0,0
+Arcane Umbra Dagger,200,WEAPON,THIEF,ARCANE,0,https://static.wikia.nocookie.net/maplestory/images/8/85/Eqp_Arcane_Umbra_Dagger.png/revision/latest?cb=20161223012516,0,100,0,100,276,0,0,30,20,0,0,0,0,0
+Arcane Umbra Cane,200,WEAPON,THIEF,ARCANE,0,https://static.wikia.nocookie.net/maplestory/images/b/b9/Eqp_Arcane_Umbra_Cane.png/revision/latest?cb=20161223024534,0,100,0,100,283,0,0,30,20,0,0,0,0,0
+Arcane Umbra Chakram,200,WEAPON,THIEF,ARCANE,0,https://static.wikia.nocookie.net/maplestory/images/2/25/Eqp_Arcane_Umbra_Chakram.png/revision/latest?cb=20230107104125,0,100,0,100,276,0,0,30,20,0,0,0,0,0
+Arcane Umbra Guards,200,WEAPON,THIEF,ARCANE,0,https://static.wikia.nocookie.net/maplestory/images/6/67/Eqp_Arcane_Umbra_Guards.png/revision/latest?cb=20161223195422,0,100,0,100,149,0,0,30,20,0,0,0,0,0
+Arcane Umbra Energy Chain (Pirate),200,WEAPON,PIRATE,ARCANE,0,https://static.wikia.nocookie.net/maplestory/images/e/ec/Eqp_Arcane_Umbra_Energy_Chain.png/revision/latest?cb=20161212073958,100,100,0,0,221,0,0,30,20,0,0,0,0,0
+Arcane Umbra Energy Chain (Thief),200,WEAPON,THIEF,ARCANE,0,https://static.wikia.nocookie.net/maplestory/images/e/ec/Eqp_Arcane_Umbra_Energy_Chain.png/revision/latest?cb=20161212073958,100,100,0,0,221,0,0,30,20,0,0,0,0,0
+,,,,,0,,,,,,,,,,,,,,,
+Genesis Bladecaster,200,WEAPON,WARRIOR,ETERNAL,1,https://static.wikia.nocookie.net/maplestory/images/a/ae/Eqp_Genesis_Bladecaster.png/revision/latest?cb=20200612064832,150,150,0,0,340,0,0,30,20,0,0,0,0,0
+Genesis Desperado,200,WEAPON,WARRIOR,ETERNAL,1,https://static.wikia.nocookie.net/maplestory/images/7/71/Eqp_Genesis_Desperado.png/revision/latest?cb=20190126024047,150,150,0,0,340,0,0,30,20,0,0,0,0,0
+Genesis Saber,200,WEAPON,WARRIOR,ETERNAL,1,https://static.wikia.nocookie.net/maplestory/images/0/02/Eqp_Genesis_Saber.png/revision/latest?cb=20190126024048,150,150,0,0,326,0,0,30,20,0,0,0,0,0
+Genesis Axe,200,WEAPON,WARRIOR,ETERNAL,1,https://static.wikia.nocookie.net/maplestory/images/e/ef/Eqp_Genesis_Axe.png/revision/latest?cb=20190126024047,150,150,0,0,326,0,0,30,20,0,0,0,0,0
+Genesis Hammer,200,WEAPON,WARRIOR,ETERNAL,1,https://static.wikia.nocookie.net/maplestory/images/5/5f/Eqp_Genesis_Hammer.png/revision/latest?cb=20190126024048,150,150,0,0,326,0,0,30,20,0,0,0,0,0
+Genesis Two-handed Sword,200,WEAPON,WARRIOR,ETERNAL,1,https://static.wikia.nocookie.net/maplestory/images/0/0c/Eqp_Genesis_Two-Handed_Sword.png/revision/latest?cb=20190126024225,150,150,0,0,340,0,0,30,20,0,0,0,0,0
+Genesis Two-handed Axe,200,WEAPON,WARRIOR,ETERNAL,1,https://static.wikia.nocookie.net/maplestory/images/a/aa/Eqp_Genesis_Two-Handed_Axe.png/revision/latest?cb=20190126024225,150,150,0,0,340,0,0,30,20,0,0,0,0,0
+Genesis Two-handed Hammer,200,WEAPON,WARRIOR,ETERNAL,1,https://static.wikia.nocookie.net/maplestory/images/b/be/Eqp_Genesis_Two-Handed_Hammer.png/revision/latest?cb=20190126024225,150,150,0,0,340,0,0,30,20,0,0,0,0,0
+Genesis Spear,200,WEAPON,WARRIOR,ETERNAL,1,https://static.wikia.nocookie.net/maplestory/images/e/ef/Eqp_Genesis_Spear.png/revision/latest?cb=20190124005938,150,150,0,0,340,0,0,30,20,0,0,0,0,0
+Genesis Polearm,200,WEAPON,WARRIOR,ETERNAL,1,https://static.wikia.nocookie.net/maplestory/images/1/1e/Eqp_Genesis_Polearm.png/revision/latest?cb=20190126024048,150,150,0,0,304,0,0,30,20,0,0,0,0,0
+Genesis Katana,200,WEAPON,WARRIOR,ETERNAL,1,https://static.wikia.nocookie.net/maplestory/images/e/ec/Eqp_Genesis_Katana.png/revision/latest?cb=20190126024048,150,150,0,0,326,0,0,30,20,0,0,0,0,0
+Genesis Ellaha,200,WEAPON,WARRIOR,ETERNAL,1,https://static.wikia.nocookie.net/maplestory/images/1/1f/Eqp_Genesis_Ellaha.png/revision/latest?cb=20190126024047,150,150,0,0,221,0,0,30,20,0,0,0,0,0
+Genesis Bow,200,WEAPON,BOWMAN,ETERNAL,1,https://static.wikia.nocookie.net/maplestory/images/6/65/Eqp_Genesis_Bow.png/revision/latest?cb=20190126024047,150,150,0,0,318,0,0,30,20,0,0,0,0,0
+Genesis Whispershot,200,WEAPON,BOWMAN,ETERNAL,1,https://static.wikia.nocookie.net/maplestory/images/d/d1/Eqp_Genesis_Whispershot.png/revision/latest?cb=20210607163528,150,150,0,0,318,0,0,30,20,0,0,0,0,0
+Genesis Crossbow,200,WEAPON,BOWMAN,ETERNAL,1,https://static.wikia.nocookie.net/maplestory/images/c/c4/Eqp_Genesis_Crossbow.png/revision/latest?cb=20190126024047,150,150,0,0,326,0,0,30,20,0,0,0,0,0
+Genesis Dual Bowguns,200,WEAPON,BOWMAN,ETERNAL,1,https://static.wikia.nocookie.net/maplestory/images/1/15/Eqp_Genesis_Dual_Bowguns.png/revision/latest?cb=20190126024047,150,150,0,0,318,0,0,30,20,0,0,0,0,0
+Genesis Ancient Bow,200,WEAPON,BOWMAN,ETERNAL,1,https://static.wikia.nocookie.net/maplestory/images/2/24/Eqp_Genesis_Ancient_Bow.png/revision/latest?cb=20190614003501,150,150,0,0,318,0,0,30,20,0,0,0,0,0
+Genesis Shining Rod,200,WEAPON,MAGE,ETERNAL,1,https://static.wikia.nocookie.net/maplestory/images/7/7e/Eqp_Genesis_Shining_Rod.png/revision/latest?cb=20190126024225,0,0,150,150,237,400,0,30,20,0,0,0,0,0
+Genesis Scepter,200,WEAPON,MAGE,ETERNAL,1,https://static.wikia.nocookie.net/maplestory/images/a/aa/Eqp_Genesis_Scepter.png/revision/latest?cb=20190126024224,0,0,150,150,237,400,0,30,20,0,0,0,0,0
+Genesis Psy-limiter,200,WEAPON,MAGE,ETERNAL,1,https://static.wikia.nocookie.net/maplestory/images/9/95/Eqp_Genesis_Psy-limiter.png/revision/latest?cb=20190126024048,0,0,150,150,237,400,0,30,20,0,0,0,0,0
+Genesis Lucent Gauntlet,200,WEAPON,MAGE,ETERNAL,1,https://static.wikia.nocookie.net/maplestory/images/e/e9/Eqp_Genesis_Lucent_Gauntlet.png/revision/latest?cb=20190126024048,0,0,150,150,237,400,0,30,20,0,0,0,0,0
+Genesis Wand,200,WEAPON,MAGE,ETERNAL,1,https://static.wikia.nocookie.net/maplestory/images/2/27/Eqp_Genesis_Wand.png/revision/latest?cb=20190126024225,0,0,150,150,237,400,0,30,20,0,0,0,0,0
+Genesis Staff,200,WEAPON,MAGE,ETERNAL,1,https://static.wikia.nocookie.net/maplestory/images/8/84/Eqp_Arcane_Umbra_Staff.png/revision/latest?cb=20161223054133,0,0,150,150,251,406,0,30,20,0,0,0,0,0
+Genesis Fan,200,WEAPON,MAGE,ETERNAL,1,https://static.wikia.nocookie.net/maplestory/images/2/23/Eqp_Genesis_Fan.png/revision/latest?cb=20190126024048,0,0,150,150,237,400,0,30,20,0,0,0,0,0
+Genesis Soul Shooter,200,WEAPON,PIRATE,ETERNAL,1,https://static.wikia.nocookie.net/maplestory/images/1/12/Eqp_Arcane_Umbra_Soul_Shooter.png/revision/latest?cb=20161210170957,150,150,0,0,255,0,0,30,20,0,0,0,0,0
+Genesis Knuckle,200,WEAPON,PIRATE,ETERNAL,1,https://static.wikia.nocookie.net/maplestory/images/e/ee/Eqp_Genesis_Claw.png/revision/latest?cb=20190126024047,150,150,0,0,255,0,0,30,20,0,0,0,0,0
+Genesis Pistol,200,WEAPON,PIRATE,ETERNAL,1,https://static.wikia.nocookie.net/maplestory/images/4/4f/Eqp_Genesis_Pistol.png/revision/latest?cb=20190126024048,150,150,0,0,249,0,0,30,20,0,0,0,0,0
+Genesis Siege Gun,200,WEAPON,PIRATE,ETERNAL,1,https://static.wikia.nocookie.net/maplestory/images/7/79/Eqp_Genesis_Siege_Gun.png/revision/latest?cb=20190126024225,150,150,0,0,248,0,0,30,20,0,0,0,0,0
+Genesis Chain,200,WEAPON,THIEF,ETERNAL,1,https://static.wikia.nocookie.net/maplestory/images/4/4f/Eqp_Genesis_Chain.png/revision/latest?cb=20190126024047,0,150,0,150,318,0,0,30,20,0,0,0,0,0
+Genesis Super Ritual Fan,200,WEAPON,THIEF,ETERNAL,1,https://static.wikia.nocookie.net/maplestory/images/b/b3/Eqp_Genesis_Ritual_Fan.png/revision/latest?cb=20191127145313,0,150,0,150,318,0,0,30,20,0,0,0,0,0
+Genesis Dagger,200,WEAPON,THIEF,ETERNAL,1,https://static.wikia.nocookie.net/maplestory/images/f/fb/Eqp_Genesis_Dagger.png/revision/latest?cb=20190126024047,0,150,0,150,318,0,0,30,20,0,0,0,0,0
+Genesis Cane,200,WEAPON,THIEF,ETERNAL,1,https://static.wikia.nocookie.net/maplestory/images/1/14/Eqp_Genesis_Cane.png/revision/latest?cb=20190126024047,0,150,0,150,326,0,0,30,20,0,0,0,0,0
+Genesis Chakram,200,WEAPON,THIEF,ETERNAL,1,https://static.wikia.nocookie.net/maplestory/images/2/25/Eqp_Arcane_Umbra_Chakram.png/revision/latest?cb=20230107104125,0,150,0,150,318,0,0,30,20,0,0,0,0,0
+Genesis Guards,200,WEAPON,THIEF,ETERNAL,1,https://static.wikia.nocookie.net/maplestory/images/9/97/Eqp_Genesis_Guards.png/revision/latest?cb=20190126024048,0,150,0,150,172,0,0,30,20,0,0,0,0,0
+Genesis Energy Chain (Pirate),200,WEAPON,PIRATE,ETERNAL,1,https://static.wikia.nocookie.net/maplestory/images/1/1f/Eqp_Genesis_Energy_Chain.png/revision/latest?cb=20190126024048,150,150,0,0,255,0,0,30,20,0,0,0,0,0
+Genesis Energy Chain (Thief),200,WEAPON,THIEF,ETERNAL,1,https://static.wikia.nocookie.net/maplestory/images/e/ec/Eqp_Arcane_Umbra_Energy_Chain.png/revision/latest?cb=20161212073958,150,150,0,0,255,0,0,30,20,0,0,0,0,0
+,,,,,0,,,,,,,,,,,,,,,
+Arcane Umbra Bowman Hat,200,HAT,BOWMAN,ARCANE,0,https://static.wikia.nocookie.net/maplestory/images/8/8f/Eqp_Arcane_Umbra_Archer_Hat.png/revision/latest?cb=20161208043448,65,65,0,0,7,0,300,0,15,0,0,0,0,0
+Arcane Umbra Knight Hat,200,HAT,WARRIOR,ARCANE,0,https://static.wikia.nocookie.net/maplestory/images/9/97/Eqp_Arcane_Umbra_Knight_Hat.png/revision/latest?cb=20161208043106,65,65,0,0,7,0,300,0,15,0,0,0,0,0
+Arcane Umbra Pirate Hat,200,HAT,PIRATE,ARCANE,0,https://static.wikia.nocookie.net/maplestory/images/f/f5/Eqp_Arcane_Umbra_Pirate_Hat.png/revision/latest?cb=20161208043507,65,65,0,0,7,0,300,0,15,0,0,0,0,0
+Arcane Umbra Thief Hat,200,HAT,THIEF,ARCANE,0,https://static.wikia.nocookie.net/maplestory/images/1/1e/Eqp_Arcane_Umbra_Thief_Hat.png/revision/latest?cb=20161208043459,0,65,0,65,7,0,300,0,15,0,0,0,0,0
+Arcane Umbra Mage Hat,200,HAT,MAGE,ARCANE,0,https://static.wikia.nocookie.net/maplestory/images/0/07/Eqp_Arcane_Umbra_Mage_Hat.png/revision/latest?cb=20161208043358,0,0,65,65,0,7,300,0,15,0,0,0,0,0
+,,,,,0,,,,,,,,,,,,,,,
+Eternal Archer Hat,200,HAT,BOWMAN,ETERNAL,0,https://static.wikia.nocookie.net/maplestory/images/d/db/Eqp_Eternal_Archer_Hat.png/revision/latest?cb=20220616172326,80,80,0,0,10,0,0,0,15,0,0,0,0,0
+Eternal Archer Hood,200,TOP,BOWMAN,ETERNAL,0,https://static.wikia.nocookie.net/maplestory/images/1/12/Eqp_Eternal_Archer_Hood.png/revision/latest?cb=20220616172510,50,50,0,0,6,0,0,0,10,0,0,0,0,0
+Eternal Archer Pants,200,BOTTOM,BOWMAN,ETERNAL,0,https://static.wikia.nocookie.net/maplestory/images/f/f8/Eqp_Eternal_Archer_Pants.png/revision/latest?cb=20220616172715,50,50,0,0,6,0,0,0,10,0,0,0,0,0
+Eternal Archer Shoulder,200,SHOULDER,BOWMAN,ETERNAL,0,https://static.wikia.nocookie.net/maplestory/images/8/8e/Eqp_Eternal_Shoulder.png/revision/latest?cb=20230615042016,51,51,0,0,28,28,0,0,0,0,0,0,0,0
+Eternal Knight Hat,200,HAT,WARRIOR,ETERNAL,0,https://static.wikia.nocookie.net/maplestory/images/1/14/Eqp_Eternal_Knight_Helm.png/revision/latest?cb=20220616172240,80,80,0,0,10,0,0,0,15,0,0,0,0,0
+Eternal Knight Hood,200,TOP,WARRIOR,ETERNAL,0,https://static.wikia.nocookie.net/maplestory/images/0/0e/Eqp_Eternal_Knight_Armor.png/revision/latest?cb=20220616172451,50,50,0,0,6,0,0,0,10,0,0,0,0,0
+Eternal Knight Pants,200,BOTTOM,WARRIOR,ETERNAL,0,https://static.wikia.nocookie.net/maplestory/images/5/57/Eqp_Eternal_Knight_Pants.png/revision/latest?cb=20220616172655,50,50,0,0,6,0,0,0,10,0,0,0,0,0
+Eternal Knight Shoulder,200,SHOULDER,WARRIOR,ETERNAL,0,https://static.wikia.nocookie.net/maplestory/images/8/8e/Eqp_Eternal_Shoulder.png/revision/latest?cb=20230615042016,51,51,0,0,28,28,0,0,0,0,0,0,0,0
+Eternal Pirate Hat,200,HAT,PIRATE,ETERNAL,0,https://static.wikia.nocookie.net/maplestory/images/a/a2/Eqp_Eternal_Pirate_Hat.png/revision/latest?cb=20220616172339,80,80,0,0,10,0,0,0,15,0,0,0,0,0
+Eternal Pirate Hood,200,TOP,PIRATE,ETERNAL,0,https://static.wikia.nocookie.net/maplestory/images/f/f7/Eqp_Eternal_Pirate_Coat.png/revision/latest?cb=20220616172525,50,50,0,0,6,0,0,0,10,0,0,0,0,0
+Eternal Pirate Pants,200,BOTTOM,PIRATE,ETERNAL,0,https://static.wikia.nocookie.net/maplestory/images/2/27/Eqp_Eternal_Pirate_Pants.png/revision/latest?cb=20220616172730,50,50,0,0,6,0,0,0,10,0,0,0,0,0
+Eternal Pirate Shoulder,200,SHOULDER,PIRATE,ETERNAL,0,https://static.wikia.nocookie.net/maplestory/images/8/8e/Eqp_Eternal_Shoulder.png/revision/latest?cb=20230615042016,51,51,0,0,28,28,0,0,0,0,0,0,0,0
+Eternal Mage Hat,200,HAT,MAGE,ETERNAL,0,https://static.wikia.nocookie.net/maplestory/images/b/b7/Eqp_Eternal_Mage_Hat.png/revision/latest?cb=20220616172313,0,0,80,80,0,10,0,0,15,0,0,0,0,0
+Eternal Mage Hood,200,TOP,MAGE,ETERNAL,0,https://static.wikia.nocookie.net/maplestory/images/0/0e/Eqp_Eternal_Mage_Robe.png/revision/latest?cb=20220616172500,0,0,50,50,0,6,0,0,10,0,0,0,0,0
+Eternal Mage Pants,200,BOTTOM,MAGE,ETERNAL,0,https://static.wikia.nocookie.net/maplestory/images/a/ae/Eqp_Eternal_Mage_Pants.png/revision/latest?cb=20220616172702,0,0,50,50,0,6,0,0,10,0,0,0,0,0
+Eternal Mage Shoulder,200,SHOULDER,MAGE,ETERNAL,0,https://static.wikia.nocookie.net/maplestory/images/8/8e/Eqp_Eternal_Shoulder.png/revision/latest?cb=20230615042016,0,0,51,51,28,28,0,0,0,0,0,0,0,0
+Eternal Thief Hat,200,HAT,THIEF,ETERNAL,0,https://static.wikia.nocookie.net/maplestory/images/8/8e/Eqp_Eternal_Thief_Bandana.png/revision/latest?cb=20220616172333,0,80,0,80,10,0,0,0,15,0,0,0,0,0
+Eternal Thief Hood,200,TOP,THIEF,ETERNAL,0,https://static.wikia.nocookie.net/maplestory/images/7/72/Eqp_Eternal_Thief_Shirt.png/revision/latest?cb=20220616172517,0,50,0,50,6,0,0,0,10,0,0,0,0,0
+Eternal Thief Pants,200,BOTTOM,THIEF,ETERNAL,0,https://static.wikia.nocookie.net/maplestory/images/a/a7/Eqp_Eternal_Thief_Pants.png/revision/latest?cb=20220616172723,0,50,0,50,6,0,0,0,10,0,0,0,0,0
+Eternal Thief Shoulder,200,SHOULDER,THIEF,ETERNAL,0,https://static.wikia.nocookie.net/maplestory/images/8/8e/Eqp_Eternal_Shoulder.png/revision/latest?cb=20230615042016,0,51,0,51,28,28,0,0,0,0,0,0,0,0
+,,,,,,,,,,,,,,,,,,,,
+Hybrid Heart,100,EMBLEM,THIEF,NO_SET,0,https://static.wikia.nocookie.net/maplestory/images/b/b6/Eqp_Hybrid_Heart.png/revision/latest?cb=20160209005302,0,0,0,0,2,2,100,0,0,0,300,100,0,0
+Fairy Heart,120,HEART,ALL_CLASS,NO_SET,0,https://static.wikia.nocookie.net/maplestory/images/e/ee/Eqp_Fairy_Heart.png/revision/latest?cb=20201110182107,0,0,0,0,0,0,0,0,0,0,100,0,0,0
+Glimmering Wondroid Heart,100,HEART,ALL_CLASS,NO_SET,0,https://static.wikia.nocookie.net/maplestory/images/d/d7/Eqp_Wondroid_Heart.png/revision/latest?cb=20210331143109,10,10,10,10,1,1,0,0,0,0,500,0,0,0
+Sweetwater Katara,160,SECONDARY,THIEF,NO_SET,0,https://static.wikia.nocookie.net/maplestory/images/8/85/Eqp_Sweetwater_Katara.png/revision/latest?cb=20171006050920,0,0,0,0,86,0,0,30,10,0,500,0,0,0
+Sweetwater Tattoo,160,FACE_ACCESSORY,ALL_CLASS,NO_SET,0,https://static.wikia.nocookie.net/maplestory/images/c/c8/Eqp_Sweetwater_Tattoo.png/revision/latest?cb=20161102002907,5,5,5,5,0,0,38,0,0,0,120,120,0,0
+Sweetwater Monocle,160,EYE_ACCESSORY,ALL_CLASS,NO_SET,0,https://static.wikia.nocookie.net/maplestory/images/3/32/Eqp_Sweetwater_Monocle.png/revision/latest?cb=20161101060254,10,10,10,10,0,0,120,0,0,0,240,240,0,0
+Sweetwater Pendant,160,PENDANT,ALL_CLASS,NO_SET,0,https://static.wikia.nocookie.net/maplestory/images/4/4d/Eqp_Sweetwater_Pendant.png/revision/latest?cb=20171007074853,34,34,34,34,0,0,330,0,0,0,0,342,0,0
+Transposed Sweetwater Katara,160,SECONDARY,THIEF,NO_SET,0,https://static.wikia.nocookie.net/maplestory/images/8/85/Eqp_Sweetwater_Katara.png/revision/latest?cb=20171006050920,9,9,9,9,94,0,0,30,10,0,500,0,0,0
+Transposed Sweetwater Tattoo,160,FACE_ACCESSORY,ALL_CLASS,NO_SET,0,https://static.wikia.nocookie.net/maplestory/images/c/c8/Eqp_Sweetwater_Tattoo.png/revision/latest?cb=20161102002907,14,14,14,14,8,0,38,0,0,0,120,120,0,0
+Transposed Sweetwater Monocle,160,EYE_ACCESSORY,ALL_CLASS,NO_SET,0,https://static.wikia.nocookie.net/maplestory/images/3/32/Eqp_Sweetwater_Monocle.png/revision/latest?cb=20161101060254,19,19,19,19,8,0,120,0,0,0,240,240,0,0
+Transposed Sweetwater Pendant,160,PENDANT,ALL_CLASS,NO_SET,0,https://static.wikia.nocookie.net/maplestory/images/4/4d/Eqp_Sweetwater_Pendant.png/revision/latest?cb=20171007074853,43,43,43,43,8,0,330,0,0,0,0,342,0,0
+,,,,,,,,,,,,,,,,,,,,
+AbsoLab Knight Gloves,200,GLOVES,WARRIOR,ABSOLAB,0,https://static.wikia.nocookie.net/maplestory/images/8/8f/Eqp_AbsoLab_Gloves.png/revision/latest?cb=20160719041450,20,20,0,0,5,0,250,0,0,0,0,0,0,0
+AbsoLab Knight Shoes,200,SHOES,WARRIOR,ABSOLAB,0,https://static.wikia.nocookie.net/maplestory/images/d/d1/Eqp_AbsoLab_Shoes.png/revision/latest?cb=20160719041459,20,20,0,0,5,0,250,0,0,0,0,0,0,0
+AbsoLab Knight Cape,200,CAPE,WARRIOR,ABSOLAB,0,https://static.wikia.nocookie.net/maplestory/images/3/34/Eqp_AbsoLab_Cape.png/revision/latest?cb=20160719041507,15,15,15,15,2,0,450,0,0,0,0,0,0,0
+AbsoLab Knight Shoulder,200,SHOULDER,WARRIOR,ABSOLAB,0,https://static.wikia.nocookie.net/maplestory/images/d/d1/Eqp_AbsoLab_Shoulder.png/revision/latest?cb=20160806223349,14,14,14,14,10,0,300,0,0,0,0,0,0,0
+AbsoLab Archer Gloves,200,GLOVES,BOWMAN,ABSOLAB,0,https://static.wikia.nocookie.net/maplestory/images/8/8f/Eqp_AbsoLab_Gloves.png/revision/latest?cb=20160719041450,20,20,0,0,5,0,250,0,0,0,0,0,0,0
+AbsoLab Archer Shoes,200,SHOES,BOWMAN,ABSOLAB,0,https://static.wikia.nocookie.net/maplestory/images/d/d1/Eqp_AbsoLab_Shoes.png/revision/latest?cb=20160719041459,20,20,0,0,5,0,250,0,0,0,0,0,0,0
+AbsoLab Archer Cape,200,CAPE,BOWMAN,ABSOLAB,0,https://static.wikia.nocookie.net/maplestory/images/3/34/Eqp_AbsoLab_Cape.png/revision/latest?cb=20160719041507,15,15,15,15,2,0,450,0,0,0,0,0,0,0
+AbsoLab Archer Shoulder,200,SHOULDER,BOWMAN,ABSOLAB,0,https://static.wikia.nocookie.net/maplestory/images/d/d1/Eqp_AbsoLab_Shoulder.png/revision/latest?cb=20160806223349,14,14,14,14,10,0,300,0,0,0,0,0,0,0
+AbsoLab Pirate Gloves,200,GLOVES,PIRATE,ABSOLAB,0,https://static.wikia.nocookie.net/maplestory/images/8/8f/Eqp_AbsoLab_Gloves.png/revision/latest?cb=20160719041450,20,20,0,0,5,0,250,0,0,0,0,0,0,0
+AbsoLab Pirate Shoes,200,SHOES,PIRATE,ABSOLAB,0,https://static.wikia.nocookie.net/maplestory/images/d/d1/Eqp_AbsoLab_Shoes.png/revision/latest?cb=20160719041459,20,20,0,0,5,0,250,0,0,0,0,0,0,0
+AbsoLab Pirate Cape,200,CAPE,PIRATE,ABSOLAB,0,https://static.wikia.nocookie.net/maplestory/images/3/34/Eqp_AbsoLab_Cape.png/revision/latest?cb=20160719041507,15,15,15,15,2,0,450,0,0,0,0,0,0,0
+AbsoLab Pirate Shoulder,200,SHOULDER,PIRATE,ABSOLAB,0,https://static.wikia.nocookie.net/maplestory/images/d/d1/Eqp_AbsoLab_Shoulder.png/revision/latest?cb=20160806223349,14,14,14,14,10,0,300,0,0,0,0,0,0,0
+AbsoLab Mage Gloves,200,GLOVES,MAGE,ABSOLAB,0,https://static.wikia.nocookie.net/maplestory/images/8/8f/Eqp_AbsoLab_Gloves.png/revision/latest?cb=20160719041450,0,0,20,20,0,5,250,0,0,0,0,0,0,0
+AbsoLab Mage Shoes,200,SHOES,MAGE,ABSOLAB,0,https://static.wikia.nocookie.net/maplestory/images/d/d1/Eqp_AbsoLab_Shoes.png/revision/latest?cb=20160719041459,0,0,20,20,0,5,250,0,0,0,0,0,0,0
+AbsoLab Mage Cape,200,CAPE,MAGE,ABSOLAB,0,https://static.wikia.nocookie.net/maplestory/images/3/34/Eqp_AbsoLab_Cape.png/revision/latest?cb=20160719041507,15,15,15,15,0,2,450,0,0,0,0,0,0,0
+AbsoLab Mage Shoulder,200,SHOULDER,MAGE,ABSOLAB,0,https://static.wikia.nocookie.net/maplestory/images/d/d1/Eqp_AbsoLab_Shoulder.png/revision/latest?cb=20160806223349,14,14,14,14,0,10,300,0,0,0,0,0,0,0
+AbsoLab Thief Gloves,200,GLOVES,THIEF,ABSOLAB,0,https://static.wikia.nocookie.net/maplestory/images/8/8f/Eqp_AbsoLab_Gloves.png/revision/latest?cb=20160719041450,0,20,0,20,5,0,250,0,0,0,0,0,0,0
+AbsoLab Thief Shoes,200,SHOES,THIEF,ABSOLAB,0,https://static.wikia.nocookie.net/maplestory/images/d/d1/Eqp_AbsoLab_Shoes.png/revision/latest?cb=20160719041459,0,20,0,20,5,0,250,0,0,0,0,0,0,0
+AbsoLab Thief Cape,200,CAPE,THIEF,ABSOLAB,0,https://static.wikia.nocookie.net/maplestory/images/3/34/Eqp_AbsoLab_Cape.png/revision/latest?cb=20160719041507,15,15,15,15,2,0,450,0,0,0,0,0,0,0
+AbsoLab Thief Shoulder,200,SHOULDER,THIEF,ABSOLAB,0,https://static.wikia.nocookie.net/maplestory/images/d/d1/Eqp_AbsoLab_Shoulder.png/revision/latest?cb=20160806223349,14,14,14,14,10,0,300,0,0,0,0,0,0,0
+,,,,,,,,,,,,,,,,,,,,
+AbsoLab Bladecaster,160,WEAPON,WARRIOR,ABSOLAB,0,https://static.wikia.nocookie.net/maplestory/images/e/e2/Eqp_AbsoLab_Bladecaster.png/revision/latest?cb=20200612064120,60,60,0,0,205,0,0,30,10,0,0,0,0,0
+AbsoLab Desperado,160,WEAPON,WARRIOR,ABSOLAB,0,https://static.wikia.nocookie.net/maplestory/images/8/8d/Eqp_AbsoLab_Desperado.png/revision/latest?cb=20210805181121,60,60,0,0,205,0,0,30,10,0,0,0,0,0
+AbsoLab Saber,160,WEAPON,WARRIOR,ABSOLAB,0,https://static.wikia.nocookie.net/maplestory/images/b/ba/Eqp_AbsoLab_Saber.png/revision/latest?cb=20160719054959,60,60,0,0,197,0,0,30,10,0,0,0,0,0
+AbsoLab Axe,160,WEAPON,WARRIOR,ABSOLAB,0,https://static.wikia.nocookie.net/maplestory/images/d/d1/Eqp_AbsoLab_Axe.png/revision/latest?cb=20160719054956,60,60,0,0,197,0,0,30,10,0,0,0,0,0
+AbsoLab Hammer,160,WEAPON,WARRIOR,ABSOLAB,0,https://static.wikia.nocookie.net/maplestory/images/4/4f/Eqp_AbsoLab_Bit_Hammer.png/revision/latest?cb=20160719054957,60,60,0,0,197,0,0,30,10,0,0,0,0,0
+AbsoLab Two-handed Sword,160,WEAPON,WARRIOR,ABSOLAB,0,https://static.wikia.nocookie.net/maplestory/images/6/6c/Eqp_AbsoLab_Broad_Saber.png/revision/latest?cb=20160719055357,60,60,0,0,205,0,0,30,10,0,0,0,0,0
+AbsoLab Two-handed Axe,160,WEAPON,WARRIOR,ABSOLAB,0,https://static.wikia.nocookie.net/maplestory/images/d/db/Eqp_AbsoLab_Broad_Axe.png/revision/latest?cb=20160719055356,60,60,0,0,205,0,0,30,10,0,0,0,0,0
+AbsoLab Two-handed Hammer,160,WEAPON,WARRIOR,ABSOLAB,0,https://static.wikia.nocookie.net/maplestory/images/0/00/Eqp_AbsoLab_Broad_Hammer.png/revision/latest?cb=20160719055357,60,60,0,0,205,0,0,30,10,0,0,0,0,0
+AbsoLab Spear,160,WEAPON,WARRIOR,ABSOLAB,0,https://static.wikia.nocookie.net/maplestory/images/9/9b/Eqp_AbsoLab_Piercing_Spear.png/revision/latest?cb=20160719055517,60,60,0,0,205,0,0,30,10,0,0,0,0,0
+AbsoLab Polearm,160,WEAPON,WARRIOR,ABSOLAB,0,https://static.wikia.nocookie.net/maplestory/images/9/92/Eqp_AbsoLab_Hellslayer.png/revision/latest?cb=20160719055512,60,60,0,0,184,0,0,30,10,0,0,0,0,0
+AbsoLab Katana,160,WEAPON,WARRIOR,ABSOLAB,0,https://static.wikia.nocookie.net/maplestory/images/c/c4/Eqp_AbsoLab_Katana.png/revision/latest?cb=20160719054958,60,60,0,0,197,0,0,30,10,0,0,0,0,0
+AbsoLab Ellaha,160,WEAPON,WARRIOR,ABSOLAB,0,https://static.wikia.nocookie.net/maplestory/images/e/e8/Eqp_AbsoLab_Pile_God.png/revision/latest?cb=20160719054959,60,60,0,0,154,0,0,30,10,0,0,0,0,0
+AbsoLab Bow,160,WEAPON,BOWMAN,ABSOLAB,0,https://static.wikia.nocookie.net/maplestory/images/2/2f/Eqp_AbsoLab_Sureshot_Bow.png/revision/latest?cb=20150111040430,60,60,0,0,192,0,0,30,10,0,0,0,0,0
+AbsoLab Whispershot,160,WEAPON,BOWMAN,ABSOLAB,0,https://static.wikia.nocookie.net/maplestory/images/e/ef/Eqp_AbsoLab_Whispershot.png/revision/latest?cb=20210607174324,60,60,0,0,192,0,0,30,10,0,0,0,0,0
+AbsoLab Crossbow,160,WEAPON,BOWMAN,ABSOLAB,0,https://static.wikia.nocookie.net/maplestory/images/b/b3/Eqp_AbsoLab_Crossbow.png/revision/latest?cb=20160719055357,60,60,0,0,197,0,0,30,10,0,0,0,0,0
+AbsoLab Dual Bowguns,160,WEAPON,BOWMAN,ABSOLAB,0,https://static.wikia.nocookie.net/maplestory/images/a/ab/Eqp_AbsoLab_Dual_Bowguns.png/revision/latest?cb=20160512045307,60,60,0,0,192,0,0,30,10,0,0,0,0,0
+AbsoLab Ancient Bow,160,WEAPON,BOWMAN,ABSOLAB,0,https://static.wikia.nocookie.net/maplestory/images/a/ad/Eqp_AbsoLab_Ancient_Bow.png/revision/latest?cb=20190614003457,60,60,0,0,192,0,0,30,10,0,0,0,0,0
+AbsoLab Shining Rod,160,WEAPON,MAGE,ABSOLAB,0,https://static.wikia.nocookie.net/maplestory/images/6/6b/Eqp_AbsoLab_Shining_Rod.png/revision/latest?cb=20150824050358,0,0,60,60,143,241,0,30,10,0,0,0,0,0
+AbsoLab Scepter,160,WEAPON,MAGE,ABSOLAB,0,https://static.wikia.nocookie.net/maplestory/images/4/4f/Eqp_AbsoLab_Scepter.png/revision/latest?cb=20160430192153,0,0,60,60,143,241,0,30,10,0,0,0,0,0
+AbsoLab Psy-limiter,160,WEAPON,MAGE,ABSOLAB,0,https://static.wikia.nocookie.net/maplestory/images/d/de/Eqp_AbsoLab_Psy-limiter.png/revision/latest?cb=20160118212150,0,0,60,60,143,241,0,30,10,0,0,0,0,0
+AbsoLab Lucent Gauntlet,160,WEAPON,MAGE,ABSOLAB,0,https://static.wikia.nocookie.net/maplestory/images/8/8a/Eqp_AbsoLab_Lucent_Gauntlet.png/revision/latest?cb=20171122221654,0,0,60,60,143,241,0,30,10,0,0,0,0,0
+AbsoLab Wand,160,WEAPON,MAGE,ABSOLAB,0,https://static.wikia.nocookie.net/maplestory/images/8/87/Eqp_AbsoLab_Spellsong_Wand.png/revision/latest?cb=20160719055359,0,0,60,60,143,241,0,30,10,0,0,0,0,0
+AbsoLab Staff,160,WEAPON,MAGE,ABSOLAB,0,https://static.wikia.nocookie.net/maplestory/images/5/50/Eqp_AbsoLab_Spellsong_Staff.png/revision/latest?cb=20160719055359,0,0,60,60,143,245,0,30,10,0,0,0,0,0
+AbsoLab Fan,160,WEAPON,MAGE,ABSOLAB,0,https://static.wikia.nocookie.net/maplestory/images/4/49/Eqp_AbsoLab_Summoner.png/revision/latest?cb=20160318053500,0,0,60,60,143,241,0,30,10,0,0,0,0,0
+AbsoLab Soul Shooter,160,WEAPON,PIRATE,ABSOLAB,0,https://static.wikia.nocookie.net/maplestory/images/f/f4/Eqp_AbsoLab_Soul_Shooter.png/revision/latest?cb=20160719055000,60,60,0,0,154,0,0,30,10,0,0,0,0,0
+AbsoLab Knuckle,160,WEAPON,PIRATE,ABSOLAB,0,https://static.wikia.nocookie.net/maplestory/images/7/7c/Eqp_AbsoLab_Blast_Knuckle.png/revision/latest?cb=20160719055400,60,60,0,0,154,0,0,30,10,0,0,0,0,0
+AbsoLab Pistol,160,WEAPON,PIRATE,ABSOLAB,0,https://static.wikia.nocookie.net/maplestory/images/c/c8/Eqp_AbsoLab_Point_Gun.png/revision/latest?cb=20151017204130,60,60,0,0,150,0,0,30,10,0,0,0,0,0
+AbsoLab Siege Gun,160,WEAPON,PIRATE,ABSOLAB,0,https://static.wikia.nocookie.net/maplestory/images/1/1a/Eqp_AbsoLab_Blast_Cannon.png/revision/latest?cb=20160719054958,60,60,0,0,248,0,0,30,10,0,0,0,0,0
+AbsoLab Chain,160,WEAPON,THIEF,ABSOLAB,0,https://static.wikia.nocookie.net/maplestory/images/d/dd/Eqp_AbsoLab_Chain.png/revision/latest?cb=20171121070115,0,60,0,60,192,0,0,30,10,0,0,0,0,0
+AbsoLab Super Ritual Fan,160,WEAPON,THIEF,ABSOLAB,0,https://static.wikia.nocookie.net/maplestory/images/7/79/Eqp_AbsoLab_Monster_Ritual_Fan.png/revision/latest?cb=20191127145311,0,60,0,60,192,0,0,30,10,0,0,0,0,0
+AbsoLab Dagger,160,WEAPON,THIEF,ABSOLAB,0,https://static.wikia.nocookie.net/maplestory/images/c/c3/Eqp_AbsoLab_Blade_Lord.png/revision/latest?cb=20160719054958,0,60,0,60,192,0,0,30,10,0,0,0,0,0
+AbsoLab Cane,160,WEAPON,THIEF,ABSOLAB,0,https://static.wikia.nocookie.net/maplestory/images/e/ea/Eqp_AbsoLab_Forked_Cane.png/revision/latest?cb=20160719055358,0,60,0,60,197,0,0,30,10,0,0,0,0,0
+AbsoLab Chakram,160,WEAPON,THIEF,ABSOLAB,0,https://static.wikia.nocookie.net/maplestory/images/7/7a/Eqp_AbsoLab_Chakram.png/revision/latest?cb=20230107104117,0,60,0,60,192,0,0,30,10,0,0,0,0,0
+AbsoLab Guards,160,WEAPON,THIEF,ABSOLAB,0,https://static.wikia.nocookie.net/maplestory/images/4/43/Eqp_AbsoLab_Revenge_Guard.png/revision/latest?cb=20160719055358,0,60,0,60,172,0,0,30,10,0,0,0,0,0
+AbsoLab Energy Chain (Pirate),160,WEAPON,PIRATE,ABSOLAB,0,https://static.wikia.nocookie.net/maplestory/images/8/83/Eqp_AbsoLab_Whip_Blade.png/revision/latest?cb=20160430001846,60,60,0,0,154,0,0,30,10,0,0,0,0,0
+AbsoLab Energy Chain (Thief),160,WEAPON,THIEF,ABSOLAB,0,https://static.wikia.nocookie.net/maplestory/images/8/83/Eqp_AbsoLab_Whip_Blade.png/revision/latest?cb=20160430001846,60,60,0,0,154,0,0,30,10,0,0,0,0,0

@@ -376,6 +376,94 @@ function getJobStats(job, dse=0, dsi=0, rope=0, blink=0, dab=0,
             jStats[PERCENT_HP] = 20;
             break;
 
+        case CORSAIR:
+            jStats[CRIT_DAMAGE] = 5 + 20;
+            jStats[FLAT_ATTACK] = 10 + 60 + 30 + Math.min(1, dco);
+            jStats[FLAT_DEX] = 20 + 30;
+            jStats[FLAT_STR] = 30;
+            jStats[FINAL_DAMAGE] = addFDSource(20 + Math.min(1, dco), 8);
+            jStats[IED] = 20;
+            break;
+
+        case BUCCANEER:
+            jStats[CRIT_DAMAGE] = 5 + 10 + 15;
+            jStats[FLAT_STR] = 20 + 30;
+            jStats[FLAT_DEX] = 30;
+            jStats[FLAT_ATTACK] = 30 + 30 + 2*Math.min(1, dco);
+            jStats[PERCENT_ATTACK] = 30 + Math.min(1, dco);
+            jStats[IED] = 40 + 4 * Math.min(1, dco);
+            jStats[FINAL_DAMAGE] = 10;
+            jStats[BOSS_DAMAGE] = 20;
+            break;
+
+        case CANNON_MASTER:
+            jStats[FLAT_ATTACK] = 20 + 40;
+            jStats[FLAT_STR] = 20 + 30;
+            jStats[FLAT_DEX] = 30;
+            jStats[CRIT_DAMAGE] = 5;
+            jStats[FINAL_DAMAGE] = addFDSource(addFDSource(addFDSource(10, 5), 5), 30);
+            jStats[CRIT_DAMAGE] += 10;
+            jStats[IED] = 20;
+            jStats[FLAT_ALL_STAT] = 60;
+            jStats[BOSS_DAMAGE] = 40;
+            break;
+
+        case THUNDER_BREAKER:
+            jStats[FLAT_STR] = 20;
+            jStats[FINAL_DAMAGE] = addFDSource(addFDSource(5, 18), 15);
+            jStats[CRIT_DAMAGE] = 5 + 10 + 15 + 15;
+            jStats[FLAT_ATTACK] = 20 + 30 + 30 + Math.min(1, dco);
+            jStats[DAMAGE] = 5;
+            jStats[IED] = 27;
+            break;
+
+        case MECHANIC:
+            jStats[FLAT_ATTACK] = 40 + 20 + 55 + Math.min(1, dco);
+            jStats[CRIT_DAMAGE] = 5;
+            jStats[STR] = 30;
+            jStats[DEX] = 30;
+            jStats[FINAL_DAMAGE] = addFDSource(20, 10 + Math.min(1, dco) + 5);
+            jStats[IED] = 30;
+            jStats[PERCENT_HP] = 30 + 40;
+            jStats[PERCENT_MP] = 30 + 10;
+            break;
+
+        case SHADE:
+            jStats[PERCENT_HP] = 20;
+            jStats[PERCENT_MP] = 20;
+            jStats[FLAT_STR] = 60;
+            jStats[DAMAGE] = 20 + 20;
+            jStats[FLAT_ATTACK] = 20;
+            jStats[IED] = 30 + Math.min(1, dco);
+            jStats[FINAL_DAMAGE] = addFDSource(15, 16 + Math.min(1, dco));
+            jStats[BOSS_DAMAGE] = 30 + Math.min(1, dco);
+            jStats[CRIT_DAMAGE] = 20 + 2*Math.min(1, dco);
+            break;
+        case ANGELIC_BUSTER:
+            jStats[FLAT_HP] = 2500 + 1000;
+            jStats[FLAT_ATTACK] = 20 + 40 + 30 + Math.min(1, dco);
+            jStats[FLAT_DEX] = 40 + 20 + 40;
+            jStats[DAMAGE] = 20;
+            jStats[FINAL_DAMAGE] = 25 + Math.min(1, dco);
+            jStats[IED] = addIEDSource(15 + Math.min(1, dco), 15);
+            jStats[CRIT_DAMAGE] = 45 + 15 + 2*Math.min(1, dco);
+            break;
+        case ARK:
+            jStats[FLAT_ATTACK] = 20 + 20 + 30 + 40 + 2*Math.min(1, dco);
+            jStats[PERCENT_HP] = 20;
+            jStats[PERCENT_MP] = 20;
+            jStats[FLAT_STR] = 60;
+            jStats[FINAL_DAMAGE] = addFDSource(5, 20 + Math.min(1, dco));
+            jStats[BOSS_DAMAGE] = 30 + 30 + 2*Math.min(1, dco);
+            jStats[DAMAGE] = 20;
+            jStats[IED] = addIEDSource(20, 30 + Math.min(1, dco));
+            jStats[CRIT_DAMAGE] = 30 + Math.min(1, dco);
+            break;
+
+        case HERO:
+            
+            break;
+
     }
 
     if(dse >= 1)

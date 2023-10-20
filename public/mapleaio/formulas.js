@@ -50,7 +50,7 @@ function setBonuses(equips)
             let set = baseEquips[equips[j].name].set;
             let type = baseEquips[equips[j].name].type;
 
-            for (let k = 0; k<setBonusTable[k].length; k++)
+            for (let k = 0; k<setBonusTable[i].length; k++)
             { 
                 if (set == i && type == setBonusTable[i][k][0])
                 {
@@ -59,7 +59,30 @@ function setBonuses(equips)
                 }
             }
         }
+        
+        //lucky items
+        if (setCount >= 3)
+        {
+            for (let j=0; j<equips.length; j++)
+            {
+                let set = baseEquips[equips[j].name].set;
+                let type = baseEquips[equips[j].name].type;
+                let isLucky = baseEquips[equips[j].name].isLucky;
 
+                if (set == i)
+                    continue;
+
+                for (let k = 0; k<setBonusTable[i].length; k++)
+                { 
+                    if (type == setBonusTable[i][k][0] && isLucky == 1)
+                    {
+                        setCount++;
+                        break;
+                    }
+                }
+            }
+        }
+        
         for (let j=0; j<= setCount; j++)
         {
             let setStats = setBonusTable[i][j][1];
@@ -69,9 +92,6 @@ function setBonuses(equips)
             }
             
         }
-
-        if (setCount != 0)
-            console.log(i, setCount);
     }
 
     return stats;
