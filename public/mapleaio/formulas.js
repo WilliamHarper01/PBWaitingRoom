@@ -208,13 +208,13 @@ class StarForce {
             if (i < 6) {
                 flatMainStat += 2;
                 if (equipType == WEAPON)
-                    flatAttack += Math.round((visibleAtt + flatAttack) * 0.02)
+                    flatAttack += Math.ceil((visibleAtt + flatAttack) * 0.02)
             }
             else if (i < 16) {
                 flatMainStat += 3;
                 
                 if (equipType == WEAPON)
-                    flatAttack += Math.round((visibleAtt + flatAttack) * 0.02)
+                    flatAttack += Math.ceil((visibleAtt + flatAttack) * 0.02)
 
             }
             else

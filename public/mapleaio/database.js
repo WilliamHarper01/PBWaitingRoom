@@ -138,6 +138,7 @@ function doneLoading()
             baseEquips[col[0]].stats[FLAT_MP] = isANumber(col[18]);
             baseEquips[col[0]].stats[PERCENT_HP] = isANumber(col[19]);
             baseEquips[col[0]].stats[PERCENT_MP] = isANumber(col[20]);
+            baseEquips[col[0]].subType = isANumber(col[21]);
         }
 
         let scriptNames = ["character.js", "equips.js", "familiars.js", "hyperstats.js", 

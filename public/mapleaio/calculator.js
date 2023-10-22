@@ -108,18 +108,17 @@ function updateRange()
 
     stats.addStats(rebootStats(characterLevel));
 
-    stats.addStats(getJobStats(job, commonLevels[0],
-        commonLevels[1],
+    stats.addStats(getJobStats(job, commonLevels[5], characterLevel, baseEquips[equips[WEAPON].name].subType));
+
+    stats.addStats(calculateCommons(commonLevels[1],
         commonLevels[2],
         commonLevels[3],
         commonLevels[4],
-        commonLevels[5],
         commonLevels[6],
         commonLevels[7],
         commonLevels[8],
         skillIEDValue,
-        VSValue,
-        characterLevel));
+        VSValue));
 
     for (let i=0; i<equips.length; i++)
     {

@@ -44,6 +44,28 @@ typeDict["SECONDARY"] = SECONDARY;
 typeDict["CAPE"] = CAPE;
 typeDict["HEART"] = HEART;
 
+const NO_SUB_TYPE = 0;
+const ONE_HANDED_SWORD = 1;
+const ONE_HANDED_AXE = 2;
+const ONE_HANDED_HAMMER = 3;
+const TWO_HANDED_SWORD = 4;
+const TWO_HANDED_AXE = 5;
+const TWO_HANDED_HAMMER = 6;
+const SPEAR = 7;
+const POLEARM = 8;
+
+const subTypeDict = {};
+subTypeDict["NONE"] = NO_SUB_TYPE;
+subTypeDict["ONE_HANDED_SWORD"] = ONE_HANDED_SWORD;
+subTypeDict["ONE_HANDED_AXE"] = ONE_HANDED_AXE;
+subTypeDict["ONE_HANDED_HAMMER"] = ONE_HANDED_HAMMER;
+subTypeDict["TWO_HANDED_SWORD"] = TWO_HANDED_SWORD;
+subTypeDict["TWO_HANDED_AXE"] = TWO_HANDED_AXE;
+subTypeDict["TWO_HANDED_HAMMER"] = TWO_HANDED_HAMMER;
+subTypeDict["SPEAR"] = SPEAR;
+subTypeDict["POLEARM"] = POLEARM;
+
+
 const ALL_CLASS = 0;
 const WARRIOR = 1;
 const MAGE = 2;
@@ -545,6 +567,7 @@ baseEquips["None"].type = RING;
 baseEquips["None"].branch = ALL_CLASS;
 baseEquips["None"].set = NO_SET;
 baseEquips["None"].isLucky = 0;
+baseEquips["None"].subType = NO_SUB_TYPE;
 baseEquips["None"].img = "Blank.png"
 baseEquips["None"].stats = new Array(STATS_LENGTH).fill(0);
 baseEquips["None"].stats[FLAT_STR] = 0;

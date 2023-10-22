@@ -182,8 +182,7 @@ passiveStats = [];
 
 passiveStats[BEGINNER] = new Array(STATS_LENGTH).fill(0);
 
-function getJobStats(job, dse=0, dsi=0, rope=0, blink=0, dab=0, 
-    dco=0, dhb=0, dmd=0, eb=0, averageIEDfromAttacks=0, averageCritDamageFromVS=0, level)
+function getJobStats(job, dco = 0, level, weaponType)
 {
     jStats = new Array(STATS_LENGTH).fill(0)
     switch (job)
@@ -412,9 +411,10 @@ function getJobStats(job, dse=0, dsi=0, rope=0, blink=0, dab=0,
             jStats[FLAT_STR] = 20;
             jStats[FINAL_DAMAGE] = addFDSource(addFDSource(5, 18), 15);
             jStats[CRIT_DAMAGE] = 5 + 10 + 15 + 15;
-            jStats[FLAT_ATTACK] = 20 + 30 + 30 + Math.min(1, dco);
+            jStats[FLAT_ATTACK] = 20 + 30 + 30 + Math.min(1, dco) + 6;
             jStats[DAMAGE] = 5;
             jStats[IED] = 27;
+            jStats[PERCENT_ATTACK] = 10;
             break;
 
         case MECHANIC:
@@ -461,11 +461,167 @@ function getJobStats(job, dse=0, dsi=0, rope=0, blink=0, dab=0,
             break;
 
         case HERO:
-            
+            jStats[PERCENT_HP] = 20;
+            jStats[FLAT_ATTACK] = 30 + 30 + Math.min(1, dco);
+            jStats[FINAL_DAMAGE] = addFDSource(addFDSource(10, 120 + 10 * Math.min(1, dco)), 25);
+            jStats[DAMAGE] = weaponType == ONE_HANDED_AXE || weaponType == TWO_HANDED_AXE ? 5 : 0;
+            jStats[FLAT_STR] = 20 + 30;
+            jStats[FLAT_DEX] = 30;
+            jStats[CRIT_DAMAGE] = 25 + Math.min(1, dco) + 20;
+            jStats[IED] = 50;
+            jStats[BOSS_DAMAGE] = 20;
             break;
+
+        case PALADIN:
+            jStats[PERCENT_HP] = 20;
+            jStats[FLAT_STR] = 20 + 30;
+            jStats[FLAT_DEX] = 30;
+            jStats[FINAL_DAMAGE] = 20;
+            jStats[CRIT_DAMAGE] = 15;
+            jStats[IED] = 31;
+            jStats[FINAL_DAMAGE] = 42;
+            jStats[FLAT_ATTACK] += 12;
+            jStats[CRIT_DAMAGE] += weaponType == ONE_HANDED_SWORD ? 6 : 5;
+            jStats[IED] = addIEDSource(jStats[IED], weaponType == ONE_HANDED_AXE || weaponType == TWO_HANDED_AXE ? 10 : 0);
+            break;
+
+        case DARK_KNIGHT:
+            jStats[PERCENT_HP] = 20 + 60;
+            jStats[PERCENT_MP] = 60;
+            jStats[DAMAGE] = weaponType == SPEAR ? 5 : 0;
+            jStats[FLAT_STR] = 20 + 30;
+            jStats[FLAT_DEX] = 30;
+            jStats[FINAL_DAMAGE] = addFDSource(addFDSource(addFDSource(50, 20), 30 + Math.min(1, dco)), 5);
+            jStats[FLAT_ATTACK] = 40 + 30 + Math.min(1, dco) + 30;
+            jStats[CRIT_DAMAGE] = 8 + 15 + 15;
+            jStats[IED] = addIEDSource(30 + Math.min(1, dco), 11 + Math.min(1, dco));
+            jStats[BOSS_DAMAGE] = 15 + Math.min(1, dco);
+            break;
+        
+        case DAWN_WARRIOR:
+            jStats[FINAL_DAMAGE] = addFDSource(addFDSource(10, 5), 80);
+            jStats[IED] = addIEDSource(addIEDSource(10, 30 + 2*Math.min(1, dco)), 20);
+            jStats[FLAT_ATTACK] = 150 + 20 + 6;
+            jStats[FLAT_STR] = 20 + 40;
+            jStats[FLAT_DEX] = 20;
+            jStats[FLAT_ATTACK] += 30 + 50 + Math.min(1, dco);
+            jStats[FLAT_STR] += 40;
+            jStats[FLAT_ALL_STAT] = 30 + Math.min(1, dco);
+            jStats[CRIT_DAMAGE] = 12;
+            jStats[BOSS_DAMAGE] = 15 + Math.min(1, dco);
+            jStats[PERCENT_ATTACK] = 10;
+            break;
+
+        case MIHILE:
+            jStats[PERCENT_ATTACK] = 10;
+            jStats[FLAT_ATTACK] = 6 + 30 + 20 + 30 + Math.min(1, dco);
+            jStats[FLAT_STR] = 20;
+            jStats[FINAL_DAMAGE] = addFDSource(15, 23);
+            jStats[FLAT_STR] += 30 + 60;
+            jStats[FLAT_DEX] = 30;
+            jStats[IED] = 40;
+            break;
+
+        case BLASTER:
+            jStats[FLAT_ATTACK] = 20 + 40 + 2*Math.min(1, dco);
+            jStats[FINAL_DAMAGE] = addFDSource(5, 60 + 10*Math.min(1, dco));
+            jStats[FLAT_STR] = 30;
+            jStats[FLAT_DEX] = 30;
+            jStats[DAMAGE] = 20;
+            jStats[PERCENT_ATTACK] = 15;
+            jStats[CRIT_DAMAGE] = 20 + Math.min(1, dco);
+            jStats[BOSS_DAMAGE] = 20 + Math.min(1, dco);
+            jStats[IED] = 35 + 3*Math.min(1, dco);
+            break;
+
+        case DEMON_SLAYER:
+            jStats[FLAT_STR] = 20 + 30;
+            jStats[PERCENT_HP] = 30 + 20;
+            jStats[FINAL_DAMAGE] = addFDSource(addFDSource(10, 30), 30);
+            jStats[FLAT_DEX] = 30;
+            jStats[FLAT_ATTACK] = 50 + 50 + Math.min(1, dco);
+            jStats[IED] = addIEDSource(15, 30 + Math.min(1, dco));
+            break;
+        
+        case DEMON_AVENGER:
+            jStats[FLAT_HP] = 800 + 600;
+            jStats[FLAT_ATTACK] = 40 + 50 + Math.min(1, dco);
+            jStats[PERCENT_HP] = 25 + 15;
+            jStats[FINAL_DAMAGE] = 15;
+            jStats[DAMAGE] = 30 + Math.min(1, dco);
+            jStats[IED] = 30 + Math.min(1, dco);
+            jStats[CRIT_DAMAGE] = 8;
+            break;
+        
+        case ARAN:
+            jStats[PERCENT_ATTACK] = 5;
+            jStats[FLAT_STR] = 20 + 30;
+            jStats[FLAT_DEX] = 30;
+            jStats[PERCENT_HP] = 10;
+            jStats[DAMAGE] = 10 + 30;
+            jStats[FINAL_DAMAGE] = 8;
+            jStats[CRIT_DAMAGE] = 10 + 8;
+            jStats[FLAT_ATTACK] = 30 + 40 + 30 + 2*Math.min(1, dco) + 30;
+            jStats[IED] = 40;
+            jStats[FINAL_DAMAGE] = 15;
+            break;
+
+        case KAISER:
+            jStats[FLAT_ATTACK] = 5 + 20 + 15 + 15;
+            jStats[BOSS_DAMAGE] = 3 + 5 + 5;
+            jStats[PERCENT_HP] = 15 + 20 + 30;
+            jStats[FLAT_STR] = 20 + 30;
+            jStats[FLAT_ATTACK] = 10;
+            jStats[BOSS_DAMAGE] = 5;
+            jStats[PERCENT_ATTACK] = 30;
+            jStats[FINAL_DAMAGE] = 32;
+            jStats[IED] = 40 + Math.min(1, dco);
+            break;
+        
+        case ADELE:
+            jStats[CRIT_DAMAGE] = 10;
+            jStats[PERCENT_ATTACK] = 10;
+            jStats[FLAT_ATTACK] = 30 + 30 + 30 + 2*Math.min(1, dco) + 30;
+            jStats[FLAT_STR] = 60;
+            jStats[PERCENT_HP] = 10 + 15;
+            jStats[FINAL_DAMAGE] = 30 + Math.min(1, dco);
+            jStats[IED] = 20 + Math.min(1, dco);
+            jStats[BOSS_DAMAGE] = 10 + Math.min(1, dco);
+            break;
+        
+        case ZERO:
+            jStats[FLAT_ATTACK] = 20;
+            jStats[FLAT_MATT] = 20;
+            jStats[FINAL_DAMAGE] = 25;
+            jStats[FLAT_STR] = 50;
+            jStats[PERCENT_HP] = 15;
+            break;
+        
+        case HAYATO:
+            jStats[FLAT_STR] = 30;
+            jStats[FLAT_DEX] = 30;
+            jStats[CRIT_DAMAGE] = 30;
+            jStats[PERCENT_HP] = 20;
+            jStats[PERCENT_MP] = 20;
+            jStats[FLAT_ATTACK] = 15;
+            jStats[IED] = 35 + Math.min(1, dco);
+            jStats[DAMAGE] = 30 + Math.min(1, dco); 
+            break;
+        
+        
 
     }
 
+    jStats[PERCENT_ALL_STAT] += 15 + Math.min(1, dco); //maple warrior
+
+    return jStats;
+}
+
+function calculateCommons(dse=0, dsi=0, rope=0, blink=0, dab=0,
+     dhb=0, dmd=0, eb=0, averageIEDfromAttacks=0, averageCritDamageFromVS=0)
+{
+    let jStats = new Array(STATS_LENGTH).fill(0);
+    
     if(dse >= 1)
         jStats[CRIT_DAMAGE] += 8;
     
@@ -494,8 +650,6 @@ function getJobStats(job, dse=0, dsi=0, rope=0, blink=0, dab=0,
 
     jStats[IED] = addIEDSource(jStats[IED], averageIEDfromAttacks);
     jStats[CRIT_DAMAGE] += averageCritDamageFromVS;
-
-    jStats[PERCENT_ALL_STAT] += 15 + Math.min(1, dco); //maple warrior
 
     return jStats;
 }
