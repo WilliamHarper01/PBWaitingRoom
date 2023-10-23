@@ -768,6 +768,12 @@ class Range {
         return Math.floor(actualDamageRange * bonusDamagePercent * finalDamagePercent);
     }
 
+    getMainStat()
+    {
+        let classStats = this.classSpecificStats();
+        return classStats[0];
+    }
+
     classSpecificStats()
     {
         let mainStat = 0, secondaryStat = 0, attack = 0;

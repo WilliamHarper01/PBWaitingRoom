@@ -4,7 +4,7 @@
 /* Purpose: specifies the general style of the entire website */
 
 /* reset the styling of the page */
-@import "reset.css";
+/*@import "reset.css";*/
 
 /* import the Roboto Mono font  */
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono');

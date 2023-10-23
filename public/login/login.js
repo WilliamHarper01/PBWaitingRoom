@@ -1,6 +1,3 @@
-import {initializeApp} from "https://www.gstatic.com/firebasejs/10.0.0/firebase-app.js";
-import {getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword} from "https://www.gstatic.com/firebasejs/10.0.0/firebase-auth.js";
-
 loginMenu = document.getElementById("loginMenu");
 
 const firebaseConfig = {
@@ -35,8 +32,8 @@ document.getElementById("gotoLogin").onclick = function () {
 
 // Initialize Firebase
 
-const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
+const app = firebase.initializeApp(firebaseConfig);
+const auth = firebase.auth(app);
 
 
 document.getElementById("submitSignup").onclick = function ()
@@ -53,12 +50,11 @@ document.getElementById("submitSignup").onclick = function ()
         return;
     }
 
-    getAuth();
-    createUserWithEmailAndPassword(auth, email, password)
+    auth.createUserWithEmailAndPassword(email, password)
     .then((userCredential) => {
         const user = userCredential.user;
 
-        signInWithEmailAndPassword(auth, email, password)
+        auth.signInWithEmailAndPassword(email, password)
         .then((userCredential) => {
             // Signed in 
             const user = userCredential.user;
@@ -85,8 +81,7 @@ document.getElementById("submitLogin").onclick = function ()
     let password = document.getElementById("loginPassword").value;
     let errorMsg = document.getElementById("loginError");
 
-    const auth = getAuth();
-    signInWithEmailAndPassword(auth, email, password)
+    auth.signInWithEmailAndPassword(email, password)
     .then((userCredential) => {
         // Signed in 
         const user = userCredential.user;

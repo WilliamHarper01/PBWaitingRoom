@@ -161,6 +161,8 @@ function updateRange(saveLast = false)
 
     let damageToBosses = stats.damageToBosses();
 
+    console.log(stats.getMainStat());
+
     document.getElementById("damagetobosses").innerHTML = "Damage To Bosses: " + damageToBosses;
 
     let fdGain = (lastRange > 0) ? ((damageToBosses / lastRange) - 1.0) * 100 : 0;
