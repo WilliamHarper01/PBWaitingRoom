@@ -41,6 +41,13 @@ body{
     background-color: rgb(220, 220, 220);
 }
 
+.displayRanges > * {
+    margin: auto;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
 .equipTab{
     margin: auto;
     display: flex;
