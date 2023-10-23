@@ -76,7 +76,7 @@ function loadFromJSON(json)
     commonLevels = json["commonLevels"];
     skillIEDValue = json["skillIEDValue"];
 
-    for (let i=0; i<24; i++)
+    for (let i=0; i<equips.length; i++)
     {
         let e = json["equips"][i];
         let s = e["starforce"];
@@ -124,7 +124,7 @@ function updateRange(saveLast = false)
     stats.addStats(getJobStats(job, commonLevels[5], characterLevel, 
                             baseEquips[equips[WEAPON].name].subType));
 
-    stats.addStats(calculateCommons(commonLevels[1],
+    stats.addStats(calculateCommons(commonLevels[0], commonLevels[1],
         commonLevels[2],
         commonLevels[3],
         commonLevels[4],
@@ -189,7 +189,7 @@ function statEquivalence(stats, baseRange)
         addSingleStat[statEquivalenceStats[i]] += 1;
         stats.addStats(addSingleStat);
         let fdGain = (baseRange > 0) ? ((stats.damageToBosses() / baseRange) - 1.0) * 100 : 0;
-        statTexts[i].innerHTML = statDict[statEquivalenceStats[i]] + ": " + fdGain.toFixed(2) + "% ";
+        statTexts[i].innerHTML = statDict[statEquivalenceStats[i]] + ": " + fdGain.toFixed(3) + "% ";
         addSingleStat[statEquivalenceStats[i]] -= 2;
         stats.addStats(addSingleStat);
         addSingleStat[statEquivalenceStats[i]] = 0;

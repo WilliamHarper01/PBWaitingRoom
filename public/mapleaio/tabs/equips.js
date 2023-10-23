@@ -5,8 +5,8 @@ const potentialValues = ['3', '4', '6', '7', '9','10', '12', '13', '20', '30', '
 const possibleFlameStats = [BLANK, FLAT_ATTACK, FLAT_MATT, FLAT_STR, FLAT_DEX, FLAT_INT, FLAT_LUK, 
                             FLAT_HP, FLAT_MP, PERCENT_ALL_STAT, DAMAGE, BOSS_DAMAGE]
 
-const possiblePotentialStats = [BLANK, FLAT_ATTACK, FLAT_MATT, FLAT_STR, FLAT_DEX, FLAT_INT , FLAT_LUK,
-                                PERCENT_STR, PERCENT_INT, PERCENT_LUK, PERCENT_DEX, PERCENT_HP,
+const possiblePotentialStats = [BLANK, FLAT_ATTACK, FLAT_MATT, FLAT_STR, FLAT_DEX, FLAT_INT , FLAT_LUK, FLAT_ALL_STAT,
+                                PERCENT_STR, PERCENT_INT, PERCENT_LUK, PERCENT_DEX, PERCENT_HP, PERCENT_ALL_STAT,
                                 PERCENT_MP, PERCENT_DEF, PERCENT_ATTACK, PERCENT_MATT, BOSS_DAMAGE, DAMAGE, CRIT_DAMAGE, IED];
 
 var equipSelected = WEAPON;
