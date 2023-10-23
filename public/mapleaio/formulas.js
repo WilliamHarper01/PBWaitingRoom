@@ -311,7 +311,10 @@ class Equip {
                 stats[IED] = addIEDSource(starforceStats[IED], stats[IED]);
             }
             else {
-                stats[i] = baseEquip.stats[i] + flameStats[i] + potentialStats[i] + starforceStats[i];
+                if (hakuFans.includes(this.name))
+                    stats[i] = potentialStats[i];
+                else
+                    stats[i] = baseEquip.stats[i] + flameStats[i] + potentialStats[i] + starforceStats[i];
             }
         }
 

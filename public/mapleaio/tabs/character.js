@@ -17,6 +17,8 @@ for(let i=0; i<CLASS_LENGTH; i++)
     oJob = document.createElement("option");
     oJob.text = classDict[i];
     oJob.value = classDict[i];
+    if (i == BEAST_TAMER)
+        oJob.disabled = true;
     jobSelector.add(oJob);
 }
 jobSelector.value = classDict[job];

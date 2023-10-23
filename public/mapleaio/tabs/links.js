@@ -5,12 +5,16 @@ linkTitle.className = "sectionTitle";
 linkTitle.innerHTML = "Link Skills";
 linkTab.appendChild(linkTitle);
 
+var linkSection = document.createElement("div");
+linkSection.className = "horizontalSection";
+linkTab.appendChild(linkSection);
+
 for (let i = 0; i < links.length; i++)
 {
     let linkLine = document.createElement("div");
-    linkLine.className = "horizontalSection";
+    linkLine.className = "verticalSection";
     linkLine.id = "linkLine" + i;
-    linkTab.appendChild(linkLine);
+    linkSection.appendChild(linkLine);
 
     let linkClass = document.createElement("select");
     linkClass.className = "basicOption";
@@ -38,7 +42,6 @@ for (let i = 0; i < links.length; i++)
     linkLevel.setAttribute("onchange", "changeLink(1, " + i + ")");
     linkLevel.value = links[i].level;
     linkClass.value = classDict[links[i].job];
-
 
     linkLine.appendChild(linkClass);
     linkLine.appendChild(linkLevel);

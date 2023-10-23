@@ -577,6 +577,8 @@ baseEquips["None"].stats[FLAT_LUK] = 0;
 baseEquips["None"].stats[FLAT_ATTACK] = 0;
 baseEquips["None"].stats[FLAT_DEF] = 0;
 
+const hakuFans = ["AbsoLab Fan", "Arcane Umbra Fan"];
+
 
 
 

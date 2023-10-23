@@ -9,7 +9,7 @@ var familiarsTab = document.getElementById("familiarsTab");
 
 var cardsTitle = document.createElement("div");
 cardsTitle.className = "sectionTitle";
-cardsTitle.innerHTML = "Cards";
+cardsTitle.innerHTML = "Familiar Cards";
 familiarsTab.appendChild(cardsTitle);
 
 var cardsSection = document.createElement("div");
@@ -54,7 +54,7 @@ for (let i = 0; i<3; i++)
 
 var badgesTitle = document.createElement("div");
 badgesTitle.className = "sectionTitle";
-badgesTitle.innerHTML = "Badges";
+badgesTitle.innerHTML = "Familiar Badges";
 familiarsTab.appendChild(badgesTitle);
 
 var badges = document.createElement("div");

@@ -69,6 +69,7 @@ function saveData()
     let saveRef = userRef.child('save.json');
     saveRef.putString(message).then((snapshot) => {
         console.log('data saved');
+        updateRange(true);
     });
     unsavedChanges = false;
       
@@ -154,7 +155,7 @@ function doneLoading()
         document.getElementById("app").style.display = "block";
         document.getElementById("loadingScreen").style.display = "none";
 
-        updateRange();
+        updateRange(true);
 
         unsavedChanges = false;
     }

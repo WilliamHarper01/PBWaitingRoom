@@ -54,6 +54,19 @@ for (let i=1; i<STATS_LENGTH; i++)
     statstext.appendChild(statText);
 }
 
+var statEquivalenceList = document.getElementById("statEquivalence");
+var statEquivalenceStats = [FLAT_STR, FLAT_DEX, FLAT_INT, FLAT_LUK, FLAT_HP, FLAT_MP, 
+                            PERCENT_STR, PERCENT_DEX, PERCENT_INT, PERCENT_LUK, PERCENT_HP, PERCENT_MP, 
+                            FLAT_ALL_STAT, PERCENT_ALL_STAT,
+                            FLAT_ATTACK, PERCENT_ATTACK, FLAT_MATT, PERCENT_MATT, BOSS_DAMAGE, CRIT_DAMAGE, IED];
+
+for (let i=0; i<statEquivalenceStats.length; i++)
+{
+    let statText = document.createElement("li");
+    statText.className = "advancedInfoStat";
+    statEquivalenceList.appendChild(statText);
+}
+
 
 function loadFromJSON(json)
 {
@@ -98,9 +111,9 @@ function loadFromJSON(json)
     ap = json["ap"];
 }
 
-var lastRange = 1;
+var lastRange = 0;
 
-function updateRange()
+function updateRange(saveLast = false)
 {
     let stats = new Range(job);
 
@@ -108,7 +121,8 @@ function updateRange()
 
     stats.addStats(rebootStats(characterLevel));
 
-    stats.addStats(getJobStats(job, commonLevels[5], characterLevel, baseEquips[equips[WEAPON].name].subType));
+    stats.addStats(getJobStats(job, commonLevels[5], characterLevel, 
+                            baseEquips[equips[WEAPON].name].subType));
 
     stats.addStats(calculateCommons(commonLevels[1],
         commonLevels[2],
@@ -153,7 +167,10 @@ function updateRange()
 
     document.getElementById("fdGain").innerHTML = "FD Gain: " + fdGain.toFixed(2) + "%";
 
-    lastRange = damageToBosses;
+    if (saveLast)
+        lastRange = damageToBosses;
+
+    statEquivalence(stats, damageToBosses);
 
     let statslist = statstext.childNodes;
 
@@ -161,4 +178,21 @@ function updateRange()
         statslist[i].innerHTML = statDict[i] + ": " + stats.stats[i];
 
     unsavedChanges = true;
+}
+
+function statEquivalence(stats, baseRange)
+{
+    let addSingleStat = new Array(STATS_LENGTH).fill(0);
+    let statTexts = statEquivalenceList.childNodes;
+    for (let i=0; i<statTexts.length; i++)
+    {
+        addSingleStat[statEquivalenceStats[i]] += 1;
+        stats.addStats(addSingleStat);
+        let fdGain = (baseRange > 0) ? ((stats.damageToBosses() / baseRange) - 1.0) * 100 : 0;
+        statTexts[i].innerHTML = statDict[statEquivalenceStats[i]] + ": " + fdGain.toFixed(2) + "% ";
+        addSingleStat[statEquivalenceStats[i]] -= 2;
+        stats.addStats(addSingleStat);
+        addSingleStat[statEquivalenceStats[i]] = 0;
+
+    }
 }

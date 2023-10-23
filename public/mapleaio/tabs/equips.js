@@ -208,6 +208,10 @@ function showEquipStats(id)
                 if (baseEquips[equipOptions[i].value].type == PENDANT)
                     equipOptions[i].style.display = "block";
             }
+            else if (equipSelected == SECONDARY && hakuFans.includes(equipOptions[i].value))
+            {
+                equipOptions[i].style.display = "block";
+            }
         }
     }
 }
