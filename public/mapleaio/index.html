@@ -8,7 +8,7 @@
 	<body id="pageBody">
 
 		<nav class="navbar navbar-expand-lg navbar-dark" style="background: linear-gradient(-45deg, rgba(114,34,121,1) 10%, rgba(236,73,142,1) 90%);">
-			<span class="navbar-brand">MapleAIO b0.1</span>
+			<span class="navbar-brand">MapleAIO b0.1.1</span>
 			<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 				<div class="navbar-nav">
 					
@@ -17,6 +17,8 @@
 		</nav>
 
 		<div id="app" class="app">
+			<div id="savedText" style="text-align: center; margin-bottom: 1rem"> </div>
+			
 			<div class="topButtons">
 				<button id="showCharacterTab" class="btnTab" onclick="showTab('characterTab')">CHARACTER</button>
 				<button id="showEquipTab" class="btnTab" onclick="showTab('equipTab')">EQUIPS</button>
@@ -28,7 +30,6 @@
 				<button id="showInnerTab" class="btnTab" onclick="showTab('innerTab')">MISC</button>
 				<button id="saveButton" class="btnSave" onclick="saveData()">SAVE</button>
 			</div>
-
 			
 			<div id="characterTab" class="tab"> </div>
 			<div id="equipTab" class="equipTab"> </div>

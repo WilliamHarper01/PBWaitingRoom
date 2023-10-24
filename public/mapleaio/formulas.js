@@ -725,8 +725,94 @@ class Symbols
 class Range {
     constructor(job) {
         this.job = job;
-        
-        this.weaponMultiplier = 1.75;
+        this.weaponMultiplier = 1.0;
+        switch (job)
+        {
+            case FIRE_POISON:
+            case ICE_LIGHTNING:
+            case BISHOP:
+            case BLAZE_WIZARD:
+            case BATTLE_MAGE:
+            case LUMINOUS:
+            case KINESIS:
+            case EVAN:
+            case ILLIUM:
+            case LARA:
+                this.weaponMultiplier = 1.2;
+                break;
+
+            case HAYATO:
+                this.weaponMultiplier = 1.25;
+                break;
+            
+            case MARKSMAN:
+            case WILD_HUNTER:
+            case KANNA:
+            case HOYOUNG:
+                this.weaponMultiplier = 1.35;
+                break;
+            
+            case DARK_KNIGHT:
+            case ARAN:
+                this.weaponMultiplier = 1.49;
+                break;
+            
+            case CORSAIR:
+            case CANNON_MASTER:
+                this.weaponMultiplier = 1.50;
+                break;
+            
+            case BUCCANEER:
+            case THUNDER_BREAKER:
+            case ANGELIC_BUSTER:
+            case BLASTER:
+                this.weaponMultiplier = 1.70;
+                break;
+            
+            case NIGHTLORD:
+            case NIGHT_WALKER:
+                this.weaponMultiplier = 1.75;
+                break;
+            
+            case HERO:
+                if (baseEquips[equips[WEAPON].name].subType == TWO_HANDED_AXE ||
+                    baseEquips[equips[WEAPON].name].subType == TWO_HANDED_SWORD)
+                {
+                    this.weaponMultiplier = 1.44;
+                }
+                else if (baseEquips[equips[WEAPON].name].subType == TWO_HANDED_HAMMER ||
+                        baseEquips[equips[WEAPON].name].subType == ONE_HANDED_AXE ||
+                        baseEquips[equips[WEAPON].name].subType == ONE_HANDED_SWORD)
+                {
+                    this.weaponMultiplier = 1.34;
+                }
+                else
+                {
+                    this.weaponMultiplier = 1.20;
+                }
+                break;
+            case PALADIN:
+                if (baseEquips[equips[WEAPON].name].subType == TWO_HANDED_AXE ||
+                    baseEquips[equips[WEAPON].name].subType == TWO_HANDED_SWORD ||
+                    baseEquips[equips[WEAPON].name].subType == TWO_HANDED_HAMMER)
+                {
+                    this.weaponMultiplier = 1.34;
+                }
+                else if (baseEquips[equips[WEAPON].name].subType == ONE_HANDED_HAMMER ||
+                        baseEquips[equips[WEAPON].name].subType == ONE_HANDED_SWORD)
+                {
+                    this.weaponMultiplier = 1.24;
+                }
+                else
+                {
+                    this.weaponMultiplier = 1.20;
+                }
+                break;
+            
+            default:
+                this.weaponMultiplier = 1.3;
+                break;
+        }
 
         this.stats = new Array(STATS_LENGTH).fill(0);
     }

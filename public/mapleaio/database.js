@@ -41,8 +41,13 @@ firebase.auth().onAuthStateChanged((user) => {
 
 function saveData()
 {
+    document.getElementById("savedText").innerHTML = "saving...";
     if (!unsavedChanges)
+    {
+        document.getElementById("savedText").innerHTML = "saved";
+        setTimeout(closeSavedText, 2000);
         return;
+    }
     
     let data = {
         job: job,
@@ -68,8 +73,9 @@ function saveData()
     let userRef = storageRef.child("users/" + uid + "/public");
     let saveRef = userRef.child('save.json');
     saveRef.putString(message).then((snapshot) => {
-        console.log('data saved');
+        document.getElementById("savedText").innerHTML = "saved";
         updateRange(true);
+        setTimeout(closeSavedText, 2000);
     });
     unsavedChanges = false;
       
@@ -177,3 +183,8 @@ window.addEventListener('beforeunload', function (e) {
     e.returnValue = '';
     
 });
+
+async function closeSavedText()
+{
+    document.getElementById("savedText").innerHTML = " ";
+}
