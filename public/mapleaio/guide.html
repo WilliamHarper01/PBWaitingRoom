@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>MapleAIO</title>
+		<link rel="stylesheet" href="../styles.css">
+	</head>
+	<body id="pageBody">
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background: linear-gradient(-45deg, rgba(114,34,121,1) 10%, rgba(236,73,142,1) 90%);">
+			<span class="navbar-brand">MapleAIO b0.2</span>
+			<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+				<div class="navbar-nav">
+					
+				</div>
+			</div>
+		</nav>
+        
+        <div class="guidePage">
+            <h1 id="mapleaio-guide">MapleAIO Guide</h1>
+            <div class="TOC">
+                <ul>
+                <li><a href="#creating-an-account">Creating an Account</a></li>
+                <li><a href="#tabs">Tabs</a></li>
+                <li><a href="#character">Character</a><ul>
+                <li><a href="#job">Job</a></li>
+                <li><a href="#common-skills">Common Skills</a></li>
+                <li><a href="#average-ied-from-attacks">Average IED from Attacks</a></li>
+                <li><a href="#average-crit-damage-from-vicious-shot">Average Crit Damage from Vicious Shot</a></li>
+                </ul>
+                </li>
+                <li><a href="#equips">Equips</a></li>
+                <li><a href="#link-skills">Link Skills</a></li>
+                <li><a href="#legion">Legion</a><ul>
+                <li><a href="#legion-grid">Legion Grid</a></li>
+                <li><a href="#legion-blocks">Legion Blocks</a></li>
+                </ul>
+                </li>
+                <li><a href="#hyper-stats">Hyper Stats</a></li>
+                <li><a href="#symbols">Symbols</a></li>
+                <li><a href="#familiars">Familiars</a><ul>
+                <li><a href="#familiar-cards">Familiar Cards</a></li>
+                <li><a href="#familiar-badges">Familiar Badges</a></li>
+                </ul>
+                </li>
+                <li><a href="#misc">Misc</a><ul>
+                <li><a href="#inner-ability">Inner Ability</a></li>
+                <li><a href="#event-statstitle">Event Stats/Title</a></li>
+                <li><a href="#weapon-soul">Weapon Soul</a></li>
+                </ul>
+                </li>
+                <li><a href="#fd-gain">FD Gain</a></li>
+                <li><a href="#stat-equivalence">Stat Equivalence</a></li>
+                <li><a href="#stats">Stats</a></li>
+                <li><a href="#save">Save</a></li>
+                </ul>
+            </div>
+            <h2 id="creating-an-account">Creating an Account</h2>
+            <p>When you first visit the app, you will be directed to a login screen. You must create an account in order to use the calculator. Once your account is created, you will be redirected to the app.</p>
+            <h2 id="tabs">Tabs</h2>
+            <p>The calculator consists of tabs which allow you to select equips, link skills, legion, etc. Your damage range will automatically be updated everytime a change is made in the tabs.</p>
+            <h3 id="character">Character</h3>
+            <p>These are the traits of your character that matter for calculating damage range.</p>
+            <h4 id="job">Job</h4>
+            <p>Passive effects from skills are automatically added when you select a job. The values of the passives are based on the maple wiki, which may be out of date. The code that calculates passives for each job can be found <a href="https://pbwaitingroom.net/mapleaio/index.html">here</a></p>
+            <h4 id="common-skills">Common Skills</h4>
+            <p>Input the skill levels of your common skills here, level 0 is equivalent to not having the skill on. If your job has the &quot;real&quot; version of any of these skills, set the common skill version to 0.</p>
+            <h4 id="average-ied-from-attacks">Average IED from Attacks</h4>
+            <p>Many jobs have IED built into their attacks. These sources of IED are not included as passives, so the calculator allows you to input an extra IED source to compensate for this.</p>
+            <h4 id="average-crit-damage-from-vicious-shot">Average Crit Damage from Vicious Shot</h4>
+            <p>Since the effects of Viscious Shot scale based on your characters crit rate, which is not included in the calculator, archers can input an extra source of crit damage which represents the average crit damage they recieve from the skill.</p>
+            <h3 id="equips">Equips</h3>
+            <p>The Equips tab shows a UI similar to the equip menu in-game. To edit an equip, select the slot you would like to edit, and edit the values to the right.</p>
+            <h3 id="link-skills">Link Skills</h3>
+            <p>The Link Skills tab allows you to select the job, and level of all 13 of your characters link skills. If a link skill is used by multiple jobs, you only have to select one of the jobs.</p>
+            <h3 id="legion">Legion</h3>
+            <h4 id="legion-grid">Legion Grid</h4>
+            <p>Assign the values of each legion grid section. Note that these values are the ammount of blocks in a section, not the actual value of the stat.</p>
+            <h4 id="legion-blocks">Legion Blocks</h4>
+            <p>Assign the ranks of each character in your legion. Level 0 corresponds with not having the character at all.</p>
+            <h3 id="hyper-stats">Hyper Stats</h3>
+            <p>The Hyper Stats tab allows you to select the points allocated to each of your hyper stats. Note that these values are the levels in the menu, and not the actual ammount of stat that it gives you.</p>
+            <h3 id="symbols">Symbols</h3>
+            <p>The Symbols menu allows you to select the level of each Arcane/Sacred symbol you have equipped.</p>
+            <h3 id="familiars">Familiars</h3>
+            <h4 id="familiar-cards">Familiar Cards</h4>
+            <p>Assign the values of each line, on all 3 familiar cards you have equipped.</p>
+            <h4 id="familiar-badges">Familiar Badges</h4>
+            <p>Select which familiar badges your character has equipped.</p>
+            <h3 id="misc">Misc</h3>
+            <h4 id="inner-ability">Inner Ability</h4>
+            <p>Select the values of each line of your inner ability. Lines such as crit rate, and buff duration are not included, so just leave these blank.</p>
+            <h4 id="event-stats-title">Event Stats/Title</h4>
+            <p>Assign any event stats your character currently has, and the title it is wearing. You can also put other miscellaneous stats here.</p>
+            <h4 id="weapon-soul">Weapon Soul</h4>
+            <p>Select the potential on your weapon&#39;s soul. The base 20 attack from charging the soul is automatically included.</p>
+            <h2 id="fd-gain">FD Gain</h2>
+            <p>Shows you the total Final Damage Gained, or lost from an edit to your account. The percent gain is based on the value that you have saved, so saving will reset this value to 0.</p>
+            <h2 id="stat-equivalence">Stat Equivalence</h2>
+            <p>Shows you the final damage gained from increasing each stat by 1.</p>
+            <h2 id="stats">Stats</h2>
+            <p>Shows you the total value of each stat in the damage formula calculation. Note that stats usually have a base value, a percentage increase, and a final additive increase.</p>
+            <h2 id="save">Save</h2>
+            <p>Saves your progress to your account, which can then be accessed later on multiple devices.</p>
+        </div>
+	</body>
+</html>
