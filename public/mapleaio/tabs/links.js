@@ -45,6 +45,10 @@ for (let i = 0; i < links.length; i++)
 
     linkLine.appendChild(linkClass);
     linkLine.appendChild(linkLevel);
+
+    let linkLevelOptions = linkLevel.childNodes;
+    displayLinkLevels(linkLevelOptions, links[i].job);
+
 }
 
 function changeLink(part, line)
@@ -54,62 +58,67 @@ function changeLink(part, line)
         links[line].job = classDict[document.getElementById("linkLine" + line).firstChild.value];
         let linkLevelOptions = document.getElementById("linkLine" + line).lastChild.childNodes;
 
-        for (let i=0; i<linkLevelOptions.length; i++)
-        {
-            linkLevelOptions[i].style.display = "none";
-            switch(links[line].job)
-            {
-                case DAWN_WARRIOR:
-                case BLAZE_WIZARD:
-                case WIND_ARCHER:
-                case THUNDER_BREAKER:
-                case NIGHT_WALKER:
-                    if (i <= 10)
-                        linkLevelOptions[i].style.display = "block";
-                        break;
-                
-                case NIGHTLORD:
-                case SHADOWER:
-                case DUAL_BLADE:
-                case BOWMASTER:
-                case MARKSMAN:
-                case PATHFINDER:
-                case HERO:
-                case PALADIN:
-                case DARK_KNIGHT:
-                case ICE_LIGHTNING:
-                case FIRE_POISON:
-                case BISHOP:
-                case CORSAIR:
-                case BUCCANEER:
-                case CANNON_MASTER:
-                    if (i <= 6)
-                        linkLevelOptions[i].style.display = "block";
-                        break;
-                
-                case DEMON_SLAYER:
-                case DEMON_AVENGER:
-                case LUMINOUS:
-                case ANGELIC_BUSTER:
-                case MIHILE:
-                case BEAST_TAMER:
-                case PHANTOM:
-                case ARK:
-                    if (i <= 3)
-                        linkLevelOptions[i].style.display = "block";
-                        break;
-
-                default:
-                    if (i <= 2)
-                        linkLevelOptions[i].style.display = "block";
-                    break;
-            }
-        }
+        displayLinkLevels(linkLevelOptions, links[line].job);
 
     }
     else
         links[line].level = isANumber(document.getElementById("linkLine" + line).lastChild.value);
 
     updateRange();
+}
+
+function displayLinkLevels(linkLevelOptions, job)
+{
+    for (let i=0; i<linkLevelOptions.length; i++)
+    {
+        linkLevelOptions[i].style.display = "none";
+        switch(job)
+        {
+            case DAWN_WARRIOR:
+            case BLAZE_WIZARD:
+            case WIND_ARCHER:
+            case THUNDER_BREAKER:
+            case NIGHT_WALKER:
+                if (i <= 10)
+                    linkLevelOptions[i].style.display = "block";
+                    break;
+            
+            case NIGHTLORD:
+            case SHADOWER:
+            case DUAL_BLADE:
+            case BOWMASTER:
+            case MARKSMAN:
+            case PATHFINDER:
+            case HERO:
+            case PALADIN:
+            case DARK_KNIGHT:
+            case ICE_LIGHTNING:
+            case FIRE_POISON:
+            case BISHOP:
+            case CORSAIR:
+            case BUCCANEER:
+            case CANNON_MASTER:
+                if (i <= 6)
+                    linkLevelOptions[i].style.display = "block";
+                    break;
+            
+            case DEMON_SLAYER:
+            case DEMON_AVENGER:
+            case LUMINOUS:
+            case ANGELIC_BUSTER:
+            case MIHILE:
+            case BEAST_TAMER:
+            case PHANTOM:
+            case ARK:
+                if (i <= 3)
+                    linkLevelOptions[i].style.display = "block";
+                    break;
+
+            default:
+                if (i <= 2)
+                    linkLevelOptions[i].style.display = "block";
+                break;
+        }
+    }
 }
 
