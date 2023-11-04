@@ -367,3 +367,8 @@ footer a:hover {
 a {
     text-decoration: none;
 }
+
+#bishopStats {
+    font-size: 2rem;
+    line-height: 2.25rem;
+}

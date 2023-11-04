@@ -167,6 +167,11 @@ function updateRange(saveLast = false)
 
     document.getElementById("fdGain").innerHTML = "FD Gain: " + fdGain.toFixed(2) + "%";
 
+    if (job == BISHOP)
+        document.getElementById("bishopStats").innerHTML = bishopStats(stats);
+    else
+        document.getElementById("bishopStats").innerHTML = "";
+
     if (saveLast)
         lastRange = damageToBosses;
 
@@ -195,4 +200,14 @@ function statEquivalence(stats, baseRange)
         addSingleStat[statEquivalenceStats[i]] = 0;
 
     }
+}
+
+function bishopStats(stats)
+{
+    let benediction = 5 + Math.min(Math.floor(stats.getMainStat()/2500), 44);
+    let angelOfBalance = 5 + Math.min(Math.floor(stats.getMainStat()/1250), 100);
+    let BotD = 1 + Math.min(Math.floor(stats.getMainStat()/5000), 15);
+    let BotDCD = 248 - Math.min(Math.floor(stats.getMainStat()/5000)*12, 248 - 140);
+    return "Benediction: " + benediction + "% FD<br /> Angel of Balance: " + angelOfBalance + "% Damage<br /> Blood of the Divine: " + BotD + 
+    "% FD, Cooldown: " + BotDCD + " seconds";
 }
