@@ -35,7 +35,6 @@ document.getElementById("gotoLogin").onclick = function () {
 const app = firebase.initializeApp(firebaseConfig);
 const auth = firebase.auth(app);
 
-
 document.getElementById("submitSignup").onclick = function ()
 {
     let email = document.getElementById("signupUsername").value;
@@ -72,8 +71,6 @@ document.getElementById("submitSignup").onclick = function ()
         // ..
     });
 };
-
-
 
 document.getElementById("submitLogin").onclick = function ()
 {
